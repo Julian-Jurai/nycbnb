@@ -29,19 +29,26 @@
 - `DELETE /api/homes/:id` - cancel a home
 - `PATCH /api/homes/:id` - edit a home
 
-### Experience
+### Experiences
 
-- `GET /api/Experience`
-  - Experience index/search actions
+- `GET /api/Experiences`
+  - Experiences index/search actions
   - accepts `price`, `start_date`, and `end_date` query params to fetch
       available Experience
 - `GET /api/Experience/:id` - fetch one Experience
 - `DELETE /api/Experience/:id` - cancel an experience
 - `PATCH /api/Experience/:id` - edit as experience
 
-### Reviews
+### HomeReviews
 
-- `GET /api/reviews` - fetches home's/experience's reviews
-- `POST /api/reviews` - create a review
-- `PATCH /api/reviews/:id` - edit your review
-- `DELETE /api/reviews/:id` - delete your review
+- `GET /api/homeReviews` - fetches home's/experience's reviews
+- `POST /api/homeReviews` - create a review
+- `PATCH /api/homeReviews/:id` - edit your review
+- `DELETE /api/homeReviews/:id` - delete your review
+
+### ExperienceReviews
+
+- `GET /api/experienceReviews` - fetches home's/experience's reviews
+- `POST /api/experienceReviews` - create a review
+- `PATCH /api/experienceReviews/:id` - edit your review
+- `DELETE /api/experienceReviews/:id` - delete your review

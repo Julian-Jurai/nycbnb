@@ -14,7 +14,7 @@ sufficient CSS styling:
 - [ ] Spots search (by location & availability) & Google Maps on search
 - [ ] Reviews
 - [ ] Bonus: Messaging
-- [ ] Bonus: User/host profiles
+- [ ] Bonus: User/host profiles   
 
 ## Design Docs
 * [View Wireframes][wireframes]

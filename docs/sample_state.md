@@ -80,7 +80,7 @@
     1: {
       title: "sleep with wolves",
       body: "This cabin was just featured in..",
-      duration: 2hrs
+      duration: 2,
       host_id: 1,
       long: 21321,
       lat: 213213,
@@ -92,7 +92,7 @@
   experienceDetail: {
     title: "sleep with wolves",
     body: "This cabin was just featured in..",
-    duration: 2hrs
+    duration: 2,
     host_id: 1,
     long: 21321,
     lat: 213213,
