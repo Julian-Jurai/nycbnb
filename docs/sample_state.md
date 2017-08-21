@@ -5,7 +5,7 @@
       email: "email@email.com",
       first: "Green",
       last: "McThomas",
-      name: "Bnbeezy",
+      username: "Bnbeezy",
       month: 2,
       day: 1,
       year: 1998
@@ -21,6 +21,7 @@
     1: {
       title: "Tree Home Cabin",
       body: "This cabin was just featured in..",
+      room_type: "Entire Home",
       host_id: 1,
       long: 21,
       lat: 213,
@@ -31,6 +32,7 @@
     2: {
       title: "Home",
       body: "This is a homey home in..",
+      room_type: "Shared Room",
       host_id: 2,
       long: 22211,
       lat: -12213,
@@ -42,20 +44,22 @@
   homeDetail: {
     id: 1,
     title: "High rise apartment with an amazing balcony view",
-    description: "Its Great!"
-    address: "123 Flex Street"
-    rating: 3
+    description: "Its Great!",
+    long: 21,
+    lat: 213,
+    address: "123 Flex Street",
+    image_url: "home.jpg",
     price: 160,
     space: {
-      accommodates: 4,
+      guests: 4,
       bathrooms: 1,
       bedrooms: 2,
       beds: 3,
-      property_type: "House",
-      room_type: "Entire home/apt"
+      room_type: "Entire home"
     },
     amenities: {
       internet: true,
+      tv: true,
       family: true,
       kitchen: true
     },
@@ -68,7 +72,7 @@
       1: {
         author_Id: 1,
         rating: 9,
-        body: "Best view in NYC, hands down!"
+        body: "Love It!"
       }
     }
   },
@@ -85,5 +89,17 @@
       price: 17
     },
   },
+  experienceDetail: {
+    title: "sleep with wolves",
+    body: "This cabin was just featured in..",
+    duration: 2hrs
+    host_id: 1,
+    long: 21321,
+    lat: 213213,
+    experience_type: "Nature"
+    address: "113 St Park "
+    image_url: "wolves.jpg",
+    price: 17
+  }
 }
 ```

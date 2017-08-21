@@ -3,6 +3,8 @@
 column name     | data type | details
 ----------------|-----------|-----------------------
 email           | string    | not null, indexed, unique
+fname           | string    | not null, indexed, unique
+lname          | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null
 image_url       | string    | not null
@@ -22,10 +24,11 @@ long        | float     | not null
 address     | string    | not null
 price       | integer   | not null
 image_url     | string    | not null
-property_type| string   |
-bedrooms    | integer   |
-beds        | integer    |
-bathrooms   | integer   |
+room_type| string   | not null
+bedrooms    | integer   | not null
+guests    | integer   | not null
+beds        | integer    | not null
+bathrooms   | integer   | not null
 kitchen     | boolean    |
 internet    | boolean    |
 family      | boolean    |
