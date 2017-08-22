@@ -26,13 +26,22 @@ class SessionForm extends React.Component {
   }
 
   renderErrors(){
-    //
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
 //submit the form disappears
 
   render(){
     return(
+    <div className="session-form">
       <form onSubmit={this.handleSubmit}>
         <input
           type="text"
@@ -43,10 +52,12 @@ class SessionForm extends React.Component {
           type="text"
           onChange={this.update('password')}
           placeholder="password"
-        />
-      <input type="submit" value={this.props.formType} />
+          />
+        <input className="session-form-submit" type="submit" value={this.props.formType} />
 
       </form>
+        {this.renderErrors()}
+    </div>
     );
   }
 
