@@ -12,16 +12,12 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
     this.handleX = this.handleX.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
+
   }
 
   handleX(e){
     debugger
-  return  this.props.resetSessionUI(false)
-  }///doesnt work!!
-
-  handleCloseModal(e){
-
+    return  this.props.resetSessionUI(false);
   }
 
 
@@ -71,8 +67,8 @@ class SessionForm extends React.Component {
     // className = "session-form"///////////css test
     return(
 
-        <div className={`${className}-background`} onClick={this.handleCloseModal}>
-          <span className={`${className}  modal`} onClick={ (e) => e.stopPropagation(); } >
+        <div className={`${className}-background`} onClick={this.handleX}>
+          <span className={`${className}  modal`} onClick={ (e) => e.stopPropagation() } >
             <button className="x-button" onClick={this.handleX}>&#10005;</button>
             <form onSubmit={this.handleSubmit}>
               <h1>{pageName}</h1>
