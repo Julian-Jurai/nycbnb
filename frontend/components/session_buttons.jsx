@@ -9,12 +9,17 @@ class SessionButtons extends React.Component{
     this.handleSignUp = this.handleSignUp.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     this.handleGuestLogin = this.handleGuestLogin.bind(this);
+    this.handleDropDown = this.this.handleDropDown.bind(this);
   }
 
   handleSignUp(e){
     debugger
     e.preventDefault()
     this.props.setSessionUI("signup")
+  }
+
+  handleDropDown(e){
+
   }
 
   handleGuestLogin(e){
@@ -36,15 +41,20 @@ class SessionButtons extends React.Component{
     this.props.logout()
   }
 
+  // <span className="session-button">
+  //   <button onClick={this.handleLogout}>Log Out</button>
+  // </span>
 
   render(){
     debugger
     //house sign in login log out
     if (this.props.loggedIn){
       return(
-        <span className="session-button">
-          <button onClick={this.handleLogout}>Log Out</button>
-        </span>
+      <div>
+        <div class="avatar" onClick={this.handleDropDown}>
+            <button onClick={this.handleLogout}>Log Out</button>
+        </div>
+      </div>
       );
     } else {
       return(

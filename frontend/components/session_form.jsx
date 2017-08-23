@@ -62,9 +62,18 @@ class SessionForm extends React.Component {
       className = "session-form";
     }
     debugger//sessionform
+
+
+
     let pageName;
     this.props.session_ui === "login" ? pageName = "Log in to continue" : pageName = "Sign Up";
     // className = "session-form"///////////css test
+
+
+
+
+
+
     return(
 
         <div className={`${className}-background`} onClick={this.handleX}>
@@ -77,6 +86,9 @@ class SessionForm extends React.Component {
                 onChange={this.update('username')}
                 placeholder="Username"
                 />
+
+
+
               <input
                 type="text"
                 onChange={this.update('password')}
@@ -95,28 +107,3 @@ class SessionForm extends React.Component {
 }//classends
 
 export default SessionForm;
-
-// let className;
-// this.props.loggedIn ? className="hidden" : className="session-form"
-//
-// let pageName;
-// this.props.formType === "login" ? pageName = "Log in to continue" : pageName = "Sign Up";
-// return(
-//   <div className="session-form">
-//     <h4>{pageName}</h4>
-//     <form onSubmit={this.handleSubmit}>
-//       <input
-//         type="text"
-//         onChange={this.update('username')}
-//         placeholder="Username"
-//         />
-//       <input
-//         type="text"
-//         onChange={this.update('password')}
-//         placeholder="password"
-//         />
-//       <input className="session-form-submit" type="submit" value={this.props.formType} />
-//
-//     </form>
-//     {this.renderErrors()}
-//   </div>
