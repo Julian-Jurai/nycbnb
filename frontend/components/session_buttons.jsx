@@ -9,36 +9,39 @@ class SessionButtons extends React.Component{
     this.handleSignUp = this.handleSignUp.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     this.handleGuestLogin = this.handleGuestLogin.bind(this);
-    this.handleDropDown = this.this.handleDropDown.bind(this);
+    this.handleDropDown = this.handleDropDown.bind(this);
+    this.state = { open: false }
   }
 
   handleSignUp(e){
-    debugger
-    e.preventDefault()
-    this.props.setSessionUI("signup")
+
+    e.preventDefault();
+    this.props.setSessionUI("signup");
   }
 
   handleDropDown(e){
+    debugger
+    e.preventDefault();
+    this.setState({open: true})
 
   }
 
   handleGuestLogin(e){
-    debugger
-    e.preventDefault()
 
-    this.props.login({username: "guest", password: "password"})
+    e.preventDefault();
+    this.props.login({username: "guest", password: "password"});
   }
 
   handleLogin(e){
-    debugger
-    e.preventDefault()
-    this.props.setSessionUI("login")
+
+    e.preventDefault();
+    this.props.setSessionUI("login");
     //displays session form
   }
 
   handleLogout(e){
-    e.preventDefault()
-    this.props.logout()
+    e.preventDefault();
+    this.props.logout();
   }
 
   // <span className="session-button">
@@ -51,8 +54,8 @@ class SessionButtons extends React.Component{
     if (this.props.loggedIn){
       return(
 
-        <div className="avatar" onClick={this.handleDropDown}> //renders dropdown
-          <div className >
+        <div className="avatar" onClick={this.handleDropDown}>
+          <div className={this.state.open ? "active session-button" : "hidden"} >
             <button onClick={this.handleLogout}>Log Out</button>
           </div>
         </div>

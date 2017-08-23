@@ -195,5 +195,20 @@ body {
   transform: translate(-50%, -50%);
 }
 /*UserDropDown*/
+.avatar {
+  display: flex;
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image:url('user_pic.png');
+  margin:0 ;
+  padding:0;
+}
 
+.active {
+  width: 100px;
+  height: 20px;
+  background-color: blue;
+}
 /*css custom*/
