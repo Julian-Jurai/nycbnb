@@ -8,12 +8,20 @@ class SessionButtons extends React.Component{
     this.handleLogin = this.handleLogin.bind(this);
     this.handleSignUp = this.handleSignUp.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
 
   handleSignUp(e){
     debugger
     e.preventDefault()
     this.props.setSessionUI("signup")
+  }
+
+  handleGuestLogin(e){
+    debugger
+    e.preventDefault()
+
+    this.props.login({username: "guest", password: "password"})
   }
 
   handleLogin(e){
@@ -46,6 +54,9 @@ class SessionButtons extends React.Component{
         </span>
         <span >
           <button onClick={this.handleSignUp}>Sign Up</button>
+        </span>
+        <span >
+          <button onClick={this.handleGuestLogin}>Guest Login</button>
         </span>
       </span>
 

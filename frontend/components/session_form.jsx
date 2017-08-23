@@ -11,8 +11,18 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.handleX = this.handleX.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
+  handleX(e){
+    debugger
+  return  this.props.resetSessionUI(false)
+  }///doesnt work!!
+
+  handleCloseModal(e){
+
+  }
 
 
   handleSubmit(e) {
@@ -58,28 +68,31 @@ class SessionForm extends React.Component {
     debugger//sessionform
     let pageName;
     this.props.session_ui === "login" ? pageName = "Log in to continue" : pageName = "Sign Up";
-    className = "session-form"///////////css test
+    // className = "session-form"///////////css test
     return(
-      <span className={`${className}`} >
 
-          <form onSubmit={this.handleSubmit}>
-            <h1>{pageName}</h1>
-            <input
-              type="text"
-              onChange={this.update('username')}
-              placeholder="Username"
-              />
-            <input
-              type="text"
-              onChange={this.update('password')}
-              placeholder="password"
-              />
-            <input className="session-form-submit" type="submit" value="Submit" />
+        <div className={`${className}-background`} onClick={this.handleCloseModal}>
+          <span className={`${className}  modal`} onClick={ (e) => e.stopPropagation(); } >
+            <button className="x-button" onClick={this.handleX}>&#10005;</button>
+            <form onSubmit={this.handleSubmit}>
+              <h1>{pageName}</h1>
+              <input
+                type="text"
+                onChange={this.update('username')}
+                placeholder="Username"
+                />
+              <input
+                type="text"
+                onChange={this.update('password')}
+                placeholder="password"
+                />
+              <input className="session-form-submit" type="submit" value="Submit" />
+            </form>
+              <p>Don't have an account? Sign Up</p>
+            {this.renderErrors()}
+          </span>
+        </div>
 
-          </form>
-          {this.renderErrors()}
-
-      </span>
     );
   }
 

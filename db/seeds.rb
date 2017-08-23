@@ -8,7 +8,8 @@
 
 
 User.destroy_all
+User.create(username: "guest", password: "password")
 User.create(username: "Julian", password: "password")
 User.create(username: "Musa", password: "password")
 User.create(username: "Foots", password: "password")
-User.create(username: "Will", password: "password")
+User.create(username: "123456", password: "123456")

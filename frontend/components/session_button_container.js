@@ -14,6 +14,7 @@ const mapDispatchToProps = (dispatch) => {
 
   return {
     logout: () => dispatch(logout()),
+    login: (user) => dispatch(login(user)),
     setSessionUI: (buttonAction) => dispatch(setSessionUI(buttonAction))
   };
 

@@ -63,6 +63,7 @@
 body {
   font-family: 'Varela Round', sans-serif;
   font-weight: bold;
+  color: rgb(67, 67, 67);
 }
 
 /*session-form*/
@@ -71,10 +72,17 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 11px;
+  padding: 32px;
   width: 510px;
   height: 570px;
   border: 1px solid #aaa;
+  justify-content: flex-start;
+}
+
+.session-form p {
+  border-top: 1px solid #aaa;
+  font-weight: lighter;
+  padding: 20px;
 }
 
 .session-form form {
@@ -83,9 +91,12 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  /*height: auto;*/
 }
 
 .session-form form h1 {
+  margin-bottom: 30px;
+  margin-top: 30px;
   display: flex;
   font-size: 28px;
   font-weight: bold;
@@ -98,7 +109,7 @@ body {
   padding: 11px;
   border-radius: 2px;
   width: 450px;
-  height: 40px;
+  /*height: 24px;*/
   /*box-sizing: border-box;*/
   margin-top: 20px;
   margin-bottom: 20px;
@@ -108,14 +119,18 @@ body {
 .session-form-submit {
   display: flex;
   justify-content: center;
-  border-color: rgb(255, 90, 95);
+  height: 50px;
+  /*border-color: rgb(255, 90, 95);*/
   background-color: rgb(255, 90, 95);
   border-radius: 4px;
   color: white;
-  font-weight: 700;
+  font-weight: 350;
 }
 
 .hidden {
+  display: none
+}
+.hidden-background {
   display: none
 }
 
@@ -142,6 +157,41 @@ body {
  justify-content: flex-end;
 }
 
+/*X-button*/
+.x-button {
+  display: flex;
+  align-self: flex-start;
+  font-weight: lighter;
+  font-family: 'Varela Round', sans-serif;
+  /*display: flex;*/
+  font-size: 30px;
+  background: none;
+  border:none;
+  height: 40px;
+  margin:0;
+  padding: 0;
+}
+/*modal*/
+
+
+.session-form-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal {
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 
