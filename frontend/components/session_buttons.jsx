@@ -50,11 +50,13 @@ class SessionButtons extends React.Component{
     //house sign in login log out
     if (this.props.loggedIn){
       return(
-      <div>
-        <div class="avatar" onClick={this.handleDropDown}>
+
+        <div className="avatar" onClick={this.handleDropDown}> //renders dropdown
+          <div className >
             <button onClick={this.handleLogout}>Log Out</button>
+          </div>
         </div>
-      </div>
+
       );
     } else {
       return(
