@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   }
 
 
+
   //test starts
 
   window.getState = store.getState;
@@ -43,5 +44,6 @@ document.addEventListener("DOMContentLoaded", () =>{
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root); // linter error
+
 
 });

@@ -59,14 +59,87 @@
  }
 
 /*css reset*/
+/*Main*/
+body {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+}
+
+/*session-form*/
+.session-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 11px;
+  width: 510px;
+  height: 570px;
+  border: 1px solid #aaa;
+}
+
+.session-form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.session-form form h1 {
+  display: flex;
+  font-size: 28px;
+  font-weight: bold;
+  align-self: flex-start;
+}
 
 .session-form input {
   display: flex;
+  font-size: 19px;
+  padding: 11px;
   border-radius: 2px;
-  width: 430px;
-  height: 50px;
-  box-sizing: border-box;
-  margin: 20px;
+  width: 450px;
+  height: 40px;
+  /*box-sizing: border-box;*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #aaa;
+}
+
+.session-form-submit {
+  display: flex;
+  justify-content: center;
+  border-color: rgb(255, 90, 95);
+  background-color: rgb(255, 90, 95);
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none
+}
+
+/*session-buttons*/
+.session-button button:hover {
+  text-decoration: underline;
+
+}
+
+.session-button button {
+  font-family: 'Varela Round', sans-serif;
+  /*display: flex;*/
+  font-size: 14px;
+  background:none;
+  border:none;
+  height: 40px;
+  margin:0;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.session-button {
+ display: flex;
+ justify-content: flex-end;
 }
 
 
