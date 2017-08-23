@@ -31,7 +31,7 @@ import SessionForm from './session_form'
 
 
 const mapStateToProps = ({ session, session_ui }) => {
-  debugger
+
 
 
   return {
@@ -43,7 +43,7 @@ const mapStateToProps = ({ session, session_ui }) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 
-  debugger
+
   return {
     login: user => dispatch(login(user)),
     signup: user => dispatch(signup(user)),

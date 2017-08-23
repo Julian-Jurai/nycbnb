@@ -16,7 +16,7 @@ class SessionForm extends React.Component {
   }
 
   handleX(e){
-    debugger
+
     return  this.props.resetSessionUI(false);
   }
 
@@ -25,7 +25,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     const processFrom = this.props.session_ui === "login" ? this.props.login : this.props.signup
-    debugger
+
     processFrom(user).then(
         ()=>this.props.resetSessionUI(false),
         ()=>this.renderErrors()
@@ -56,12 +56,12 @@ class SessionForm extends React.Component {
 
 
   render(){
-    debugger
+
     let className;
     if (Boolean(this.props.session_ui) === false )  { className="hidden" } else {
       className = "session-form";
     }
-    debugger//sessionform
+
 
 
 

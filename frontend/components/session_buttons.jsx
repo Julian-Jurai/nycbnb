@@ -20,7 +20,7 @@ class SessionButtons extends React.Component{
   }
 
   handleDropDown(e){
-    debugger
+
     e.preventDefault();
     this.setState({open: true})
 
@@ -49,7 +49,7 @@ class SessionButtons extends React.Component{
   // </span>
 
   render(){
-    debugger
+
     //house sign in login log out
     if (this.props.loggedIn){
       return(
@@ -77,35 +77,12 @@ class SessionButtons extends React.Component{
 
       );
     }
-    debugger
+
   }//render
 
-  //test
-  // <button onClick={this.handleLogin}>Log In</button>
-  // <button onClick={this.handleSignUp}>Sign Up</button>
-  //testends
+
 
 
 }//classend
 
 export default SessionButtons;
-// const sessionLinks = () => (
-//   <div>
-//     <h1>Welcome</h1>
-//     <nav>
-//       <button id="session-button">Login</button>
-//       <button id="session-button">Sign up</button>
-//     </nav>
-//   </div>
-// );
-//
-// const personalGreeting = (currentUser, logout) => (
-// 	<div>
-//     <h2>Hi, {currentUser.username}!</h2>
-//     <button onClick={logout}>Log Out</button>
-// 	</div>
-// );
-//
-// const HomeIndex = ({ currentUser, logout }) => (
-//   currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
-// );
