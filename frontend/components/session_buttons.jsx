@@ -20,9 +20,10 @@ class SessionButtons extends React.Component{
   }
 
   handleDropDown(e){
-
+    debugger
     e.preventDefault();
-    this.setState({open: true})
+    const nextState = !this.state.open
+    this.setState({open: nextState})
 
   }
 
@@ -41,7 +42,9 @@ class SessionButtons extends React.Component{
 
   handleLogout(e){
     e.preventDefault();
+    this.setState({ open: false })
     this.props.logout();
+
   }
 
   // <span className="session-button">
@@ -52,12 +55,20 @@ class SessionButtons extends React.Component{
 
     //house sign in login log out
     if (this.props.loggedIn){
+      debugger
       return(
+        <div className ="dropdown">
 
-        <div className="avatar" onClick={this.handleDropDown}>
-          <div className={this.state.open ? "active session-button" : "hidden"} >
-            <button onClick={this.handleLogout}>Log Out</button>
-          </div>
+            <div className="avatar" onClick={this.handleDropDown}></div>
+
+            <ul className={this.state.open ? "pullDown active " : "hidden"} >
+              <li onClick={this.handleLogout}>Edit Profile</li>
+              <li onClick={this.handleLogout}>Travel Credit</li>
+              <li onClick={this.handleLogout}>Account Settings</li>
+              <li onClick={this.handleLogout}>My Guidbook</li>
+              <li onClick={this.handleLogout}>Log Out</li>
+              <li onClick={this.handleLogout}>Log Out</li>
+            </ul>
         </div>
 
       );

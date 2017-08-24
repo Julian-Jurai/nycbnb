@@ -197,18 +197,128 @@ body {
 /*UserDropDown*/
 .avatar {
   display: flex;
+
   align-self: flex-end;
-  width: 40px;
-  height: 40px;
+  cursor: pointer;
+  background: url('user_pic.png') no-repeat center;;
+  margin: 10px ;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background-image:url('user_pic.png');
-  margin:0 ;
-  padding:0;
+}
+
+
+
+.avatar:hover {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
 }
 
 .active {
-  width: 100px;
-  height: 20px;
-  background-color: blue;
+  padding: 0 16px 0px 16px ;
+  border-radius: 3px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #FFFFFF;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+  z-index: 1;
 }
+
+.dropdown {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #767676;
+}
+
+
+
+.active li {
+    width: 262px;
+    height: 20px;
+    color: #767676;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.active li:hover {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+.active li:last-of-type {
+   border-bottom: none;
+}
+
+.pullDown{
+	animation-name: pullDown;
+	-webkit-animation-name: pullDown;
+
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%;
+}
+
+@keyframes pullDown {
+	0% {
+		transform: scaleY(0.1);
+	}
+	40% {
+		transform: scaleY(1.02);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@-webkit-keyframes pullDown {
+	0% {
+		-webkit-transform: scaleY(0.1);
+	}
+	40% {
+		-webkit-transform: scaleY(1.02);
+	}
+	60% {
+		-webkit-transform: scaleY(0.98);
+	}
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(0.98);
+	}
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(1);
+	}
+}
+
+
 /*css custom*/
