@@ -13,10 +13,12 @@ User.create(username: "Julian", password: "password")
 User.create(username: "Musa", password: "password")
 User.create(username: "Foots", password: "password")
 User.create(username: "123456", password: "123456")
-#
-# Homes.destroy_all
+
+Home.destroy_all
+user_ids = User.all.map{ |user| user.id }
+
 # Home.create(
-#   host_id:
+#   host_id: user_ids.sample,
 #   title: Faker::Ancient.hero,
 #   description: Faker::Lorem.paragraph,
 #   lat: Faker::Address.latitude,
@@ -33,75 +35,58 @@ User.create(username: "123456", password: "123456")
 #   tv: Faker::Boolean.boolean,
 #   essentials: Faker::Boolean.boolean,
 # )
-# Home.create(
-#   host_id:
-#   title: Faker::Ancient.hero,
-#   description: Faker::Lorem.paragraph,
-#   lat: Faker::Address.latitude,
-#   long: Faker::Address.longitude,
-#   address: Faker::Address.street_address,
-#   price: Random.new.rand(50..1000),
-#   room_type: ["Entire home", "Private room", "Shared room"].sample,
-#   bedrooms: Random.new.rand(1..5),
-#   guests: Random.new.rand(1..10),
-#   beds: Random.new.rand(1..7),
-#   kitchen: Faker::Boolean.boolean,
-#   internet: Faker::Boolean.boolean,
-#   family: Faker::Boolean.boolean,
-#   tv: Faker::Boolean.boolean,
-#   essentials: Faker::Boolean.boolean,
-# )
-# Home.create(
-#   host_id:
-#   title: Faker::Ancient.hero,
-#   description: Faker::Lorem.paragraph,
-#   lat: Faker::Address.latitude,
-#   long: Faker::Address.longitude,
-#   address: Faker::Address.street_address,
-#   price: Random.new.rand(50..1000),
-#   room_type: ["Entire home", "Private room", "Shared room"].sample,
-#   bedrooms: Random.new.rand(1..5),
-#   guests: Random.new.rand(1..10),
-#   beds: Random.new.rand(1..7),
-#   kitchen: Faker::Boolean.boolean,
-#   internet: Faker::Boolean.boolean,
-#   family: Faker::Boolean.boolean,
-#   tv: Faker::Boolean.boolean,
-#   essentials: Faker::Boolean.boolean,
-# )
-# Home.create(
-#   host_id:
-#   title: Faker::Ancient.hero,
-#   description: Faker::Lorem.paragraph,
-#   lat: Faker::Address.latitude,
-#   long: Faker::Address.longitude,
-#   address: Faker::Address.street_address,
-#   price: Random.new.rand(50..1000),
-#   room_type: ["Entire home", "Private room", "Shared room"].sample,
-#   bedrooms: Random.new.rand(1..5),
-#   guests: Random.new.rand(1..10),
-#   beds: Random.new.rand(1..7),
-#   kitchen: Faker::Boolean.boolean,
-#   internet: Faker::Boolean.boolean,
-#   family: Faker::Boolean.boolean,
-#   tv: Faker::Boolean.boolean,
-#   essentials: Faker::Boolean.boolean,
-# )
-# Home.create(
-#   host_id:
-#   title: Faker::Ancient.hero,
-#   description: Faker::Lorem.paragraph,
-#   lat: Faker::Address.latitude,
-#   long: Faker::Address.longitude,
-#   address: Faker::Address.street_address,
-#   price: Random.new.rand(50..1000),
-#   room_type: ["Entire home", "Private room", "Shared room"].sample,
-#   bedrooms: Random.new.rand(1..5),
-#   guests: Random.new.rand(1..10),
-#   beds: Random.new.rand(1..7),
-#   kitchen: Faker::Boolean.boolean,
-#   internet: Faker::Boolean.boolean,
-#   family: Faker::Boolean.boolean,
-#   tv: Faker::Boolean.boolean,
-#   essentials: Faker::Boolean.boolean,
-# )
+
+Home.create(
+  host_id: 12,
+  title: "title",
+  description: "description",
+  lat: 50,
+  long: 45,
+  address: "address",
+  price: 50,
+  room_type: "Entire home",
+  bedrooms: 4,
+  guests: 6,
+  beds: 5,
+  kitchen: true,
+  internet: true,
+  family: true,
+  tv: true,
+  essentials: true
+)
+Home.create(
+  host_id: 12,
+  title: "title",
+  description: "description",
+  lat: 50,
+  long: 45,
+  address: "address",
+  price: 50,
+  room_type: "Entire home",
+  bedrooms: 4,
+  guests: 6,
+  beds: 5,
+  kitchen: true,
+  internet: true,
+  family: true,
+  tv: true,
+  essentials: true
+)
+Home.create(
+  host_id: 12,
+  title: "title",
+  description: "description",
+  lat: 50,
+  long: 45,
+  address: "address",
+  price: 50,
+  room_type: "Entire home",
+  bedrooms: 4,
+  guests: 6,
+  beds: 5,
+  kitchen: true,
+  internet: true,
+  family: true,
+  tv: true,
+  essentials: true
+)

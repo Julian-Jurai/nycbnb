@@ -10,7 +10,7 @@ class SessionButtons extends React.Component{
     this.handleLogout = this.handleLogout.bind(this);
     this.handleGuestLogin = this.handleGuestLogin.bind(this);
     this.handleDropDown = this.handleDropDown.bind(this);
-    this.state = { open: false }
+    this.state = { open: false };
   }
 
   handleSignUp(e){
@@ -20,10 +20,9 @@ class SessionButtons extends React.Component{
   }
 
   handleDropDown(e){
-    debugger
     e.preventDefault();
-    const nextState = !this.state.open
-    this.setState({open: nextState})
+    const nextState = !this.state.open;
+    this.setState({open: nextState});
 
   }
 
@@ -42,7 +41,7 @@ class SessionButtons extends React.Component{
 
   handleLogout(e){
     e.preventDefault();
-    this.setState({ open: false })
+    this.setState({ open: false });
     this.props.logout();
 
   }
@@ -52,6 +51,8 @@ class SessionButtons extends React.Component{
   // </span>
 
   render(){
+
+
 
     //house sign in login log out
     if (this.props.loggedIn){

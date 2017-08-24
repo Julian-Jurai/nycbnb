@@ -12,15 +12,6 @@ export const signup = (user) => {
 };
 
 
-// export const current_user = () => {
-//   return (
-//     $.ajax({
-//       method: "GET",
-//       url: "/api/users/"
-//     })
-//   );
-// };
-
 export const login = (user) => {
   //user : {username, :password}
   return (

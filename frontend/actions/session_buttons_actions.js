@@ -9,7 +9,7 @@ export const setSessionUI = (buttonAction) => {
     type: LOGINSIGNUP,
     buttonAction
   };
-}
+};
 
 export const resetSessionUI = (buttonAction) => {
 
@@ -17,4 +17,4 @@ export const resetSessionUI = (buttonAction) => {
     type: LOGOUT,
     buttonAction
   };
-}
+};

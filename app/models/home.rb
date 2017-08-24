@@ -26,9 +26,9 @@
 
 
 class Home < ApplicationRecord
-  validates :host_id, :title, :description, :lat, :long, :address, :price, presence: true
-  validates :room_type, :bedrooms, :guests, :beds, :kitchen, :internet, presence: true
-  validates :family, :tv, :essentials, presence: true
+   validates :host_id, :title, :description, :lat, :long, :address, :price, presence: true
+   validates :family, :tv, :essentials, :room_type, :bedrooms, :guests, :beds, :kitchen, :internet, presence: true
+
 
 
 end
