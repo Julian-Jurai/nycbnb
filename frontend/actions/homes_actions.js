@@ -14,6 +14,7 @@ export const receiveSingleHome = (home) => {
 };
 
 export const receiveAllHomes = (homes) => {
+  
   return{
     type: RECEIVE_ALL_HOMES,
     homes,
@@ -30,10 +31,13 @@ export const receiveErrors = (errors) => {
 //thunkactions
 
 export const fetchAllHomes = () => (dispatch) => {
-  return (
 
+  return (
     APIUtil.fetchAllHomes().then(
-      homes => dispatch(receiveAllHomes(homes)),
+      homes => {
+
+        return dispatch(receiveAllHomes(homes));
+      },
       err => dispatch(receiveErrors(err.responseJSON))
     )
 
@@ -43,22 +47,8 @@ export const fetchAllHomes = () => (dispatch) => {
 export const fetchSingleHome = (home) => (dispatch) => {
   return (
 
-    APIUtil.fetchSingleHomes().then(
-      homes => dispatch(receiveSingleHomes(homes)),
-      err => dispatch(receiveErrors(err.responseJSON))
-    )
-
-  );
-};
-
-fetchAllHomes
- fetchSingleHomes
-
-export const login = (user) => (dispatch) => {
-  return(
-
-    APIUtil.login(user).then(
-      user => dispatch(receiveCurrentUser(user)),
+    APIUtil.fetchSingleHomes(home).then(
+      home => dispatch(receiveSingleHomes(home)),
       err => dispatch(receiveErrors(err.responseJSON))
     )
 

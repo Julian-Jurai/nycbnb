@@ -2,10 +2,8 @@ class Api::HomesController < ApplicationController
 
   def index
     @homes = Home.all;
-    if @homes
       render "api/homes/index"
-    else
-      render json: ["Problem Fetching Homes"], status: 422
+      # handle errors
   end
 
   def show

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 class SessionButtons extends React.Component{
   constructor(props){
-    super(props)
+    super(props);
     this.handleLogin = this.handleLogin.bind(this);
     this.handleSignUp = this.handleSignUp.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
@@ -61,7 +61,6 @@ class SessionButtons extends React.Component{
         <div className ="dropdown">
 
             <div className="avatar" onClick={this.handleDropDown}></div>
-
             <ul className={this.state.open ? "pullDown active " : "hidden"} >
               <li onClick={this.handleLogout}>Edit Profile</li>
               <li onClick={this.handleLogout}>Travel Credit</li>

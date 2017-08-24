@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { login, logout, signup } from '../actions/session_actions';
-import { setSessionUI } from '../actions/session_buttons_actions';
-import SessionButtons from './session_buttons'
+import { login, logout, signup } from '../../actions/session_actions';
+import { setSessionUI } from '../../actions/session_buttons_actions';
+import SessionButtons from './session_buttons';
 
 const mapStateToProps = ({ session }) => {
   return {
@@ -20,4 +20,4 @@ const mapDispatchToProps = (dispatch) => {
 
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionButtons)
+export default connect(mapStateToProps, mapDispatchToProps)(SessionButtons);

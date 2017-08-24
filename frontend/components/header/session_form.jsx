@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { LOGOUT } from '../actions/session_buttons_actions'
+import { LOGOUT } from '../../actions/session_buttons_actions';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    const processFrom = this.props.session_ui === "login" ? this.props.login : this.props.signup
+    const processFrom = this.props.session_ui === "login" ? this.props.login : this.props.signup;
 
     processFrom(user).then(
         ()=>this.props.resetSessionUI(false),
@@ -41,7 +41,7 @@ class SessionForm extends React.Component {
 
 
   renderErrors(){
-    const errors = this.props.errors ? this.props.errors : []
+    const errors = this.props.errors ? this.props.errors : [];
     return(
       <ul>
         {errors.map((error, i) => (

@@ -5,8 +5,8 @@ import configureStore from './store/store';
 import { Root } from './components/root';
 
 //test imports
-// import * as APIUtil from './util/api_util';
 import * as APIUtil from './util/homes_util';
+import { fetchAllHomes, fetchSingleHome } from './actions/homes_actions';
 import * as SessionAction from './actions/session_actions';
 //test imports end
 
@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 
   //test starts
-  window.fetchAllHomes = APIUtil.fetchAllHomes;
-  window.fetchSingleHomes = APIUtil.fetchSingleHomes;
+  window.fetchAllHomes = fetchAllHomes;
+  // window.fetchAllHomes = APIUtil.fetchAllHomes;
+  // window.fetchSingleHomes = fetchSingleHome;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
