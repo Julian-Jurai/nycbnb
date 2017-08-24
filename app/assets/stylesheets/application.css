@@ -200,7 +200,8 @@ body {
 
   align-self: flex-end;
   cursor: pointer;
-  background: url('user_pic.png') no-repeat center;;
+  background-image: assest-url('user_pic.png');
+  background: no-repeat center;
   margin: 10px ;
   padding: 0px;
   width: 30px;

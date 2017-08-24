@@ -12,8 +12,6 @@ import * as SessionAction from './actions/session_actions';
 
 document.addEventListener("DOMContentLoaded", () =>{
 
-
-
   let store;
 
   if (window.currentUser) {
