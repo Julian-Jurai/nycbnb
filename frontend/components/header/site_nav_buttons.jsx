@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 const siteNavButtons = (props) => {
   return (
-    <div >
+    <div className="site-nav-buttons">
       <Link to="/homes"> Homes </Link>
       <br></br>
+
     </div>
   );
 };

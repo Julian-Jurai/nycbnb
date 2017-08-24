@@ -81,6 +81,7 @@ class SessionForm extends React.Component {
             <button className="x-button" onClick={this.handleX}>&#10005;</button>
             <form onSubmit={this.handleSubmit}>
               <h1>{pageName}</h1>
+              <span>&#9993;</span>
               <input
                 type="text"
                 onChange={this.update('username')}
@@ -88,7 +89,7 @@ class SessionForm extends React.Component {
                 />
 
 
-
+              <span>&#128274;</span>
               <input
                 type="password"
                 onChange={this.update('password')}

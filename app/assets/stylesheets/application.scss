@@ -67,8 +67,46 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: row;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.site-nav-buttons {
+  display: flex;
+}
+
+/*logo*/
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+// SearchFormButtons
+.search-form-button {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.search-form-button input {
+  border: none;
+  padding: 10px;
+  height: 20px;
+  width: 150px;
+}
+
+
+
+// .search-form-button input:first-of-type {
+//   border-left: none;
+// }
+//
+// .search-form-button input:last-of-type {
+//   border-right: none;
+// }
+
+
 
 /*session-form*/
 .session-form {
@@ -176,7 +214,25 @@ header {
   height: 40px;
   margin:0;
   padding: 0;
+
 }
+
+/*search-form-buttons*/
+// .anywhere-searchbutton input[type=text] {
+//     width: 130px;
+//     -webkit-transition: width 0.4s ease-in-out;
+//     transition: width 0.4s ease-in-out;
+// }
+//
+// /* When the input field gets focus, change its width to 100% */
+// .anywhere-searchbutton input[type=text]:focus {
+//     width: 120%;
+// }
+
+
+
+
+
 /*modal*/
 
 
@@ -201,17 +257,18 @@ header {
 /*UserDropDown*/
 .avatar {
   display: flex;
-
   align-self: flex-end;
   cursor: pointer;
   background-image: asset-url('user_pic.png');
   background: url('user_pic.png') no-repeat center;
   margin: 10px ;
   padding: 0px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 }
+
+
 
 
 
@@ -223,7 +280,7 @@ header {
   padding: 0 16px 0px 16px ;
   border-radius: 3px;
   position: absolute;
-  top: 40px;
+  top: 80px;
   right: 0;
   background-color: #FFFFFF;
   min-width: 160px;
@@ -324,6 +381,7 @@ header {
 		-webkit-transform: scaleY(1);
 	}
 }
+
 
 
 /*css custom*/

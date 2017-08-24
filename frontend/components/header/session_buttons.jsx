@@ -58,7 +58,12 @@ class SessionButtons extends React.Component{
     if (this.props.loggedIn){
       debugger
       return(
+
         <div className ="dropdown">
+          <span className="session-button">
+            <button >Become a Host</button>
+            <button >Help</button>
+          </span>
 
             <div className="avatar" onClick={this.handleDropDown}></div>
             <ul className={this.state.open ? "pullDown active " : "hidden"} >
@@ -70,11 +75,16 @@ class SessionButtons extends React.Component{
               <li onClick={this.handleLogout}>Log Out</li>
             </ul>
         </div>
-
       );
     } else {
       return(
-      <span className="session-button">
+      <div className="session-button">
+        <span >
+          <button>Become a Host</button>
+        </span>
+        <span >
+          <button>Help</button>
+        </span>
         <span >
           <button onClick={this.handleLogin}>Log In</button>
         </span>
@@ -84,7 +94,7 @@ class SessionButtons extends React.Component{
         <span >
           <button onClick={this.handleGuestLogin}>Guest Login</button>
         </span>
-      </span>
+      </div>
 
       );
     }

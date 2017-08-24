@@ -50,7 +50,7 @@
         family: true,
         kitchen: true
       },
-      reservations: {
+      bookings: {
         id: 1
         start_date: 2/1/2018
         start_date: 2/2/2018
@@ -63,31 +63,7 @@
         }
       }
     }
-  },
-  experiences: {
-    1: {
-      title: "sleep with wolves",
-      body: "This cabin was just featured in..",
-      duration: 2,
-      host_id: 1,
-      long: 21321,
-      lat: 213213,
-      address: "113 St Park "
-      image_url: "wolves.jpg",
-      price: 17
-    },
-  },
-  experienceDetail: {
-    title: "sleep with wolves",
-    body: "This cabin was just featured in..",
-    duration: 2,
-    host_id: 1,
-    long: 21321,
-    lat: 213213,
-    experience_type: "Nature"
-    address: "113 St Park "
-    image_url: "wolves.jpg",
-    price: 17
   }
+
 }
 ```

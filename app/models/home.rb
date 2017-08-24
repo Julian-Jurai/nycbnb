@@ -29,6 +29,16 @@ class Home < ApplicationRecord
    validates :host_id, :title, :description, :lat, :long, :address, :price, presence: true
    validates :family, :tv, :essentials, :room_type, :bedrooms, :guests, :beds, :kitchen, :internet, presence: true
 
+  # has_many :bookings,
+  # primary_key: :id,
+  # foreign_key: :homes_id,
+  # class: :Booking
+  #
+  # has_many :users,
+  # through: :bookings,
+  # source: :user
+
+
 
 
 end

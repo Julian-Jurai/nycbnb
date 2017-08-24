@@ -17,4 +17,5 @@ const HomesIndexItem =({home}) => {
   );
 };
 
+
 export default HomesIndexItem;
