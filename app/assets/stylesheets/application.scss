@@ -71,6 +71,9 @@ body {
 .top-nav {
   display: flex;
   justify-content: space-between;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
@@ -94,8 +97,8 @@ body {
   width: 620px;
   margin-left: 140px;
   margin-right: 138px;
-  padding-top: 15px;
-  margin-bottom: 30px;
+  padding-top: 60px;
+  margin-bottom: 80px;
 }
 .home-page-greeting-title{
   color: #FF5A5F;
@@ -115,6 +118,7 @@ body {
 
 .site-nav-buttons {
   padding-bottom: 18px;
+  margin-left: 130px;
 }
 
 .site-nav-buttons a {
@@ -258,8 +262,13 @@ body {
 }
 
 .session-button {
- display: flex;
- justify-content: flex-end;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.session-button img {
+  max-width: 25px;
 }
 
 /*X-button*/
@@ -320,7 +329,7 @@ body {
   cursor: pointer;
   // margin: 10px ;
   margin: 10px;
-  width: 25px;
+  max-width: 25px;
   height: 25px;
   border-radius: 50%;
 }

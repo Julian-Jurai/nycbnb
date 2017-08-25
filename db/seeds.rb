@@ -17,6 +17,8 @@ User.create(username: "123456", password: "123456")
 Home.destroy_all
 user_ids = User.all.map{ |user| user.id }
 
+# Home.create(image:)
+
 # Home.create(
 #   host_id: user_ids.sample,
 #   title: Faker::Ancient.hero,
@@ -37,7 +39,7 @@ user_ids = User.all.map{ |user| user.id }
 # )
 
 Home.create(
-  host_id: 12,
+  host_id: user_ids.sample,
   title: "title",
   description: "description",
   lat: 50,
@@ -52,10 +54,12 @@ Home.create(
   internet: true,
   family: true,
   tv: true,
-  essentials: true
+  essentials: true,
+  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/1.jpg"
 )
+
 Home.create(
-  host_id: 12,
+  host_id: user_ids.sample,
   title: "title",
   description: "description",
   lat: 50,
@@ -70,10 +74,12 @@ Home.create(
   internet: true,
   family: true,
   tv: true,
-  essentials: true
+  essentials: true,
+  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/33f0a1eb_original.jpg"
 )
+
 Home.create(
-  host_id: 12,
+  host_id: user_ids.sample,
   title: "title",
   description: "description",
   lat: 50,
@@ -88,5 +94,66 @@ Home.create(
   internet: true,
   family: true,
   tv: true,
-  essentials: true
+  essentials: true,
+  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/7b53f441_original.jpg"
+)
+
+Home.create(
+  host_id: user_ids.sample,
+  title: "title",
+  description: "description",
+  lat: 50,
+  long: 45,
+  address: "address",
+  price: 50,
+  room_type: "Entire home",
+  bedrooms: 4,
+  guests: 6,
+  beds: 5,
+  kitchen: true,
+  internet: true,
+  family: true,
+  tv: true,
+  essentials: true,
+  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/7b53f441_original.jpg"
+)
+
+Home.create(
+  host_id: user_ids.sample,
+  title: "title",
+  description: "description",
+  lat: 50,
+  long: 45,
+  address: "address",
+  price: 50,
+  room_type: "Entire home",
+  bedrooms: 4,
+  guests: 6,
+  beds: 5,
+  kitchen: true,
+  internet: true,
+  family: true,
+  tv: true,
+  essentials: true,
+  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/da4b9b6b_original.jpg"
+)
+
+Home.create(
+  host_id: user_ids.sample,
+  title: "title",
+  description: "description",
+  lat: 50,
+  long: 45,
+  address: "address",
+  price: 50,
+  room_type: "Entire home",
+  bedrooms: 4,
+  guests: 6,
+  beds: 5,
+  kitchen: true,
+  internet: true,
+  family: true,
+  tv: true,
+  essentials: true,
+  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/fd6d6382_original.jpg"
 )

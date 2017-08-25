@@ -29,6 +29,11 @@ class Home < ApplicationRecord
    validates :host_id, :title, :description, :lat, :long, :address, :price, presence: true
    validates :family, :tv, :essentials, :room_type, :bedrooms, :guests, :beds, :kitchen, :internet, presence: true
 
+
+  has_attached_file :image, default_url: "home_default.png"
+
+  validates_attachment_content_type :image, content_type: /\Aimage/
+
   # has_many :bookings,
   # primary_key: :id,
   # foreign_key: :homes_id,
