@@ -58,7 +58,7 @@ class SessionForm extends React.Component {
   render(){
 
     let className;
-    if (Boolean(this.props.session_ui) === false )  { className="hidden" } else {
+    if (Boolean(this.props.session_ui) === false )  { className="hidden"; } else {
       className = "session-form";
     }
 

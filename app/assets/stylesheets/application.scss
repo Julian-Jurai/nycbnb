@@ -77,6 +77,7 @@ body {
 
 /*logo*/
 .logo img {
+
   height: 50px;
   width: auto;
 }
@@ -90,20 +91,48 @@ body {
 }
 
 .site-nav-buttons {
+  padding-bottom: 18px;
+}
 
+.site-nav-buttons a {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  padding-bottom: 17px;
+}
+
+//
+// .anywhere-searchbutton {
+//   height: 20px;
+//   border: 1px solid rgba(0, 0, 0, 0.2);
+//   border-left: none;
+// }
+// .when-calender-button{
+//   height: 20px;
+//   border: 1px solid rgba(0, 0, 0, 0.2);
+//   border-left: none;
+//   border-right: none;
+// }
+// .guest-button{
+//   height: 20px;
+//   border: 1px solid rgba(0, 0, 0, 0.2);
+//   border-right: none;
+// }
+
+.selected-site-nav-button {
+  border-bottom: 3px solid #008489;
 }
 
 // SearchFormButtons
 .search-form-button {
   display: flex;
   flex-direction: row;
-  padding: 10px;
 }
 
 .search-form-button input {
   border: none;
   padding: 10px;
-  height: 20px;
+  height: 15px;
   width: 150px;
 }
 

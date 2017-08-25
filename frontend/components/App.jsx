@@ -17,6 +17,9 @@ import subNavButtons from './header/sub_nav_buttons';
 //test
 // import HomesIndex from './homes_index';
 
+
+
+
 const Header = () => (
   <header className="header-container">
     <header className="top-nav">
@@ -25,7 +28,7 @@ const Header = () => (
       <AuthRoute path="/" component={SessionFormContainer} />
     </header>
     <header className="bottom-nav">
-      <Route path="/" exact component={subNavButtons} />
+      <Route path="/"  component={subNavButtons} />
     </header>
   </header>
 );

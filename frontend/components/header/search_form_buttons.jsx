@@ -36,4 +36,4 @@ class SearchFormButtons extends React.Component{
 
 }//class ends
 
-export default SearchFormButtons
+export default SearchFormButtons;
