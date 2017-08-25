@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824211512) do
+ActiveRecord::Schema.define(version: 20170824234036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20170824211512) do
     t.integer "homes_id", null: false
     t.date "start_date", null: false
     t.date "end_date", null: false
-    t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170824211512) do
     t.string "title", null: false
     t.string "description", null: false
     t.float "lat", null: false
-    t.integer "long", null: false
+    t.float "long", null: false
     t.string "address", null: false
     t.integer "price", null: false
     t.string "room_type", null: false

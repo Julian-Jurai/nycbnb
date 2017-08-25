@@ -8,13 +8,12 @@ class SearchFormButtons extends React.Component{
 
   }
 
-
   render(){
     return(
 
       <div className="search-form-button">
-        <div className="logo" >
-          <img src={window.images.logo} />
+        <div  className="logo" >
+          <Link to="/"><img src={window.images.logo} /></Link>
         </div>
         <div className="anywhere-searchbutton">
           <input type="text" name="search" placeholder="Anywhere" />
@@ -29,7 +28,7 @@ class SearchFormButtons extends React.Component{
 
         </div>
       </div>
-  
+
 
 
     );

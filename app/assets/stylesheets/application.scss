@@ -66,20 +66,31 @@ body {
   color: rgb(72, 72, 72);
 }
 
-header {
+
+// header
+.top-nav {
   display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
 }
 
-.site-nav-buttons {
-  display: flex;
-}
+
 
 /*logo*/
 .logo img {
   height: 50px;
   width: auto;
+}
+
+// header {
+//   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+// }
+
+.header-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.site-nav-buttons {
+
 }
 
 // SearchFormButtons
@@ -178,20 +189,18 @@ header {
 
 /*session-buttons*/
 .session-button button:hover {
-  border-bottom: 2px solid rgb(72, 72, 72)
-;
-
+  border-bottom: 2px solid rgb(72, 72, 72);
 }
 
 .session-button button {
   font-family: 'Varela Round', sans-serif;
+  padding: 15px;
   /*display: flex;*/
   font-size: 14px;
   background:none;
   border:none;
   height: 40px;
-  margin-left:32px;
-  margin-right:32px;
+  // padding:30px;
   /*padding-left: 32px;
   padding-right: 32px;*/
 }
@@ -256,13 +265,11 @@ header {
 }
 /*UserDropDown*/
 .avatar {
-  display: flex;
-  align-self: flex-end;
   cursor: pointer;
   background-image: asset-url('user_pic.png');
   background: url('user_pic.png') no-repeat center;
-  margin: 10px ;
-  padding: 0px;
+  // margin: 10px ;
+  margin: 10px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -280,7 +287,7 @@ header {
   padding: 0 16px 0px 16px ;
   border-radius: 3px;
   position: absolute;
-  top: 80px;
+  top: 70px;
   right: 0;
   background-color: #FFFFFF;
   min-width: 160px;

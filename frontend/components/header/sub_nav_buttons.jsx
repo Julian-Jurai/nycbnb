@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const siteNavButtons = (props) => {
+const subNavButtons = (props) => {
   return (
     <div className="site-nav-buttons">
       <Link to="/homes"> Homes </Link>
@@ -13,4 +13,4 @@ const siteNavButtons = (props) => {
 };
 
 
-export default siteNavButtons;
+export default subNavButtons;
