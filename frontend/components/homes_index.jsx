@@ -16,7 +16,7 @@ class HomesIndex extends React.Component {
   }
 
   render() {
-
+    
     let allHomes;
     if (this.props.homes){
       allHomes = this.props.homes.map(

@@ -29,7 +29,7 @@ const Header = (props) => {
       </header>
       <Route path="/" exact component={Greeting} />
       <header className="bottom-nav">
-        <Route path="/"  component={subNavButtons} />
+        <Route path="/" component={subNavButtons} />
       </header>
     </header>
   );
@@ -50,7 +50,7 @@ export const App = () => {
   return (
     <div>
       <Route component={Header} />
-      <Route path="/homes" exact component ={HomesIndexContainer} />
+      <Route path="/homes"  exact component ={HomesIndexContainer} />
       <AuthRoute path="/" component={SessionFormContainer} />
     </div>
   );

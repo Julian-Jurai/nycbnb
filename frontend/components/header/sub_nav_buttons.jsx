@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 const subNavButtons = (props) => {
-  debugger
+  debugger;
+  let marginFix;
+  if (props.location.pathname === "/"){
+    marginFix = "with-greeting";
+  } else { marginFix = "";}
 
 
   return (
-    <div className="site-nav-buttons">
+    <div className={`site-nav-buttons ${marginFix}`}>
 
         <Link className="selected-site-nav-button" to="/homes"> Homes </Link>
         <Link className="selected-site-nav-button" to="/"> HomePage </Link>
@@ -20,4 +24,4 @@ const subNavButtons = (props) => {
 };
 
 
-export default subNavButtons;
+export default withRouter(subNavButtons);

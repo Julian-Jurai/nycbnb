@@ -63,6 +63,9 @@ class SessionButtons extends React.Component{
           <span className="session-button">
             <button >Become a Host</button>
             <button >Help</button>
+            <button>
+              <Link to="/trips">Trips</Link>
+            </button>
           </span>
 
           <img src={window.images.avatar} className="avatar session-button" onClick={this.handleDropDown}></img>
