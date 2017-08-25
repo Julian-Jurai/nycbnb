@@ -2,7 +2,7 @@
 @homes.each do |home|
 
   json.set! home.id do
-
+    json.image home.image.url
     json.extract! home,
       :id,
       :title,
@@ -13,7 +13,6 @@
       :address,
       :price,
       :room_type,
-      :beds,
-      :image
+      :beds
   end
 end
