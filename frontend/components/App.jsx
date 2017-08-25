@@ -20,34 +20,38 @@ import subNavButtons from './header/sub_nav_buttons';
 
 
 
-const Header = () => (
-  <header className="header-container">
-    <header className="top-nav">
-      <Route path="/" component={SearchFormButtons} />
-      <SessionButtonContainer />
-      <AuthRoute path="/" component={SessionFormContainer} />
+const Header = (props) => {
+  return (
+    <header className="header-container">
+      <header className="top-nav">
+        <Route path="/" component={SearchFormButtons} />
+        <SessionButtonContainer />
+      </header>
+      <Route path="/" exact component={Greeting} />
+      <header className="bottom-nav">
+        <Route path="/"  component={subNavButtons} />
+      </header>
     </header>
-    <div className="home-page-greeting">
-      <div className="home-page-greeting-title">NYCbnb</div>
-      <div className="home-page-greeting-body">
-        Book unique homes and experience a city like a local
-      </div>
-    </div>
-    <header className="bottom-nav">
-      <Route path="/"  component={subNavButtons} />
-    </header>
-  </header>
-);
+  );
+};
 
+const Greeting = () => (
+  <div className="home-page-greeting">
+    <div className="home-page-greeting-title">NYCbnb</div>
+    <div className="home-page-greeting-body">
+      Book unique homes and experience a city like a local
+    </div>
+  </div>
+);
 
 
 
 export const App = () => {
   return (
     <div>
-
-      <Header />
+      <Route component={Header} />
       <Route path="/homes" exact component ={HomesIndexContainer} />
+      <AuthRoute path="/" component={SessionFormContainer} />
     </div>
   );
 };

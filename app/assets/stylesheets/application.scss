@@ -76,6 +76,10 @@ body {
   text-overflow: ellipsis;
 }
 
+.top-nav button {
+  color: #767676;
+}
+
 
 
 /*logo*/
@@ -89,6 +93,11 @@ body {
 .header-container {
   box-shadow: 0px 4px 16px 3px rgba(0,0,0,0.2);
   margin-bottom: 50px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
   // border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -116,7 +125,7 @@ body {
 }
 
 .site-nav-buttons {
-  padding-bottom: 18px;
+  padding-bottom: 21px;
   margin-left: 130px;
 }
 
@@ -164,24 +173,36 @@ body {
 
 
 
-// .search-form-button input:first-of-type {
-//   border-left: none;
-// }
-//
-// .search-form-button input:last-of-type {
-//   border-right: none;
-// }
+
+
+
 
 // homeindex
 .home-index-image {
-  max-width: 440px;
-  min-width: 340px;
+  // max-width: 440px;
+  // min-width: 340px;
   max-height: 280px;
-  min-height: 230px;
-  padding-top: 10px;
-  padding-bottom: 15px;
-  padding-left: 10px;
-  padding-left: 10px;
+
+  // min-height: 230px;
+  padding-bottom: 5px;
+}
+
+.home-index {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+
+}
+
+.home-index-item {
+  margin: 15px;
+}
+
+.home-index-item div {
+  padding-top: 3px;
 }
 
 
@@ -272,7 +293,7 @@ body {
 }
 
 .session-button {
-
+  color: #767676;
   display: flex;
   justify-content: flex-end;
 }
@@ -297,17 +318,7 @@ body {
 
 }
 
-/*search-form-buttons*/
-// .anywhere-searchbutton input[type=text] {
-//     width: 130px;
-//     -webkit-transition: width 0.4s ease-in-out;
-//     transition: width 0.4s ease-in-out;
-// }
-//
-// /* When the input field gets focus, change its width to 100% */
-// .anywhere-searchbutton input[type=text]:focus {
-//     width: 120%;
-// }
+
 
 
 
@@ -352,7 +363,7 @@ body {
   padding: 0 16px 0px 16px ;
   border-radius: 3px;
   position: absolute;
-  top: 70px;
+  top: 35px;
   right: 0;
   background-color: #FFFFFF;
   min-width: 160px;
@@ -368,15 +379,15 @@ body {
   font-weight: normal;
   font-size: 14px;
   color: #767676;
+
 }
 
 
 
 .active li {
-    width: 262px;
+    width: 230px;
     height: 20px;
     color: #767676;
-    color: black;
     padding: 16px;
     text-decoration: none;
     background-color: #FFFFFF;

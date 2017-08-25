@@ -6,33 +6,29 @@ import HomesIndexItem from './homes_index_item';
 class HomesIndex extends React.Component {
   constructor(props){
     super(props);
-    debugger
+
   }
 
   componentDidMount(){
-    debugger
+
     this.props.fetchAllHomes();
 
   }
 
   render() {
-    debugger
+
     let allHomes;
     if (this.props.homes){
       allHomes = this.props.homes.map(
         home => (<HomesIndexItem home={home} />)
       );
-    debugger
-    } else ( allHomes = [<li></li>])
+
+  } else ( allHomes = [<li></li>]);
 
 
     return (
-      <div>
-        <h1>HomesIndex</h1>
-        <ul>
+      <div className="home-index">
           {allHomes}
-
-        </ul>
       </div>
 
     );
@@ -44,4 +40,4 @@ class HomesIndex extends React.Component {
 }//classEnds
 
 
-export default HomesIndex
+export default HomesIndex;

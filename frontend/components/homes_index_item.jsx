@@ -16,15 +16,15 @@ const HomesIndexItem =({home}) => {
 
 
   return (
-    <div>
+    <div className="home-index-item">
+      <img src={home.image} className="home-index-image"/>
       <div>
-        <img src={home.image} className="home-index-image"/>
-        <span>{home.title}</span>
         <span>From ${home.price} &middot;  </span>
+        <span>{home.title}</span>
         <span>{home.title}</span>
       </div>
       <div>
-        <span>{home.room_type}</span>
+        <span>{home.room_type} &middot; </span>
         <span>{home.beds} beds</span>
       </div>
       <div>
