@@ -52,7 +52,7 @@ class SessionButtons extends React.Component{
 
   render(){
 
-
+  // <div className="avatar session-button" onClick={this.handleDropDown}></div>
 // use img tag instead for session button
     //house sign in login log out
     if (this.props.loggedIn){
@@ -65,15 +65,15 @@ class SessionButtons extends React.Component{
             <button >Help</button>
           </span>
 
-            <div className="avatar session-button" onClick={this.handleDropDown}></div>
-            <ul className={this.state.open ? "pullDown active " : "hidden"} >
-              <li onClick={this.handleLogout}>Edit Profile</li>
-              <li onClick={this.handleLogout}>Travel Credit</li>
-              <li onClick={this.handleLogout}>Account Settings</li>
-              <li onClick={this.handleLogout}>My Guidbook</li>
-              <li onClick={this.handleLogout}>Log Out</li>
-              <li onClick={this.handleLogout}>Log Out</li>
-            </ul>
+          <img src={window.images.avatar} className="avatar session-button" onClick={this.handleDropDown}></img>
+          <ul className={this.state.open ? "pullDown active " : "hidden"} >
+            <li onClick={this.handleLogout}>Edit Profile</li>
+            <li onClick={this.handleLogout}>Travel Credit</li>
+            <li onClick={this.handleLogout}>Account Settings</li>
+            <li onClick={this.handleLogout}>My Guidbook</li>
+            <li onClick={this.handleLogout}>Log Out</li>
+            <li onClick={this.handleLogout}>Log Out</li>
+          </ul>
         </div>
       );
     } else {

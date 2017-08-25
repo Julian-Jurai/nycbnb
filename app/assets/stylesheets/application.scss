@@ -90,6 +90,29 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.home-page-greeting{
+  width: 620px;
+  margin-left: 140px;
+  margin-right: 138px;
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+.home-page-greeting-title{
+  color: #FF5A5F;
+  font-weight: bold;
+  font-size: 48px;
+  text-rendering: optimizeLegibility;
+}
+.home-page-greeting-body{
+  padding-top: 10px;
+  display: block;
+  color: #484848;
+  letter-spacing: -0.8px;
+  font-weight: 300;
+  font-size: 48px;
+  text-rendering: optimizeLegibility;
+}
+
 .site-nav-buttons {
   padding-bottom: 18px;
 }
@@ -295,18 +318,12 @@ body {
 /*UserDropDown*/
 .avatar {
   cursor: pointer;
-  background-image: asset-url('user_pic.png');
-  background: url('user_pic.png') no-repeat center;
   // margin: 10px ;
   margin: 10px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
 }
-
-
-
-
 
 .avatar:hover {
   border-bottom: 2px solid rgba(0, 0, 0, 0.7);

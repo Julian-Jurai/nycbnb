@@ -27,6 +27,12 @@ const Header = () => (
       <SessionButtonContainer />
       <AuthRoute path="/" component={SessionFormContainer} />
     </header>
+    <div className="home-page-greeting">
+      <div className="home-page-greeting-title">NYCbnb</div>
+      <div className="home-page-greeting-body">
+        Book unique homes and experience a city like a local
+      </div>
+    </div>
     <header className="bottom-nav">
       <Route path="/"  component={subNavButtons} />
     </header>
