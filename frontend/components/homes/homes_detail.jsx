@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Route, Redirect } from 'react-router';
 import { isEmpty } from 'lodash';
-import HomesIndexItem from './homes_index_item';
+
+
+import BookingFormContainer from './booking_form_container';
 
 
 
@@ -15,7 +17,7 @@ class HomesDetail extends React.Component {
 
   componentDidMount(){
     //loading screen dispatched > data is fetched loading stopped(state changes)
-    window.setTimeout(() => this.setState({dataFetched: true}), 2000);
+    window.setTimeout(() => this.setState({dataFetched: true}), 1000);
   }
 
 
@@ -27,7 +29,7 @@ class HomesDetail extends React.Component {
     } else {
       this.props.fetchSingleHome(homeId);
     }
-    debugger
+
   }
 
 
@@ -53,6 +55,10 @@ class HomesDetail extends React.Component {
           <div>latitude: {currentHome.lat}</div>
           <div>longitude: {currentHome.long}</div>
           <div>bedrooms: {currentHome.bedrooms}</div>
+
+          <BookingFormContainer
+            currentHome={currentHome}
+          />
         </div>
       );
     } else if (!this.state.dataFetched) {

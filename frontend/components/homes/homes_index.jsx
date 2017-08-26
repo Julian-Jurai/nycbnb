@@ -35,7 +35,7 @@ class HomesIndex extends React.Component {
   // }//render end
   componentDidMount(){
 
-    window.setTimeout(() => this.setState({dataFetched: true}), 1500);
+    window.setTimeout(() => this.setState({dataFetched: true}), 1000);
   }
 
 
