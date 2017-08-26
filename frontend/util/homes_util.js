@@ -15,6 +15,3 @@ export const fetchSingleHomes = (homeId) => {
     })
   );
 };
-
-
-// NOTE avialble 6,7,8

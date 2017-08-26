@@ -6,7 +6,8 @@ import { Root } from './components/root';
 
 //test imports
 // import * as APIUtil from './util/homes_util';
-import { fetchAllHomes, fetchSingleHome } from './actions/homes_actions';
+// import { fetchAllHomes, fetchSingleHome } from './actions/homes_actions';
+import * as APIUtil from './util/booking_util';
 // import * as SessionAction from './actions/session_actions';
 //test imports end
 
@@ -28,7 +29,13 @@ document.addEventListener("DOMContentLoaded", () =>{
   //test starts
   // window.fetchAllHomes = fetchAllHomes;
   // window.fetchAllHomes = APIUtil.fetchAllHomes;
-  window.fetchSingleHome = fetchSingleHome;
+  // window.fetchSingleHome = fetchSingleHome;
+
+  window.fetchAllBookingForUser = APIUtil.fetchAllBookingForUser;
+  window.fetchAllBookingForHome = APIUtil.fetchAllBookingForHome;
+  window.createBooking = APIUtil.createBooking;
+  window.destroyBooking = APIUtil.destroyBooking;
+
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;

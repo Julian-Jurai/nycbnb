@@ -41,6 +41,12 @@ class HomesDetail extends React.Component {
       debugger
       return(
         <div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           <div>title: {currentHome.address}</div>
           <div>description: {currentHome.description}</div>
           <div>address: {currentHome.address}</div>
@@ -56,7 +62,7 @@ class HomesDetail extends React.Component {
         </div>
       );
     }
-    debugger
+
   }
 
 }//classEnds

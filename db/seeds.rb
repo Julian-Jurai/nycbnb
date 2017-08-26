@@ -157,3 +157,52 @@ Home.create(
   essentials: true,
   image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/fd6d6382_original.jpg"
 )
+
+Booking.destroy_all
+
+homes_ids = Home.all.map{ |home| home.id }
+
+Booking.create(
+  {
+    user_id: user_ids.sample,
+    homes_id: homes_ids.sample,
+    start_date: '2017-06-01',
+    end_date: '2017-06-04'
+  }
+)
+
+Booking.create(
+  {
+  user_id: user_ids.sample,
+  homes_id: homes_ids.sample,
+  start_date: '2016-06-01',
+  end_date: '2015-06-04'
+  }
+)
+
+
+
+
+# Booking.create(
+#   user_id: 2,
+#   homes_id: 21,
+#   start_date: 21/03/2010,
+#   end_date: 05/04/2010
+#
+# )
+#
+# Booking.create(
+#   user_id: 11,
+#   homes_id: 12,
+#   start_date: 01/12/2010,
+#   end_date: 05/01/2010
+#
+# )
+#
+# Booking.create(
+#   user_id: 111,
+#   homes_id: 322,
+#   start_date: 01/03/2016,
+#   end_date: 05/04/2017
+#
+# )
