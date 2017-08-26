@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
-import { fetchAllHomes, fetchSingleHomes } from '../actions/homes_actions';
-import { selectAllHomes } from '../reducers/selectors';
+import { fetchAllHomes, fetchSingleHomes } from '../../actions/homes_actions';
+import { selectAllHomes } from '../../reducers/selectors';
 import HomesIndex from './homes_index';
 
 

@@ -7,6 +7,7 @@ class Api::HomesController < ApplicationController
   end
 
   def show
+
     @home = Home.find(params[:id])
     if @home
       render "api/homes/show"

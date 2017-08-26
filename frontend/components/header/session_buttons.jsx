@@ -13,6 +13,7 @@ class SessionButtons extends React.Component{
     this.state = { open: false };
   }
 
+
   handleSignUp(e){
 
     e.preventDefault();

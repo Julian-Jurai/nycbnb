@@ -1,5 +1,5 @@
 json.extract! @home,
-  :id
+  :id,
   :host_id,
   :title,
   :description,

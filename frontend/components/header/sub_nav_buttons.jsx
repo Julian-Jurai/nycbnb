@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 
 const subNavButtons = (props) => {
-  debugger;
+
   let marginFix;
   if (props.location.pathname === "/"){
     marginFix = "with-greeting";

@@ -11,11 +11,14 @@ import { AuthRoute } from '../util/route_util';
 
 import SessionFormContainer from './header/session_form_container';
 import SessionButtonContainer from './header/session_button_container';
-import HomesIndexContainer from './homes_index_container';
+import HomesIndexContainer from './homes/homes_index_container';
 import SearchFormButtons from './header/search_form_buttons';
 import subNavButtons from './header/sub_nav_buttons';
+import HomesDetailContainer from './homes/homes_detail_container';
+
 //test
-// import HomesIndex from './homes_index';
+// import HomesDetail from './homes/homes_detail';
+// test ends
 
 
 
@@ -46,12 +49,15 @@ const Greeting = () => (
 
 
 
+
 export const App = () => {
+
   return (
     <div>
       <Route component={Header} />
       <Route path="/homes"  exact component ={HomesIndexContainer} />
       <AuthRoute path="/" component={SessionFormContainer} />
+      <Route path="/homes/:homeId" component={HomesDetailContainer} />
     </div>
   );
 };

@@ -6,6 +6,7 @@ export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 
 export const receiveSingleHome = (home) => {
+  
   // { id,....}
   return{
     type: RECEIVE_SINGLE_HOME,
@@ -14,7 +15,7 @@ export const receiveSingleHome = (home) => {
 };
 
 export const receiveAllHomes = (homes) => {
-  
+
   return{
     type: RECEIVE_ALL_HOMES,
     homes,
@@ -44,11 +45,12 @@ export const fetchAllHomes = () => (dispatch) => {
   );
 };
 
-export const fetchSingleHome = (home) => (dispatch) => {
+export const fetchSingleHome = (homeId) => (dispatch) => {
+
   return (
 
-    APIUtil.fetchSingleHomes(home).then(
-      home => dispatch(receiveSingleHomes(home)),
+    APIUtil.fetchSingleHomes(homeId).then(
+      home => dispatch(receiveSingleHome(home)),
       err => dispatch(receiveErrors(err.responseJSON))
     )
 
