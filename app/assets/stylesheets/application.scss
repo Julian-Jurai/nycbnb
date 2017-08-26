@@ -332,7 +332,13 @@ a {
 
 }
 
+// HomesDetail
 
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
 
 
 
@@ -347,7 +353,6 @@ a {
   bottom: 0;
   right: 0;
   left: 0;
-
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -384,6 +389,16 @@ a {
   min-width: 160px;
   box-shadow: 3px 8px 16px 3px rgba(0,0,0,0.6);
   z-index: 1;
+}
+
+.session-button-background{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+
 }
 
 .dropdown {

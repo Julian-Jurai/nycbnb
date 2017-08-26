@@ -9,7 +9,7 @@ const HomesReducer = (state = {}, action) => {
     case RECEIVE_ALL_HOMES:
       return action.homes;
     case RECEIVE_SINGLE_HOME:
-    debugger
+
       return merge({}, state, {[action.home.id]: action.home});
     case RECEIVE_ERRORS:
       const errors = action.errors;

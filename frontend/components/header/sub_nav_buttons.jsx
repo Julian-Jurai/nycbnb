@@ -17,7 +17,6 @@ const subNavButtons = (props) => {
         <Link className="selected-site-nav-button" to="/"> HomePage </Link>
 
 
-      <br></br>
 
     </div>
   );

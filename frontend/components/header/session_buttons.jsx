@@ -70,7 +70,8 @@ class SessionButtons extends React.Component{
           </span>
 
           <img src={window.images.avatar} className="avatar session-button" onClick={this.handleDropDown}></img>
-          <ul className={this.state.open ? "pullDown active " : "hidden"} >
+        <div className={this.state.open ? "session-button-background" : "hidden"} onClick={this.handleDropDown}>
+          <ul className={this.state.open ? "pullDown active " : "hidden"} onClick={ (e) => e.stopPropagation() } >
             <li onClick={this.handleLogout}>Edit Profile</li>
             <li onClick={this.handleLogout}>Travel Credit</li>
             <li onClick={this.handleLogout}>Account Settings</li>
@@ -78,6 +79,7 @@ class SessionButtons extends React.Component{
             <li onClick={this.handleLogout}>Log Out</li>
             <li onClick={this.handleLogout}>Log Out</li>
           </ul>
+        </div>
         </div>
       );
     } else {
