@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router';
 import { isEmpty } from 'lodash';
 
 
-import BookingFormContainer from './booking_form_container';
+import BookingFormContainer from './../booking/booking_form_container';
 
 
 

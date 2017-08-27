@@ -4,7 +4,6 @@ import { withRouter, Link } from 'react-router-dom';
 
 class BookingForm extends React.Component {
   constructor(props){
-    debugger
     super(props);
     this.state = {
       start_date: "",
@@ -30,7 +29,6 @@ class BookingForm extends React.Component {
   }
 
   handleSubmit(e){
-    debugger
     e.preventDefault();
     this.props.setBookingUI(this.state);
     this.props.history.push("/booking");

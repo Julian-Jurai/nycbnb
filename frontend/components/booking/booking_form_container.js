@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { createBooking } from '../../util/booking_util';
-import BookingPage from './booking_page';
+import BookingForm from './booking_form';
 import { setBookingUI } from '../../actions/booking_actions';
 
 
@@ -17,7 +16,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     currentHome: ownProps.currentHome,
-    setBookingUI: (bookingFormState) => dispatch(setBookingUI(bookingFormState)),
+    setBookingUI: (bookingFormState) => dispatch(setBookingUI(bookingFormState))
   };
 };
 

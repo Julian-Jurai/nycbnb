@@ -15,6 +15,7 @@ import HomesIndexContainer from './homes/homes_index_container';
 import SearchFormButtons from './header/search_form_buttons';
 import subNavButtons from './header/sub_nav_buttons';
 import HomesDetailContainer from './homes/homes_detail_container';
+import BookingPageContainer from './booking/booking_page_container';
 
 //test
 // import HomesDetail from './homes/homes_detail';
@@ -58,6 +59,7 @@ export const App = () => {
       <Route path="/homes"  exact component ={HomesIndexContainer} />
       <AuthRoute path="/" component={SessionFormContainer} />
       <Route path="/homes/:homeId" component={HomesDetailContainer} />
+      <Route path="/booking" component={BookingPageContainer} />
     </div>
   );
 };
