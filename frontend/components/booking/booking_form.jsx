@@ -18,13 +18,11 @@ class BookingForm extends React.Component {
 
   handleCheckIn(e){
     e.preventDefault();
-    console.log(e.currentTarget.value);
     this.setState({start_date: e.currentTarget.value});
   }
 
   handleCheckOut(e){
     e.preventDefault();
-    console.log(e.currentTarget.value);
     this.setState({end_date: e.currentTarget.value});
   }
 
@@ -38,30 +36,33 @@ class BookingForm extends React.Component {
   render(){
 
     return(
-      <div className="booking-form">
 
-        <div>
-          <span>From</span>
-          <span className="booking-form-price">{this.props.price}</span>
-          <span>per night</span>
+    <div className="booking-form">
+
+        <div className="booking-form-heading">
+          <span>From </span>
+          <span id="booking-form-price">  ${this.props.currentHome.price}</span>
+          <span> per night</span>
         </div>
 
+      <div className="booking-form-body">
         <form>
+          <div className="booking-form-date">
+            <div>
+              <div >Check In</div>
 
-          <div>
-            <div>Check In</div>
-            <input type="date" onChange={this.handleCheckIn}/>
+              <input type="date"  id="booking-date" placeholder="Check In" onChange={this.handleCheckIn}/>
+            </div>
+
+            <div>
+              <div>Check In</div>
+              <input type="date" id="booking-date" placeholder="Check Out" onChange={this.handleCheckOut}/>
+            </div>
           </div>
-
-          <div>
-            <div>Check In</div>
-            <input type="date" onChange={this.handleCheckOut}/>
-          </div>
-
-          <div>
-            <div>Guests</div>
-              <select>
-                <option value="guest">1 Guest</option>
+          <div className="booking-form-guests">
+            <div id="booking-form-guests" >Guests</div>
+              <select >
+                <option selected value="guest">1 Guest</option>
                 <option value="guest">2 Guests</option>
                 <option value="guest">3 Guests</option>
                 <option value="guest">4 Guests</option>
@@ -78,12 +79,13 @@ class BookingForm extends React.Component {
               </select>
           </div>
 
-
+        
           <button onClick={this.handleSubmit}> Request a Book</button>
-          <p> 100% refundable. You won't be charged yet</p>
-
         </form>
+
+        <p> 100% refundable. You won't be charged yet</p>
       </div>
+    </div>
     );
   }//renderends
 

@@ -58,6 +58,7 @@
  	border-spacing: 0;
  }
 
+
 /*css reset*/
 /*Main*/
 body {
@@ -68,6 +69,67 @@ body {
 
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline:none;
+}
+
+select:focus {
+  outline:none;
+}
+
+// calender
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+#date {
+  width: 15px;
+}
+
+// select
+
+select {
+
+  // border: 1px solid #111;
+  background: transparent;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 11px;
+  border: none;
+  border-radius: 2px;
+  height: 34px;
+  color: #76767A;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand {
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    }
 }
 
 
@@ -92,8 +154,20 @@ a {
 
 /*logo*/
 .logo img {
-  height: 50px;
+  height: 60px;
   width: auto;
+}
+
+.logo {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  justify-content: center;
+  margin: auto;
+  height: 50px;
+  width: 50px;
 }
 
 
@@ -175,14 +249,211 @@ a {
 // SearchFormButtons
 .search-form-button {
   display: flex;
+  align-items: center;
   flex-direction: row;
 }
 
 .search-form-button input {
+
   border: none;
   padding: 10px;
   height: 15px;
   width: 150px;
+}
+
+.search-form-button-container {
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #66666;
+  border-radius: 4px;
+}
+
+
+// homedetail
+.home-detail {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.home-detail-container img {
+  height: 600px;
+  width: 100%;
+  margin: 0;
+  // background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-sizing: border-box;
+}
+
+#home-detail-heading {
+  border-bottom: 1px solid rgb(166, 166, 166) ;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.home-detail-title {
+  font-size: 36px ;
+  font-weight: 700 ;
+  letter-spacing: -0.6px ;
+  line-height: 44px ;
+  padding-bottom: 4px ;
+  padding-top: 6px ;
+  word-wrap: break-word;
+}
+
+.home-detail-address{
+  color: inherit;
+  text-decoration: none;
+  line-height: 22px;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+
+// BookingForm
+
+
+.booking-form {
+  position: sticky;
+  right: 0;
+  top: 65px;
+  // right: 100px;
+  // z-index: 3;
+  // display: flex;
+  // justify-content: flex-end;
+  // // align-items: center;
+  // flex-direction: column;
+  border: 1px solid rgb(166, 166, 166);
+  width: 340px;
+  height: 480px;
+}
+
+.booking-form-heading {
+  background-color: rgba(60,63,64,0.9);
+  border: 0;
+  color: #fff;
+  height: 50px;
+  padding: 13px 20px 10px ;
+  z-index: 1;
+  overflow-y: visible;
+  box-sizing: border-box;
+  width: 340px;
+}
+
+.booking-form-heading span {
+  border: none;
+  z-index: auto;
+  display: inline;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#booking-form-price {
+  z-index: auto;
+  display: inline;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.booking-form-body {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 340px;
+  box-sizing: border-box;
+  //text
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+}
+.booking-form-body form {
+  width: 315px;
+
+}
+
+
+.booking-form select {
+  border: 1px solid rgb(166, 166, 166);
+}
+
+
+.booking-form-date {
+  display: flex;
+  flex-direction: row;
+
+}
+
+#booking-date {
+  border: none;
+  border: 1px solid rgb(166, 166, 166);
+  border-collapse: collapse;
+  border-color: #dbdbdb;
+  font-size: 16px;
+  padding: 12px;
+  width: 130px;
+}
+
+.booking-form-guests{
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.booking-form-guests select {
+  height: 42px;
+  width: 100%;
+  padding-bottom: 10px;
+  border-color: #dbdbdb;
+  font-size: 16px;
+  padding: 12px;
+  background: #fff;
+  text-align: left;
+  line-height: normal;
+  display: block;
+  border: 1px solid #aaa;
+  color: #484848;
+}
+
+#booking-form-guests {
+  padding-bottom: 10px;
+}
+
+
+.booking-form button {
+  display: block;
+  white-space: normal;
+  width: 100%;
+  border-color: #ff5a5f;
+  background-color: #ff5a5f;
+  color: #fff;
+  padding: 13px 27px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  line-height: 1.43;
+}
+
+.booking-form p {
+  padding: 20px 0 20px 0;
+  word-wrap: break-word !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  letter-spacing: 0.4px
 }
 
 
@@ -226,6 +497,7 @@ a {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  z-index: 3;
   padding: 32px;
   width: 510px;
   height: 570px;
@@ -245,7 +517,7 @@ a {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  /*height: auto;*/
+  margin-bottom: 40px;
 }
 
 .session-form form h1 {
@@ -271,14 +543,28 @@ a {
 }
 
 .session-form-submit {
-  display: flex;
-  justify-content: center;
-  height: 50px;
-  /*border-color: rgb(255, 90, 95);*/
-  background-color: rgb(255, 90, 95);
+  // display: flex;
+  // justify-content: center;
+  // height: 50px;
+  //
+  // background-color: rgb(255, 90, 95);
+  // border-radius: 4px;
+  // color: white;
+  // font-weight: 350;
+  display: block;
+  white-space: normal;
+  width: 100%;
+  border-color: #ff5a5f;
+  background-color: #ff5a5f;
+  color: #fff;
+  padding: 9px 27px;
+  font-size: 16px;
   border-radius: 4px;
-  color: white;
-  font-weight: 350;
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  line-height: 1.43;
 }
 
 .hidden {
@@ -295,7 +581,8 @@ a {
 
 .session-button button {
   font-family: 'Varela Round', sans-serif;
-  padding: 15px;
+  padding: 23px 15px 30px 15px;
+
   /*display: flex;*/
   font-size: 14px;
   background:none;
@@ -307,6 +594,7 @@ a {
 }
 
 .session-button {
+
   color: #767676;
   display: flex;
   justify-content: flex-end;
@@ -368,7 +656,8 @@ a {
 .avatar {
   cursor: pointer;
   // margin: 10px ;
-  margin: 10px;
+  margin-top: 18px;
+
   max-width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -380,13 +669,13 @@ a {
 
 .active {
 
-  padding: 0 16px 0px 16px ;
+  padding: 0 14px 0px 14px ;
   border-radius: 3px;
   position: absolute;
   top: 35px;
   right: 0;
   background-color: #FFFFFF;
-  min-width: 160px;
+  width: 240px;
   box-shadow: 3px 8px 16px 3px rgba(0,0,0,0.6);
   z-index: 1;
 }

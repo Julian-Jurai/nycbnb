@@ -57,9 +57,12 @@ export const App = () => {
     <div>
       <Route component={Header} />
       <Route path="/homes"  exact component ={HomesIndexContainer} />
-      <AuthRoute path="/" component={SessionFormContainer} />
+      <Route path="/" component={SessionFormContainer} />
       <Route path="/homes/:homeId" component={HomesDetailContainer} />
-      <Route path="/booking" component={BookingPageContainer} />
+      <AuthRoute path="/booking" component={BookingPageContainer} />
+      <AuthRoute path="/:userId/trips" component={BookingPageContainer} />
+
+
     </div>
   );
 };

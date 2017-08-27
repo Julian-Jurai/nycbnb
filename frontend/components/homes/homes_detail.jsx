@@ -4,6 +4,8 @@ import { Route, Redirect } from 'react-router';
 import { isEmpty } from 'lodash';
 
 
+
+
 import BookingFormContainer from './../booking/booking_form_container';
 
 
@@ -40,25 +42,49 @@ class HomesDetail extends React.Component {
     const currentHome = this.props.homes[homeId];
 
     if (this.state.dataFetched){
-      debugger
-      return(
-        <div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <div>title: {currentHome.address}</div>
-          <div>description: {currentHome.description}</div>
-          <div>address: {currentHome.address}</div>
-          <div>latitude: {currentHome.lat}</div>
-          <div>longitude: {currentHome.long}</div>
-          <div>bedrooms: {currentHome.bedrooms}</div>
 
-          <BookingFormContainer
-            currentHome={currentHome}
-          />
+      return(
+        <div className="home-detail-container">
+
+            <img src={currentHome.image} />
+
+
+          <div className="home-detail">
+
+            <div>
+              <div id="home-detail-heading">
+                <div className="home-detail-title">{currentHome.title}</div>
+                <div className="home-detail-address">{currentHome.address}</div>
+              </div>
+
+              <div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.description}</div>
+                <div>{currentHome.lat}</div>
+                <div>{currentHome.long}</div>
+                <div>{currentHome.bedrooms}</div>
+              </div>
+          </div>
+            <BookingFormContainer currentHome={currentHome} />
+          </div>
+
         </div>
       );
     } else if (!this.state.dataFetched) {
