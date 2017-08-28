@@ -9,30 +9,7 @@ class HomesIndex extends React.Component {
     this.state = {dataFetched: false}
   }
 
-  // componentDidMount(){
-  //
-  //   this.props.fetchAllHomes();
-  //
-  // }
-  //
-  // render() {
-  //
-  //   let allHomes;
-  //   if (this.props.homes){
-  //     allHomes = this.props.homes.map(
-  //       home => (<HomesIndexItem home={home} />)
-  //     );
-  //   } else {
-  //     allHomes = [<li></li>];
-  //   }
-  //   return (
-  //     <div className="home-index">
-  //         {allHomes}
-  //     </div>
-  //
-  //   );
-  //
-  // }//render end
+
   componentDidMount(){
 
     window.setTimeout(() => this.setState({dataFetched: true}), 1000);

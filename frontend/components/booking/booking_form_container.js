@@ -8,7 +8,8 @@ import { setBookingUI } from '../../actions/booking_actions';
 
 const mapStateToProps = (state) => {
   return {
-    errors: state.errors,
+    loggedIn: Boolean(state.session.currentUser),
+    errors: state.session.errors,
     currentUser :state.session.currentUser
   };
 };

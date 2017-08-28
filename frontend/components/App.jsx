@@ -7,7 +7,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import SessionFormContainer from './header/session_form_container';
 import SessionButtonContainer from './header/session_button_container';
@@ -16,9 +16,10 @@ import SearchFormButtons from './header/search_form_buttons';
 import subNavButtons from './header/sub_nav_buttons';
 import HomesDetailContainer from './homes/homes_detail_container';
 import BookingPageContainer from './booking/booking_page_container';
+import TripsContainer from './users/trips_container';
 
 //test
-// import HomesDetail from './homes/homes_detail';
+import Trips from './users/trips';
 // test ends
 
 
@@ -55,12 +56,13 @@ export const App = () => {
 
   return (
     <div>
+
       <Route component={Header} />
-      <Route path="/homes"  exact component ={HomesIndexContainer} />
+      <Route path="/homes" exact component ={HomesIndexContainer} />
       <Route path="/" component={SessionFormContainer} />
       <Route path="/homes/:homeId" component={HomesDetailContainer} />
-      <Route path="/booking" component={BookingPageContainer} />
-      <Route path="/:userId/trips" component={BookingPageContainer} />
+      <ProtectedRoute path="/booking" component={BookingPageContainer} />
+      <Route path="/:userId/trips" component={TripsContainer} />
     </div>
   );
 };

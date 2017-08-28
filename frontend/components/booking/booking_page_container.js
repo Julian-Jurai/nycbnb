@@ -11,6 +11,7 @@ import BookingPage from './booking_page';
 const mapStateToProps = (state) => {
   return {
     errors: state.errors,
+    loggedIn: Boolean(state.session.currentUser),
     currentUser :state.session.currentUser,
     booking_ui: state.booking_ui
   };

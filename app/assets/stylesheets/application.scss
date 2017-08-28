@@ -195,7 +195,7 @@ select::-ms-expand {
 .header-container {
   box-shadow: 0px 4px 16px 3px rgba(0,0,0,0.1);
   margin-bottom: 50px;
-
+  z-index: 5;
   position: fixed;
   top: 0;
   width: 100%;
@@ -359,9 +359,9 @@ select::-ms-expand {
 .booking-form {
   position: sticky;
   // right: 0;
-  top: 65px;
+  top: 117px;
   // right: 100px;
-  z-index: 3;
+
   // display: flex;
   // justify-content: flex-end;
   // // align-items: center;
@@ -369,6 +369,10 @@ select::-ms-expand {
   border: 1px solid rgb(166, 166, 166);
   width: 340px;
   height: 480px;
+}
+
+#error {
+  color: red;
 }
 
 .booking-form-heading {
@@ -554,7 +558,7 @@ select::-ms-expand {
   border-radius: 3px;
   line-height: 20.02px;
   font-weight: 300;
-  height: auto;
+  max-height: 600px;
   width: 250px;
 }
 
@@ -626,9 +630,9 @@ select::-ms-expand {
   flex-direction: column;
 }
 
-.booking-page-details  h3 {'
-  padding-bottom: 20px;
-  padding-top: 20px;
+.booking-page-details  h3 {
+  padding-bottom: 15px;
+  padding-top: 15px;
   font-size: 24px;
   font-weight: normal;
   line-height: 1.1;
@@ -654,7 +658,7 @@ select::-ms-expand {
 }
 
 .booking-page-book-button {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .booking-textarea {
@@ -662,17 +666,13 @@ select::-ms-expand {
   padding-bottom: 20px;
 }
 
-.booking-textarea p {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.booking-textarea  textarea{
+  font-size: 14px;
+  padding: 10px;
 }
-.
-
-
-
-
-
-
+.booking-textarea p {
+  padding-bottom: 10px;
+}
 
 // homeindex
 .home-index-image {
@@ -852,6 +852,7 @@ select::-ms-expand {
 
 
 .session-form-background {
+  z-index: 10;
   position: fixed;
   top: 0;
   bottom: 0;

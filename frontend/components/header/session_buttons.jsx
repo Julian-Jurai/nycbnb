@@ -76,7 +76,7 @@ class SessionButtons extends React.Component{
             <li onClick={this.handleLogout}>Travel Credit</li>
             <li onClick={this.handleLogout}>Account Settings</li>
             <li onClick={this.handleLogout}>My Guidbook</li>
-            <li onClick={this.handleLogout}>Log Out</li>
+            <li onClick={this.handleLogout}>Help</li>
             <li onClick={this.handleLogout}>Log Out</li>
           </ul>
         </div>

@@ -22,9 +22,8 @@ class BookingPage extends React.Component {
 
 
   handleSubmit(e){
-
     e.preventDefault();
-    createBooking(this.state.booking);
+    this.props.createBooking(this.state.booking);
     this.props.history.push(`/${this.props.currentUser.id}/trips`);
   }
 
@@ -68,7 +67,7 @@ class BookingPage extends React.Component {
           <p>Say hello to your host and tell them why you're coming:</p>
           <textarea
             rows="10"
-            cols="60"
+            cols="50"
             placeholder="Visting family or
             friends? Seeing the sights?
             This helps your host plan for

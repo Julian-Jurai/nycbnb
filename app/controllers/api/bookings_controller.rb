@@ -27,6 +27,13 @@ class Api::BookingsController < ApplicationController
     end
   end
 
+  def show
+      @bookings = Booking.where(
+        user_id: params[:user_id],
+        homes_id: params[:home_id]
+      )
+  end
+
   def destroy
 
     @booking = Booking.find(params[:id])

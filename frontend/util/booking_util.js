@@ -1,4 +1,4 @@
-export const fetchAllBookingForHome = (homeId) => {
+export const fetchAllBookingsForHome = (homeId) => {
   return (
     $.ajax({
       method: "GET",
@@ -7,7 +7,7 @@ export const fetchAllBookingForHome = (homeId) => {
   );
 };
 
-export const fetchAllBookingForUser = (userId) => {
+export const fetchAllBookingsForUser = (userId) => {
   return (
     $.ajax({
       method: "GET",
