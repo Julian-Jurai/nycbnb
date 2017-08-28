@@ -59,10 +59,8 @@ export const App = () => {
       <Route path="/homes"  exact component ={HomesIndexContainer} />
       <Route path="/" component={SessionFormContainer} />
       <Route path="/homes/:homeId" component={HomesDetailContainer} />
-      <AuthRoute path="/booking" component={BookingPageContainer} />
-      <AuthRoute path="/:userId/trips" component={BookingPageContainer} />
-
-
+      <Route path="/booking" component={BookingPageContainer} />
+      <Route path="/:userId/trips" component={BookingPageContainer} />
     </div>
   );
 };

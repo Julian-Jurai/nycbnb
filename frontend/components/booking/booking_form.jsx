@@ -49,20 +49,20 @@ class BookingForm extends React.Component {
         <form>
           <div className="booking-form-date">
             <div>
-              <div >Check In</div>
+              <div id="checkinout">Check In</div>
 
               <input type="date"  id="booking-date" placeholder="Check In" onChange={this.handleCheckIn}/>
             </div>
 
             <div>
-              <div>Check In</div>
+              <div id="checkinout">Check In</div>
               <input type="date" id="booking-date" placeholder="Check Out" onChange={this.handleCheckOut}/>
             </div>
           </div>
           <div className="booking-form-guests">
             <div id="booking-form-guests" >Guests</div>
               <select >
-                <option selected value="guest">1 Guest</option>
+                <option selected="selected" value="guest">1 Guest</option>
                 <option value="guest">2 Guests</option>
                 <option value="guest">3 Guests</option>
                 <option value="guest">4 Guests</option>
@@ -79,8 +79,8 @@ class BookingForm extends React.Component {
               </select>
           </div>
 
-        
-          <button onClick={this.handleSubmit}> Request a Book</button>
+
+          <button onClick={this.handleSubmit}> Request to Book</button>
         </form>
 
         <p> 100% refundable. You won't be charged yet</p>

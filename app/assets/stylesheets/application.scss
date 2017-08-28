@@ -272,11 +272,14 @@ select::-ms-expand {
 
 // homedetail
 .home-detail {
+  // max-width: 700px;
+  // margin-left: 100px;
+  // margin-right: 100px;
+  margin-top: 0px;
   margin-left: 100px;
   margin-right: 100px;
-  margin-top: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
 }
 
@@ -288,6 +291,19 @@ select::-ms-expand {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   box-sizing: border-box;
+}
+
+.home-detail-items {
+  padding-right: 20px;
+  // padding-right: 100px;
+}
+
+.home-detail-container{
+  // // margin-top: 100px;
+
+  // margin-right: 100px;
+  // display: flex;
+  // flex-direction: row;
 }
 
 #home-detail-heading {
@@ -321,10 +337,10 @@ select::-ms-expand {
 
 .booking-form {
   position: sticky;
-  right: 0;
+  // right: 0;
   top: 65px;
   // right: 100px;
-  // z-index: 3;
+  z-index: 3;
   // display: flex;
   // justify-content: flex-end;
   // // align-items: center;
@@ -344,6 +360,13 @@ select::-ms-expand {
   overflow-y: visible;
   box-sizing: border-box;
   width: 340px;
+}
+
+.booking-form-guests{
+  display: flex;
+  margin: 5px;
+
+  flex-direction: column;
 }
 
 .booking-form-heading span {
@@ -396,6 +419,12 @@ select::-ms-expand {
 
 }
 
+#checkinout{
+  padding-bottom: 10px;
+}
+
+
+
 #booking-date {
   border: none;
   border: 1px solid rgb(166, 166, 166);
@@ -406,6 +435,8 @@ select::-ms-expand {
   width: 130px;
 }
 
+
+
 .booking-form-guests{
   margin-top: 18px;
   margin-bottom: 18px;
@@ -413,7 +444,7 @@ select::-ms-expand {
 
 .booking-form-guests select {
   height: 42px;
-  width: 100%;
+  width: 300px;
   padding-bottom: 10px;
   border-color: #dbdbdb;
   font-size: 16px;
@@ -427,6 +458,7 @@ select::-ms-expand {
 }
 
 #booking-form-guests {
+
   padding-bottom: 10px;
 }
 
@@ -454,6 +486,11 @@ select::-ms-expand {
   font-size: 12px !important;
   line-height: 16px !important;
   letter-spacing: 0.4px
+}
+
+// booking-page
+.booking-page-book-button{
+  
 }
 
 

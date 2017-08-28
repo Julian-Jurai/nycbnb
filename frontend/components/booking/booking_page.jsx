@@ -60,6 +60,32 @@ class BookingPage extends React.Component {
         <br></br>
         <div>About Your Trip</div>
 
+        <div className="booking-form-guests">
+          <div id="whos-coming">Who's coming</div>
+          <div id="booking-form-guests" ></div>
+            <select >
+              <option selected="selected" value="guest">1 Guest</option>
+              <option value="guest">2 Guests</option>
+              <option value="guest">3 Guests</option>
+              <option value="guest">4 Guests</option>
+              <option value="guest">5 Guests</option>
+              <option value="guest">6 Guests</option>
+              <option value="guest">7 Guests</option>
+              <option value="guest">8 Guests</option>
+              <option value="guest">9 Guests</option>
+              <option value="guest">10 Guests</option>
+              <option value="guest">11 Guests</option>
+              <option value="guest">12 Guests</option>
+              <option value="guest">13 Guests</option>
+              <option value="guest">14 Guests</option>
+            </select>
+        </div>
+
+        <div>
+          <input id="checkBox" type="checkbox"></input>
+          <div>Bringing a pet?</div>
+        </div>
+
         <div>Say hello to your host and tell them why you're coming:</div>
         <textarea
           rows="4"
@@ -68,7 +94,7 @@ class BookingPage extends React.Component {
           friends? Seeing the sights?
           This helps your host plan for
           your trip"
-          />
+        />
 
         <div>Review house rules</div>
         <ul>
@@ -92,11 +118,11 @@ class BookingPage extends React.Component {
           </li>
         </ul>
 
-        <button onClick={this.handleSubmit}>Book</button>
+        <button className="booking-form" onClick={this.handleSubmit}>Book</button>
       </div>
     );
 
-  
+
 
   }//renderends
 
