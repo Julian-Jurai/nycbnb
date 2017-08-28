@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { uniqBy } from 'lodash';
 
-import TripItem from './trips_item';
+import {TripItem} from './trips_item';
 
 
 
@@ -26,7 +26,7 @@ class Trips extends React.Component {
     let tripItems = (
       Object.values(this.props.trips).map(home => {
         debugger
-        return <TripItem home={home} />;
+        return <TripItem key={home.id} home={home} />;
       })
     );
 
@@ -35,18 +35,31 @@ class Trips extends React.Component {
 
       return (
         <div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          <div>Past Trips</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
           <div>
             {tripItems}
           </div>
-          <br></br>
-          <br></br>
-          <br></br>
           <div>User's trips</div>
         </div>
       );

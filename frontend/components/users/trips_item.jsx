@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 
 
 export const TripItem = (props) => {
-  debugger
+
   return (
     <div className="trip-item">
       <img src={props.home.image}/>
+      <h3>{props.home.address}</h3>
       <p>{props.home.guests}</p>
       <h5>{props.home.room_type}</h5>
       <h5>Read Your Review</h5>

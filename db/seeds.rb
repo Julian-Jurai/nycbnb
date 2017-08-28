@@ -1,25 +1,25 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# The data can then be loaded with the rails db:seed command (or create!d alongside the database with db:setup).
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create!(name: 'Luke', movie: movies.first)
 
 
 User.destroy_all
-User.create(username: "guest", password: "password")
-User.create(username: "Julian", password: "password")
-User.create(username: "Musa", password: "password")
-User.create(username: "Foots", password: "password")
-User.create(username: "123456", password: "123456")
+User.create!(username: "guest", password: "password")
+User.create!(username: "Julian", password: "password")
+User.create!(username: "Musa", password: "password")
+User.create!(username: "Foots", password: "password")
+User.create!(username: "123456", password: "123456")
 
 Home.destroy_all
 user_ids = User.all.map{ |user| user.id }
 
-# Home.create(image:)
+# Home.create!(image:)
 
-# Home.create(
+# Home.create!(
 #   host_id: user_ids.sample,
 #   title: Faker::Ancient.hero,
 #   description: Faker::Lorem.paragraph,
@@ -38,7 +38,7 @@ user_ids = User.all.map{ |user| user.id }
 #   essentials: Faker::Boolean.boolean,
 # )
 
-Home.create(
+Home.create!(
   host_id: user_ids.sample,
   title: "title",
   description: "description",
@@ -58,7 +58,7 @@ Home.create(
   image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/1.jpg"
 )
 
-Home.create(
+Home.create!(
   host_id: user_ids.sample,
   title: "title",
   description: "description",
@@ -78,7 +78,7 @@ Home.create(
   image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/33f0a1eb_original.jpg"
 )
 
-Home.create(
+Home.create!(
   host_id: user_ids.sample,
   title: "title",
   description: "description",
@@ -98,7 +98,7 @@ Home.create(
   image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/7b53f441_original.jpg"
 )
 
-Home.create(
+Home.create!(
   host_id: user_ids.sample,
   title: "title",
   description: "description",
@@ -118,7 +118,7 @@ Home.create(
   image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/7b53f441_original.jpg"
 )
 
-Home.create(
+Home.create!(
   host_id: user_ids.sample,
   title: "title",
   description: "description",
@@ -138,7 +138,7 @@ Home.create(
   image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/da4b9b6b_original.jpg"
 )
 
-Home.create(
+Home.create!(
   host_id: user_ids.sample,
   title: "title",
   description: "description",
@@ -162,7 +162,7 @@ Booking.destroy_all
 
 homes_ids = Home.all.map{ |home| home.id }
 
-Booking.create(
+Booking.create!(
   {
     user_id: user_ids.sample,
     homes_id: homes_ids.sample,
@@ -171,7 +171,7 @@ Booking.create(
   }
 )
 
-Booking.create(
+Booking.create!(
   {
   user_id: user_ids.sample,
   homes_id: homes_ids.sample,
@@ -183,7 +183,7 @@ Booking.create(
 
 
 
-# Booking.create(
+# Booking.create!(
 #   user_id: 2,
 #   homes_id: 21,
 #   start_date: 21/03/2010,
@@ -191,7 +191,7 @@ Booking.create(
 #
 # )
 #
-# Booking.create(
+# Booking.create!(
 #   user_id: 11,
 #   homes_id: 12,
 #   start_date: 01/12/2010,
@@ -199,7 +199,7 @@ Booking.create(
 #
 # )
 #
-# Booking.create(
+# Booking.create!(
 #   user_id: 111,
 #   homes_id: 322,
 #   start_date: 01/03/2016,

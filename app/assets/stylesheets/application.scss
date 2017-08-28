@@ -1001,6 +1001,34 @@ select::-ms-expand {
 	}
 }
 
+// trips
+.trip-item {
+  color: #484848;
+  text-align: center
+}
+
+.trips-item h3 {
+  font-size: 36px;
+  line-height: 51.48px;
+}
+
+.trip-item p {
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.trip-item h5 {
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.trip-item img {
+  width: 310px;
+  height: 200px;
+}
+
 
 
 /*css custom*/
