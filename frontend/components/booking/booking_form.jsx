@@ -5,7 +5,9 @@ import { withRouter, Link } from 'react-router-dom';
 class BookingForm extends React.Component {
   constructor(props){
     super(props);
+
     this.state = {
+      errors: "",
       start_date: "",
       end_date: "",
       currentHome: this.props.currentHome
@@ -27,13 +29,25 @@ class BookingForm extends React.Component {
   }
 
   handleSubmit(e){
+    debugger
     e.preventDefault();
-    this.props.setBookingUI(this.state);
-    this.props.history.push("/booking");
+    if (this.state.start_date && this.state.end_date && this.props.currentUser){
+      this.setState.errors = "" ;
+      this.props.setBookingUI(this.state);
+      this.props.history.push("/booking");
+    } else if ( !this.props.currentUser )
+      { this.setState({errors: "You must be logged in"});
+    } else if (!this.state.start_date && !this.state.end_date )
+      { this.setState({errors: "You must select check-in and check-out dates"});
+    }
+
     //redirect to page
   }
 
+
+
   render(){
+
 
     return(
 
@@ -84,6 +98,9 @@ class BookingForm extends React.Component {
         </form>
 
         <p> 100% refundable. You won't be charged yet</p>
+
+        <p id="error">{ this.state.errors ? this.state.errors : "" }</p>
+
       </div>
     </div>
     );

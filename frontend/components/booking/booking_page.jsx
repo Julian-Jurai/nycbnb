@@ -17,13 +17,12 @@ class BookingPage extends React.Component {
         homes_id: this.props.booking_ui.currentHome.id
       }
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
   handleSubmit(e){
-    debugger
+
     e.preventDefault();
     createBooking(this.state.booking);
     this.props.history.push(`/${this.props.currentUser.id}/trips`);
@@ -37,10 +36,10 @@ class BookingPage extends React.Component {
     return(
     <div className="booking_page_container">
       <div className="booking-page-details">
-        <div>About Your Trip</div>
+        <h3>About Your Trip</h3>
 
         <div className="booking-form-guests">
-          <div id="whos-coming">Who's coming</div>
+          <p> Who's coming</p>
           <div id="booking-form-guests" ></div>
             <select >
               <option selected="selected" value="guest">1 Guest</option>
@@ -60,68 +59,70 @@ class BookingPage extends React.Component {
             </select>
         </div>
 
-        <div>
+        <div className="booking-checkbox">
           <input id="checkBox" type="checkbox"></input>
-          <div>Bringing a pet?</div>
+          <p>Bringing a pet?</p>
         </div>
 
-        <div>Say hello to your host and tell them why you're coming:</div>
-        <textarea
-          rows="4"
-          cols="50"
-          placeholder="Visting family or
-          friends? Seeing the sights?
-          This helps your host plan for
-          your trip"
-        />
+        <div className="booking-textarea">
+          <p>Say hello to your host and tell them why you're coming:</p>
+          <textarea
+            rows="10"
+            cols="60"
+            placeholder="Visting family or
+            friends? Seeing the sights?
+            This helps your host plan for
+            your trip"
+          />
+        </div>
 
-        <div>Review house rules</div>
+
+        <h3>Review house rules</h3>
         <ul>
           <li>No smoking</li>
           <li>No parties or events</li>
           <li>Check in time is flexible</li>
           <li>Avoid making to much noise</li>
           <li>Be respectful to the neighbors</li>
-
-          <li>
-            Any damage or losses caused during the Rental Period,
-            as well as any special cleaning requirements will be
-            the Guest's responsibility. In cases of excessive or
-            unacceptable loss or damage at any time during the Rental
-            Period,the Owner or Owner's Representative may require the
-            Guest and their party, including visitors to vacate the
-            Property immediately, without compensation or refund.
-            Smoking is only allowed down stairs outside. Smoking inside
-            the bedrooms, kitchen and especially upstairs is absolutely
-            forbidden.
-          </li>
         </ul>
         <button className="booking-page-book-button" onClick={this.handleSubmit}>Book</button>
       </div>
+
       <div className="booking-page-summary">
         <img src={this.props.booking_ui.currentHome.image}></img>
-        <div className="page-summary-title">{this.props.booking_ui.currentHome.title}</div>
-        <div className="page-summary-room_type">{this.props.booking_ui.currentHome.room_type}</div>
-        <div className="checkin-dates">
-            <div>
-              <div>Check-in</div>
-              <div className="page-summary-room_type">{this.props.booking_ui.start_date}</div>
-            </div>
-            <div>
-              <div>Check-out</div>
-              <div className="page-summary-room_type">{this.props.booking_ui.start_date}</div>
-            </div>
-        </div>
-        <div>
-          <div>Total</div>
-          <div>${this.props.booking_ui.currentHome.price}</div>
-        </div>
+        <div className="booking-page-summary-details">
+          <div className="booking-page-summary-header">
+            <h2>{this.props.booking_ui.currentHome.title}</h2>
+            <p >{this.props.booking_ui.currentHome.room_type}</p>
+            <p >{this.props.booking_ui.currentHome.address}</p>
+          </div>
 
-        <div>
-          <div>Contact your local bank for information about the current exhange rate</div>
+          <div className="checkin-dates">
+            <div>
+              <p>Check-in</p>
+              <h4>{this.props.booking_ui.start_date}</h4>
+            </div>
+
+            <div>
+              <p>Check-out</p>
+              <h4>{this.props.booking_ui.start_date}</h4>
+            </div>
+          </div>
+
+          <div className="total">
+            <h4>Total</h4>
+            <h4>${this.props.booking_ui.currentHome.price}</h4>
+          </div>
+
+          <div className="disclaimer">
+            <p>Contact your local bank for information about the current exhange rate</p>
+          </div>
         </div>
       </div>
+
+
     </div>
+
     );
 
 
