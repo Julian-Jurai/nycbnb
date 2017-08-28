@@ -490,7 +490,45 @@ select::-ms-expand {
 
 // booking-page
 .booking-page-book-button{
-  
+  display: block;
+  white-space: normal;
+  width: 100px;
+  border-color: #ff5a5f;
+  background-color: #ff5a5f;
+  color: #fff;
+  padding: 13px 27px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  line-height: 1.43;
+}
+
+.booking_page_container {
+  justify-content: space-between;
+
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 150px;
+  display: flex !important ;
+  flex-direction: row !important ;
+}
+
+.booking-page-summary {
+  height: 600px;
+  width: 400px;
+}
+
+.booking-page-details {
+  max-width: 590px;
+
+}
+
+.booking-page-summary img {
+  height: 140px;
+  width: 400px;
 }
 
 

@@ -35,29 +35,8 @@ class BookingPage extends React.Component {
 //fix direct link to with if statement to redirect to homes page
 
     return(
-      <div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+    <div className="booking_page_container">
+      <div className="booking-page-details">
         <div>About Your Trip</div>
 
         <div className="booking-form-guests">
@@ -117,9 +96,32 @@ class BookingPage extends React.Component {
             forbidden.
           </li>
         </ul>
-
-        <button className="booking-form" onClick={this.handleSubmit}>Book</button>
+        <button className="booking-page-book-button" onClick={this.handleSubmit}>Book</button>
       </div>
+      <div className="booking-page-summary">
+        <img src={this.props.booking_ui.currentHome.image}></img>
+        <div className="page-summary-title">{this.props.booking_ui.currentHome.title}</div>
+        <div className="page-summary-room_type">{this.props.booking_ui.currentHome.room_type}</div>
+        <div className="checkin-dates">
+            <div>
+              <div>Check-in</div>
+              <div className="page-summary-room_type">{this.props.booking_ui.start_date}</div>
+            </div>
+            <div>
+              <div>Check-out</div>
+              <div className="page-summary-room_type">{this.props.booking_ui.start_date}</div>
+            </div>
+        </div>
+        <div>
+          <div>Total</div>
+          <div>${this.props.booking_ui.currentHome.price}</div>
+        </div>
+
+        <div>
+          <div>Contact your local bank for information about the current exhange rate</div>
+        </div>
+      </div>
+    </div>
     );
 
 
