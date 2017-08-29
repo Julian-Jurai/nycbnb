@@ -172,7 +172,7 @@ class HomesDetail extends React.Component {
 
                 <div className="home-detail-sub-item">
                   <h4> Safety features </h4>
-                  <div className="flex-and-space-beteen">
+                  <div id="safety-devices">
                     <p>Smoke detector</p>
                     <p>Fire extinguisher</p>
                   </div>

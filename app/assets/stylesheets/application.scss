@@ -628,10 +628,9 @@ select::-ms-expand {
 }
 
 .booking_page_container {
-  justify-content: space-between;
-
-  padding-left: 100px;
-  padding-right: 100px;
+  justify-content: space-around;
+  padding-left: 200px;
+  padding-right: 200px;
   margin-top: 150px;
   display: flex !important ;
   flex-direction: row !important ;
