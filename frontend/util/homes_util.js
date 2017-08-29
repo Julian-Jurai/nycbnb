@@ -1,8 +1,10 @@
-export const fetchAllHomes = () => {
+export const fetchAllHomes = (filter) => {
+  debugger
   return (
     $.ajax({
       method: "GET",
-      url: "/api/homes/"
+      url: "/api/homes/",
+      data: {bounds: filter}
     })
   );
 };

@@ -20,6 +20,7 @@ import TripsContainer from './users/trips_container';
 
 //test
 import Trips from './users/trips';
+import SearchContainer from './search/search_container';
 // test ends
 
 
@@ -58,11 +59,13 @@ export const App = () => {
     <div>
 
       <Route component={Header} />
-      <Route path="/homes" exact component ={HomesIndexContainer} />
+
+      <Route path="/homes##NOTNEEDED" exact component ={HomesIndexContainer} />
       <Route path="/" component={SessionFormContainer} />
       <Route path="/homes/:homeId" component={HomesDetailContainer} />
       <ProtectedRoute path="/booking" component={BookingPageContainer} />
       <ProtectedRoute path="/:userId/trips" component={TripsContainer} />
+      <Route path="/homes" component={SearchContainer} />
     </div>
   );
 };

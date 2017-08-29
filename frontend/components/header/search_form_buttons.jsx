@@ -11,7 +11,7 @@ class SearchFormButtons extends React.Component{
   render(){
     return(
 
-      <div className="search-form-button">
+      <div className="search-form-button" id="address-input">
 
         <div  className="logo" >
           <Link to="/"><img src={window.images.logo} /></Link>

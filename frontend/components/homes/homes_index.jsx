@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HomesIndexItem from './homes_index_item';
 
+import MarkerManager from '../../util/marker_manager';
 
 class HomesIndex extends React.Component {
   constructor(props){
     super(props);
-    this.state = {dataFetched: false}
+    this.state = {dataFetched: false};
   }
 
 
   componentDidMount(){
-
     window.setTimeout(() => this.setState({dataFetched: true}), 1000);
   }
 
@@ -19,6 +19,7 @@ class HomesIndex extends React.Component {
   componentWillMount(){
     this.props.fetchAllHomes();
   }
+
 
   render() {
 

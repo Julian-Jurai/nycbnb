@@ -16,7 +16,7 @@ const HomesIndexItem = ({home}) => {
 
 
   return (
-    <div className="home-index-item">
+    <div className="home-index-item" key={home.id}>
       <Link to={`/homes/${home.id}`}>
         <img src={home.image} className="home-index-image"/>
       </Link>

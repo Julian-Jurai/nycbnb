@@ -6,7 +6,7 @@ export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 
 export const receiveSingleHome = (home) => {
-  
+
   // { id,....}
   return{
     type: RECEIVE_SINGLE_HOME,
@@ -31,10 +31,10 @@ export const receiveErrors = (errors) => {
 
 //thunkactions
 
-export const fetchAllHomes = () => (dispatch) => {
-
+export const fetchAllHomes = (filter) => (dispatch) => {
+  debugger
   return (
-    APIUtil.fetchAllHomes().then(
+    APIUtil.fetchAllHomes(filter).then(
       homes => {
 
         return dispatch(receiveAllHomes(homes));

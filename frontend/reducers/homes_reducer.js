@@ -3,6 +3,7 @@ import { RECEIVE_ALL_HOMES, RECEIVE_SINGLE_HOME, RECEIVE_ERRORS } from '../actio
 
 
 const HomesReducer = (state = {}, action) => {
+  debugger
   Object.freeze(state);
   let newState;
   switch(action.type) {
