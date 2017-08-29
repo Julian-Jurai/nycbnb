@@ -15,8 +15,12 @@ class MarkerManager {
         this.removeMarker(this.markers[homeId]);
       }
     });
-    //markers get created each time around
-      this.createMarkerFromHome(home);
+
+    Object.values(homes).forEach( home => {
+      if (!this.markers[home.id]){
+        this.createMarkerFromHome(home);
+      }
+    });
 
   }
 

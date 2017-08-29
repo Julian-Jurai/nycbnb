@@ -42,9 +42,16 @@ class Map extends React.Component {
     });
   }
 
-  searchAddress () {
-    let addressInput = document.getElementById('address-input').value;
-    let geocoder = new google.maps.Geocoder();
+  searchAddress() {
+    var addressInput = document.getElementById('address-input').value;
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({address: addressInput}, function(results, status) {
+
+      if (status == google.maps.GeocoderStatus.OK) {
+        //fetch
+      }
+    });
 
   }
 
