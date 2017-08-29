@@ -30,7 +30,7 @@ const HomesIndexItem = ({home}) => {
         <span>{home.beds} beds</span>
       </div>
       <div>
-        <span>&#9733; &#9733; &#9733;</span>
+        <span id="stars">&#9733; &#9733; &#9733;</span>
       </div>
     </div>
 

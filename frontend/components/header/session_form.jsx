@@ -43,9 +43,9 @@ class SessionForm extends React.Component {
   renderErrors(){
     const errors = this.props.errors ? this.props.errors : [];
     return(
-      <ul>
+      <ul >
         {errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li id="error" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -62,17 +62,9 @@ class SessionForm extends React.Component {
       className = "session-form";
     }
 
-
-
-
     let pageName;
     this.props.session_ui === "login" ? pageName = "Log in to continue" : pageName = "Sign Up";
     // className = "session-form"///////////css test
-
-
-
-
-
 
     return(
 
@@ -81,7 +73,7 @@ class SessionForm extends React.Component {
             <button className="x-button" onClick={this.handleX}>&#10005;</button>
             <form onSubmit={this.handleSubmit}>
               <h1>{pageName}</h1>
-              <span>&#9993;</span>
+
               <input
                 type="text"
                 onChange={this.update('username')}
@@ -89,7 +81,7 @@ class SessionForm extends React.Component {
                 />
 
 
-              <span>&#128274;</span>
+
               <input
                 type="password"
                 onChange={this.update('password')}
@@ -97,7 +89,7 @@ class SessionForm extends React.Component {
                 />
               <button className="session-form-submit" type="submit"> Submit </button>
             </form>
-              <p>Don't have an account? Sign Up</p>
+
             {this.renderErrors()}
           </span>
         </div>
