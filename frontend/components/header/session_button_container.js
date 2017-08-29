@@ -6,6 +6,7 @@ import SessionButtons from './session_buttons';
 const mapStateToProps = ({ session }) => {
   return {
     loggedIn: Boolean(session.currentUser),
+    currentUser: session.currentUser,
     errors: session.errors,
   };
 };

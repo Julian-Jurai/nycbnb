@@ -18,67 +18,35 @@ class Trips extends React.Component {
 
 
   componentDidMount(){
+    debugger
     this.props.fetchAllUserTrips(this.props.currentUser.id);
   }
 
   render() {
-    debugger
+
     let tripItems = (
       Object.values(this.props.trips).map(home => {
-        debugger
+
         return <TripItem key={home.id} home={home} />;
       })
     );
 
-    debugger
     if (tripItems.length > 0){
-
       return (
-        <div>
-          <div>Past Trips</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-          <div>
+        <div className="trips">
+          <h1>Past Trips</h1>
+          <div className="trips-trip-items">
             {tripItems}
           </div>
-          <div>User's trips</div>
         </div>
       );
     } else {
       return (
         <div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          <h1>You have no trips yet</h1>
           <div>
-            NO TRIPS BRA
+            <img src={window.images.no_trips}></img>
           </div>
-          <br></br>
-          <br></br>
         </div>
       );
     }

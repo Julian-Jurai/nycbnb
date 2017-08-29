@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 
 
 const HomesIndexItem = ({home}) => {
-  debugger
+
+
   // const randStar = () => {
   //   let num = (Math.round(Math.random()*5) + 1)
   //   let str = "&#9733; "
-    // for (var i = 0; i < num; i++) {
-    //   str += str
-    // }
+  //   for (var i = 0; i < num; i++) {
+  //     str += str
+  //   }
   // return str;
   // }
 
@@ -24,7 +25,7 @@ const HomesIndexItem = ({home}) => {
         <span>{home.title}</span>
         <span>{home.title}</span>
       </div>
-      <div>
+      <div className="home-index-item-feats">
         <span>{home.room_type} &middot; </span>
         <span>{home.beds} beds</span>
       </div>

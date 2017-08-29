@@ -62,7 +62,7 @@ export const App = () => {
       <Route path="/" component={SessionFormContainer} />
       <Route path="/homes/:homeId" component={HomesDetailContainer} />
       <ProtectedRoute path="/booking" component={BookingPageContainer} />
-      <Route path="/:userId/trips" component={TripsContainer} />
+      <ProtectedRoute path="/:userId/trips" component={TripsContainer} />
     </div>
   );
 };

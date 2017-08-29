@@ -57,7 +57,7 @@ class SessionButtons extends React.Component{
 // use img tag instead for session button
     //house sign in login log out
     if (this.props.loggedIn){
-      debugger
+
       return(
 
         <div className ="dropdown">
@@ -65,7 +65,7 @@ class SessionButtons extends React.Component{
             <button >Become a Host</button>
             <button >Help</button>
             <button>
-              <Link to="/trips">Trips</Link>
+              <Link to={`/${this.props.currentUser.id}/trips`}>Trips</Link>
             </button>
           </span>
 
