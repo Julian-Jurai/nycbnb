@@ -85,53 +85,62 @@ class HomesDetail extends React.Component {
                   <p>{currentHome.description}</p>
                 </div>
 
-                <div className="home-detail-sub-item">
+                <div className="home-detail-sub-item flex-and-space-beteen">
                   <h4> The space </h4>
-                  <p>Accomodates: {currentHome.guests}:</p>
-                  <p>Bedrooms: {currentHome.bedrooms}</p>
-                  <p>Beds: {currentHome.beds}</p>
-                  <p>Room type: {currentHome.room_type}</p>
+                  <div id="listed-feats">
+                    <p>Accomodates: {currentHome.guests}:</p>
+                    <p>Bedrooms: {currentHome.bedrooms}</p>
+                    <p>Beds: {currentHome.beds}</p>
+                    <p>Room type: {currentHome.room_type}</p>
+                  </div>
                 </div>
 
                 <div className="home-detail-sub-item">
                   <h4> Ammenities</h4>
+                  <div className="ammenities">
+                    <div id="ammenities-icon">
+                      <i className="fa fa-cutlery" aria-hidden="true"></i>
+                      <p>Kitchen</p>
+                    </div>
 
-                  <div id="ammenities-icon">
-                    <i className="fa fa-cutlery" aria-hidden="true"></i>
-                    <p>Kitchen</p>
-                  </div>
+                    <div id="ammenities-icon">
+                      <i className="fa fa-wifi" aria-hidden="true"></i>
+                      <p>Wireless Internet</p>
+                    </div>
 
-                  <div id="ammenities-icon">
-                    <i className="fa fa-wifi" aria-hidden="true"></i>
-                    <p>Wireless Internet</p>
-                  </div>
+                    <div id="ammenities-icon">
+                      <i className="fa fa-child" aria-hidden="true"></i>
+                      <p>Kid friendly</p>
+                    </div>
 
-                  <div id="ammenities-icon">
-                    <i className="fa fa-child" aria-hidden="true"></i>
-                    <p>Kid friendly</p>
-                  </div>
-
-                  <div id="ammenities-icon">
-                    <i className="fa fa-television" aria-hidden="true"></i>
-                    <p>Television </p>
+                    <div id="ammenities-icon">
+                      <i className="fa fa-television" aria-hidden="true"></i>
+                      <p>Television </p>
+                    </div>
                   </div>
                 </div>
 
                 <div className="home-detail-sub-item">
-                  <h4> Prices </h4>
-                    <p>Cleaning Fee:</p>
-                    <p>Monthly Discount:</p>
-                    <p>Weekly Discount:</p>
-                    <p>Weekend Price:</p>
+                  <div className="flex-and-space-beteen">
+                    <h4> Prices </h4>
+                    <div id="listed-feats">
+                      <p>Cleaning Fee:</p>
+                      <p>Monthly Discount:</p>
+                      <p>Weekly Discount:</p>
+                      <p>Weekend Price:</p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="home-detail-sub-item">
-                  <h4> House Rules </h4>
+
+                    <h4> House Rules </h4>
                     <p>- No smoking</p>
                     <p>- No parties or events</p>
                     <p>- Check in time is flexible</p>
                     <p>- Avoid making to much noise</p>
                     <p>- Be respectful to the neighbors</p>
+
                     <br></br>
                     <br></br>
                     <p>
@@ -163,8 +172,10 @@ class HomesDetail extends React.Component {
 
                 <div className="home-detail-sub-item">
                   <h4> Safety features </h4>
-                  <p>Smoke detector</p>
-                  <p>Fire extinguisher</p>
+                  <div className="flex-and-space-beteen">
+                    <p>Smoke detector</p>
+                    <p>Fire extinguisher</p>
+                  </div>
                 </div>
 
                 <div className="home-detail-sub-item" id="last-home-detail-el">
