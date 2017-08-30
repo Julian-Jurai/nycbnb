@@ -29,7 +29,6 @@ class BookingForm extends React.Component {
   }
 
   handleSubmit(e){
-    debugger
     e.preventDefault();
     if (this.state.start_date && this.state.end_date && this.props.currentUser){
       this.setState.errors = "" ;

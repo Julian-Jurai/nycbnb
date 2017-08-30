@@ -5,7 +5,6 @@ export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 
 export const receiveAllUsersTrips = (trips) => {
-  debugger
   return{
     type: RECEIVE_USERS_TRIPS,
     trips

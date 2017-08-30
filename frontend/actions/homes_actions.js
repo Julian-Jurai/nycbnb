@@ -32,7 +32,6 @@ export const receiveErrors = (errors) => {
 //thunkactions
 
 export const fetchAllHomes = (filter) => (dispatch) => {
-  debugger
   return (
     APIUtil.fetchAllHomes(filter).then(
       homes => {

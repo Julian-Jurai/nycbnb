@@ -6,7 +6,6 @@ import { selectAllTrips } from '../../reducers/selectors';
 import Trips from './trips';
 
 const mapStateToProps = (state) => {
-  debugger
   return {
     trips: selectAllTrips(state),
     currentUser :state.session.currentUser

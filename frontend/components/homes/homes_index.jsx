@@ -24,6 +24,7 @@ class HomesIndex extends React.Component {
   render() {
 
     let allHomes;
+    let searched = [];
 
     if (this.state.dataFetched){
 
@@ -31,15 +32,30 @@ class HomesIndex extends React.Component {
         home => ( <HomesIndexItem home={home} />)
       );
 
+      if (this.props.search_ui){
+
+        searchedHomes = this.props.homes.map(
+          home => {
+
+            if (home.address.startsWith(this.props.search_ui))
+             return (<HomesIndexItem home={home} />);
+           }
+        );
+
+      }
+
+
       return(
         <div className="home-index">
-                {allHomes}
+          {this.props.search_ui ? searched : allHomes}
         </div>
       );
     } else {
       return(
-        <div className="loading">
-          <img src={window.images.loading}></img>
+        <div className="loading-background" >
+          <div className="loading">
+            <img src={window.images.loading}></img>
+          </div>
         </div>
       );
     }

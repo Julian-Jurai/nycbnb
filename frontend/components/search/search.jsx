@@ -16,9 +16,15 @@ class Search extends React.Component {
 
   render(){
     return(
-      <div>
-        <Map homes={this.props.homes} updateFilter={this.props.updateFilter}/>
+      <div className="homes-page-container-map">
         <HomesIndexContainer />
+        <Map
+          filter={this.props.filter}
+          homes={this.props.homes}
+          updateFilter={this.props.updateFilter}
+          updateSearch={this.props.updateSearch}
+          search_ui={this.props.search_ui}
+        />
       </div>
     );
   }

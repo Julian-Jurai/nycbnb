@@ -1,5 +1,5 @@
 export const fetchAllHomes = (filter) => {
-  debugger
+
   return (
     $.ajax({
       method: "GET",

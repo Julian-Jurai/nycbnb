@@ -17,6 +17,8 @@ import subNavButtons from './header/sub_nav_buttons';
 import HomesDetailContainer from './homes/homes_detail_container';
 import BookingPageContainer from './booking/booking_page_container';
 import TripsContainer from './users/trips_container';
+import SearchFormButtonsContainer from './header/search_form_button_container';
+
 
 //test
 import Trips from './users/trips';
@@ -29,8 +31,9 @@ import SearchContainer from './search/search_container';
 const Header = (props) => {
   return (
     <header className="header-container">
+      
       <header className="top-nav">
-        <Route path="/" component={SearchFormButtons} />
+        <Route path="/" component={SearchFormButtonsContainer} />
         <SessionButtonContainer />
       </header>
       <Route path="/" exact component={Greeting} />
@@ -57,7 +60,6 @@ export const App = () => {
 
   return (
     <div>
-
       <Route component={Header} />
 
       <Route path="/homes##NOTNEEDED" exact component ={HomesIndexContainer} />

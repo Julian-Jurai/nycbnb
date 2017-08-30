@@ -6,7 +6,7 @@ export const selectAllHomes = state => {
 
 
 export const selectAllTrips = ({trips_ui}) => {
-  // debugger
+
   let pojo = {};
   //
   if (Array.isArray(trips_ui)){

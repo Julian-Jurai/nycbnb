@@ -193,8 +193,10 @@ class HomesDetail extends React.Component {
       );
     } else if (!this.state.dataFetched) {
       return(
-        <div className="loading">
-          <img src={window.images.loading} ></img>
+        <div className="loading-background" >
+          <div className="loading">
+            <img src={window.images.loading} ></img>
+          </div>
         </div>
       );
     }
