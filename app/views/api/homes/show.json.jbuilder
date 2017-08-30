@@ -16,3 +16,7 @@ json.extract! @home,
   :family,
   :tv,
   :essentials
+
+json.reviews  @home.reviews.map do |review|
+  json.partial! "api/reviews/review", review: review
+end

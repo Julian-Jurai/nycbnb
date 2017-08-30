@@ -28,9 +28,8 @@
 #
 
 class Home < ApplicationRecord
-   validates :host_id, :title, :description, :lat, :long, :address, :price, presence: true
-   validates :family, :tv, :essentials, :room_type, :bedrooms, :guests, :beds, :kitchen, :internet, presence: true
-
+  validates :host_id, :title, :description, :lat, :long, :address, :price, presence: true
+  validates :family, :tv, :essentials, :room_type, :bedrooms, :guests, :beds, :kitchen, :internet, presence: true
 
   has_attached_file :image, default_url: "home_default.png"
 
@@ -45,8 +44,12 @@ class Home < ApplicationRecord
   through: :bookings,
   source: :user
 
-  def self.in_bounds(bounds)
+  has_many :reviews,
+  primary_key: :id,
+  foreign_key: :home_id,
+  class_name: :Home
 
+  def self.in_bounds(bounds)
     # {
     #   "northEast"=> {"lat"=>"37.80971", "lng"=>"-122.39208"},
     #   "southWest"=> {"lat"=>"37.74187", "lng"=>"-122.47791"}

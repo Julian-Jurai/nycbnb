@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
     resources :homes, only:[] do
       resources :bookings, only: [:index]
+      resources :reviews, only: [:create, :destroy, :update, :index]
     end
 
     resources :users, only:[] do

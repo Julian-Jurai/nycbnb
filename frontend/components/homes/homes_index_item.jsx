@@ -4,15 +4,13 @@ import { Link } from 'react-router-dom';
 
 const HomesIndexItem = ({home}) => {
 
+    let stars = [];
+    let num = (Math.round(Math.random()*4) + 1)
+    for (var i = 0; i < num; i++) {
+      stars.push(<i className="fa fa-star" aria-hidden="true"></i>)
+    }
 
-  // const randStar = () => {
-  //   let num = (Math.round(Math.random()*5) + 1)
-  //   let str = "&#9733; "
-  //   for (var i = 0; i < num; i++) {
-  //     str += str
-  //   }
-  // return str;
-  // }
+
 
 
   return (
@@ -30,7 +28,9 @@ const HomesIndexItem = ({home}) => {
         <span>{home.beds} beds</span>
       </div>
       <div>
-        <span id="stars">&#9733; &#9733; &#9733;</span>
+        <span id="stars">
+          { stars }
+        </span>
       </div>
     </div>
 
