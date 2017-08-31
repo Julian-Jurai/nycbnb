@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Route, Redirect } from 'react-router';
@@ -9,43 +7,119 @@ import { isEmpty } from 'lodash';
 
 
 import BookingFormContainer from './../booking/booking_form_container';
-
+import ReviewItem from './review_item';
 
 
 class HomesDetail extends React.Component {
   constructor(props){
     super(props);
-    this.state = {dataFetched: false};
+    this.state = {dataFetched: false, editFormOpen:false, reviewBody: "", rating: 0};
+    this.handleEditForm = this.handleEditForm.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleEditForm(e){
+    e.preventDefault();
+    this.setState({editFormOpen: !this.state.editFormOpen}); //button is hidden
+  }
+
+  handleChange(e){
+    e.preventDefault();
+    this.setState({reviewBody: e.currentTarget.value});
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    
+    this.setState({reviewBody: "", rating: 0});
   }
 
 
   componentDidMount(){
+    const homeId = this.props.match.params.homeId;
+
+    if (Object.keys(this.props.homes).length <= 1){
+      this.props.fetchAllHomes()
+        .then(() => this.props.fetchSingleHome(homeId))
+        .then(() => this.props.fetchReviewsForHome(homeId));
+    } else {
+      this.props.fetchSingleHome(homeId)
+      .then(() => this.props.fetchReviewsForHome(homeId));
+    }
     //loading screen dispatched > data is fetched loading stopped(state changes)
     window.setTimeout(() => this.setState({dataFetched: true}), 1000);
   }
 
+  // componentDidMount(){ NOTE: what is the order of execution
+  //   const homeId = this.props.match.params.homeId;
+  //   const loadingScreen = () => (window.setTimeout(() => this.setState({dataFetched: true}), 1000));
+  //
+  //   if (Object.keys(this.props.homes).length <= 1){
+  //     this.props.fetchAllHomes()
+  //       .then(() => this.props.fetchSingleHome(homeId));
+  //       loadingScreen();
+  //       // .then(() => this.props.fetchAllReviewsForHome(homeId));
+  //   } else {
+  //     this.props.fetchSingleHome(homeId).then(loadingScreen);
+  //     // .then(() => this.props.fetchAllReviewsForHome(homeId));
+  //   }
+  //   //loading screen dispatched > data is fetched loading stopped(state changes)
+  // }
 
   componentWillMount(){
     const homeId = this.props.match.params.homeId;
+
     if (Object.keys(this.props.homes).length <= 1){
       this.props.fetchAllHomes()
-        .then(() => this.props.fetchSingleHome(homeId));
+        .then(() => this.props.fetchSingleHome(homeId))
+        .then(() => this.props.fetchAllUserTrips(this.props.currentUser.id));
     } else {
-      this.props.fetchSingleHome(homeId);
+      this.props.fetchSingleHome(homeId)
+      .then(() => this.props.fetchAllUserTrips(this.props.currentUser.id));
+      // .then(() => this.props.fetchAllReviewsForHome(homeId));
     }
-
   }
 
 
 
   render() {
-
     const homeId = parseInt(this.props.match.params.homeId);
     const currentHome = this.props.homes[homeId];
+    let editButtonOption;
+    let editFormOption;
+    let inUsersTrips;
+    //NOTE: reviews are fetchde in jbuidler homes show
+    const reviews = Object.values(this.props.reviews_ui).map((review) => (
+    <ReviewItem review={review}/>
+    ));
+
+
+    if (this.props.loggedIn) {
+      debugger
+
+       if (this.props.currentUser.homes){ //array [{home}];
+       let prevTrips = this.props.currentUser.homes
+       let prevTripsIds = prevTrips.map( home => (home.id));
+       inUsersTrips =  prevTripsIds.includes(homeId);
+       }
+    } else
+    inUsersTrips = false;
+
+
+
+    if (this.props.loggedIn && !this.state.editFormOpen && inUsersTrips) {
+      editButtonOption = "create-review-button";
+    } else editButtonOption = "hidden";
+
+    if (this.props.loggedIn && this.state.editFormOpen && inUsersTrips) {
+      editFormOption = "display-edit-form";
+    } else editFormOption = "hidden";
+
+    debugger
 
     if (this.state.dataFetched){
       return(
-
         <div className="home-detail-container">
           <img src={currentHome.image} />
           <div className="home-detail">
@@ -183,9 +257,16 @@ class HomesDetail extends React.Component {
                   <p>2 nights minimum stay</p>
                 </div>
 
+                {reviews}
+                <button className={editButtonOption} onClick={this.handleEditForm}>Write review</button>
 
-
-            </div>
+                <div className={`${editFormOption}-background`}>
+                  <form className="edit-form">
+                    <input type="text" placeholder="Write your review" onChange={this.handleChange}></input>
+                    <button onClick={this.handleSubmit}>Submit review</button>
+                  </form>
+                </div>
+          </div>
             <BookingFormContainer currentHome={currentHome} />
           </div>
         </div>

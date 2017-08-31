@@ -32,17 +32,17 @@ class HomesIndex extends React.Component {
         home => ( <HomesIndexItem home={home} />)
       );
 
-      if (this.props.search_ui){
-
-        searchedHomes = this.props.homes.map(
-          home => {
-
-            if (home.address.startsWith(this.props.search_ui))
-             return (<HomesIndexItem home={home} />);
-           }
-        );
-
-      }
+      // if (this.props.search_ui){
+      //
+      //   searchedHomes = this.props.homes.map(
+      //     home => {
+      //
+      //       if (home.address.startsWith(this.props.search_ui))
+      //        return (<HomesIndexItem home={home} />);
+      //      }
+      //   );
+      //
+      // }
 
 
       return(

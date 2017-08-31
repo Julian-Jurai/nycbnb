@@ -7,7 +7,7 @@ const defaultFilters = Object.freeze({
 });
 
 const FiltersReducer = (state = defaultFilters, action) => {
-  debugger
+
   Object.freeze(state);
   switch(action.type) {
     case  UPDATE_BOUNDS:

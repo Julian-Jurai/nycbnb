@@ -31,7 +31,7 @@ import SearchContainer from './search/search_container';
 const Header = (props) => {
   return (
     <header className="header-container">
-      
+
       <header className="top-nav">
         <Route path="/" component={SearchFormButtonsContainer} />
         <SessionButtonContainer />
@@ -67,7 +67,7 @@ export const App = () => {
       <Route path="/homes/:homeId" component={HomesDetailContainer} />
       <ProtectedRoute path="/booking" component={BookingPageContainer} />
       <ProtectedRoute path="/:userId/trips" component={TripsContainer} />
-      <Route path="/homes" component={SearchContainer} />
+      <Route path="/homes" exact component={SearchContainer} />
     </div>
   );
 };

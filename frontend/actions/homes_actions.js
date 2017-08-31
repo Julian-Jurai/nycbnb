@@ -40,7 +40,6 @@ export const fetchAllHomes = (filter) => (dispatch) => {
       },
       err => dispatch(receiveErrors(err.responseJSON))
     )
-
   );
 };
 

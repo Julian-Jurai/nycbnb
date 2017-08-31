@@ -1,7 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    debugger
+
     @reviews = Review.where(
       homes_id: params[:home_id]
     )
@@ -11,9 +11,9 @@ class Api::ReviewsController < ApplicationController
 
 
   def create
-
+    debugger
     @review = Review.new(review_params)
-    if @review.save
+    if @review.save!
       render "api/reviews/show"
     else
       render json: @review.errors.full_messages, status: 422
@@ -34,7 +34,7 @@ class Api::ReviewsController < ApplicationController
       @review.destroy
       render json: ["Review sucessfully deleted"]
     else
-      render json: ["No review found"], status: 422
+      render json: ["Deletion failed"], status: 422
     end
 
   end
@@ -42,7 +42,6 @@ class Api::ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id])
     if @review.update(review_params)
-      @review.destroy
       render "api/reviews/show"
     else
       render json: ["Update Failed"], status: 422
@@ -54,7 +53,8 @@ class Api::ReviewsController < ApplicationController
     params.require(:review).permit(
     :user_id,
     :homes_id,
-    :body
+    :body,
+    :rating
     )
   end
 

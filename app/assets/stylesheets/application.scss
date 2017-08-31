@@ -451,7 +451,7 @@ select::-ms-expand {
 .booking-form {
   position: sticky;
   // right: 0;
-  top: 117px;
+  top: 168px;
   // right: 100px;
 
   // display: flex;
@@ -461,6 +461,7 @@ select::-ms-expand {
   border: 1px solid rgb(166, 166, 166);
   width: 340px;
   height: 480px;
+  margin-top: -3px;
 }
 
 #error {
@@ -477,6 +478,8 @@ select::-ms-expand {
   overflow-y: visible;
   box-sizing: border-box;
   width: 340px;
+  position: relative;
+  top: -51px;
 }
 
 .booking-form-guests{
@@ -1187,7 +1190,7 @@ select::-ms-expand {
 }
 
 
-/*css custom*/
+// googlemaps
 #map {
   width: 550px;
   height: 100vh;
@@ -1216,4 +1219,52 @@ select::-ms-expand {
 .pac-icon {
   width: 0;
   height: 0;
+}
+
+// users
+#user-avatar {
+  margin-right: 10px;
+  width: 50px !important;
+  height: 50px !important;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+
+}
+
+.review-item{
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.review-item-header{
+display: flex;
+justify-content: space-between;
+
+}
+
+.user-reviews{
+  font-size: 10px !important;
+}
+
+.review-item-header-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.review-item-header-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#helpful-tag{
+  display: flex;
+  align-items: center;
 }

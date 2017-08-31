@@ -4,4 +4,7 @@ json.extract! review,
   :body,
   :homes_id,
   :user_id,
+  :rating,
   :updated_at
+
+json.partial! "api/users/user", user: review.user

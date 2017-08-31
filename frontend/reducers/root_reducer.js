@@ -7,6 +7,7 @@ import BookingReducer from './booking_reducer';
 import TripsReducer from './trips_reducer';
 import FiltersReducer from './filter_reducer';
 import SearchReducer from './search_reducer';
+import ReviewsReducer from './reviews_reducer';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   trips_ui: TripsReducer,
   search_ui: SearchReducer,
   homes: HomesReducer,
-  filters: FiltersReducer
+  filters: FiltersReducer,
+  reviews_ui: ReviewsReducer
 });
 
 export default rootReducer;

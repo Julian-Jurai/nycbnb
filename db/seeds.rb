@@ -73,16 +73,67 @@ random_price = (50..300).to_a
 random_snum = (3..7).to_a
 random_rating = (2..5).to_a
 
+random_profile_image = [
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/067ad871eca05621e4f5396ea92f3d66--profile-photography-headshot-photography.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/205-McGREGOR_CONOR.png",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/IMG_ReeseD_20161027.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/emily-profile.png",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/image.jpeg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/obioma.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/profile.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/varun_56b_copy.jpg"
 
+]
+
+random_profile_usernames = [
+  "Emma",	"Liam",
+	"Olivia",	"Noah",
+	"Ava",	"Lucas",
+	"Sophia",	"Mason",
+	"Isabella",	"Oliver",
+	"Mia",	"Logan",
+	",Amelia",	"Ethan",
+	"Charlotte",	"Elijah",
+	"Harper",	"Aiden",
+	"Aria",	"Benjamin",
+	"Ella",	"James"
+]
 
 User.destroy_all
-User.create!(username: "guest", password: "password")
-User.create!(username: "Julian", password: "password")
-User.create!(username: "Musa", password: "password")
-User.create!(username: "Foots", password: "password")
-User.create!(username: "Brendon", password: "passoword")
-User.create!(username: "Mav", password: "passoword")
-User.create!(username: "Cal", password: "passoword")
+
+User.create!(
+username: "guest",
+password: "password",
+image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/varun_56b_copy.jpg"
+)
+
+
+User.create!(
+username: random_profile_usernames.pop,
+password: "password",
+image: random_profile_image.pop
+)
+
+User.create!(
+username: random_profile_usernames.pop,
+password: "password",
+image: random_profile_image.pop
+)
+
+User.create!(
+username: random_profile_usernames.pop,
+password: "password",
+image: random_profile_image.pop
+)
+
+User.create!(
+username: random_profile_usernames.pop,
+password: "password",
+image: random_profile_image.pop
+)
+
+
+
 
 user_ids = User.all.map{ |user| user.id }
 

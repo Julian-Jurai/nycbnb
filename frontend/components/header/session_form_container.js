@@ -8,8 +8,6 @@ import SessionForm from './session_form';
 
 const mapStateToProps = ({ session, session_ui }) => {
 
-
-
   return {
     loggedIn: Boolean(session.currentUser),
     errors: session.errors,
@@ -18,8 +16,6 @@ const mapStateToProps = ({ session, session_ui }) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-
-
   return {
     login: user => dispatch(login(user)),
     signup: user => dispatch(signup(user)),

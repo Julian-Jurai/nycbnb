@@ -42,6 +42,10 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Review
 
+  has_many :reviewed_homes,
+  source: :reviews,
+  through: :home
+
 
 
   def self.find_by_credentials(username, password)

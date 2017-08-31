@@ -46,8 +46,12 @@ class Home < ApplicationRecord
 
   has_many :reviews,
   primary_key: :id,
-  foreign_key: :home_id,
-  class_name: :Home
+  foreign_key: :homes_id,
+  class_name: :Review
+
+  has_many :reviewers,
+  source: :reviews,
+  through: :user
 
   def self.in_bounds(bounds)
     # {

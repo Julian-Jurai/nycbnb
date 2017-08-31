@@ -14,10 +14,11 @@ class Map extends React.Component {
     this.registerListener = this.registerListener.bind(this);
   }
 
+  // zoom: 13
   componentDidMount(){
     const mapOptions = {
       center: { lat: 40.746569, lng: -73.987085},
-      zoom: 13
+      zoom: 1
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -73,19 +74,19 @@ class Map extends React.Component {
   }
 
 
-  //
+
   // searchAddress() {
   //   let addressInput = this.props.search_ui;
   //   let geocoder = new google.maps.Geocoder();
-  //   debugger
+  //
   //   geocoder.geocode({address: addressInput}, function(results, status) {
-  //     debugger
+  //
   //     if (status == google.maps.GeocoderStatus.OK) {
   //       let latlng = {
   //         lat: results[0].geometry.location.lat(),
   //         lng: results[0].geometry.location.lng()
   //       };
-  //       debugger
+  //
   //       this.map.setCenter(latlng);
   //     }
   //   });
