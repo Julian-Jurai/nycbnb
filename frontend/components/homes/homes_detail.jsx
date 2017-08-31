@@ -13,7 +13,7 @@ import ReviewItem from './review_item';
 class HomesDetail extends React.Component {
   constructor(props){
     super(props);
-    this.state = {dataFetched: false, editFormOpen:false, reviewBody: "", rating: 0};
+    this.state = {dataFetched: false, editFormOpen:false, body: "", rating: 0};
     this.handleEditForm = this.handleEditForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -26,13 +26,21 @@ class HomesDetail extends React.Component {
 
   handleChange(e){
     e.preventDefault();
-    this.setState({reviewBody: e.currentTarget.value});
+    this.setState({body: e.currentTarget.value});
   }
 
   handleSubmit(e){
     e.preventDefault();
-    
-    this.setState({reviewBody: "", rating: 0});
+    let review = {
+      homes_id: parseInt(this.props.match.params.homeId),
+      user_id: this.props.currentUser.id,
+      body: this.state.body,
+      rating: 1,
+    };
+    debugger
+    this.props.createReviewForHome(review);
+    //dispatch thunk action to create review and return all review
+    this.setState({body: "", rating: 0});
   }
 
 
@@ -84,6 +92,7 @@ class HomesDetail extends React.Component {
 
 
   render() {
+    debugger
     const homeId = parseInt(this.props.match.params.homeId);
     const currentHome = this.props.homes[homeId];
     let editButtonOption;
@@ -97,15 +106,28 @@ class HomesDetail extends React.Component {
 
     if (this.props.loggedIn) {
       debugger
-
+      // why not use trips_ui???
        if (this.props.currentUser.homes){ //array [{home}];
-       let prevTrips = this.props.currentUser.homes
+       let prevTrips = this.props.currentUser.homes;
        let prevTripsIds = prevTrips.map( home => (home.id));
        inUsersTrips =  prevTripsIds.includes(homeId);
        }
     } else
     inUsersTrips = false;
-
+///////////////////////////////
+    // if (this.props.loggedIn) {
+    //   debugger
+    //   // why not use trips_ui???
+    //    if (this.props.trips_ui){ //array [{home}];
+    //    let prevTrips = this.props.trips_ui;
+    //    let prevTripsIds =
+    //       Object.values(prevTrips)
+    //       .map( home => (home.id));
+    //    inUsersTrips =  prevTripsIds.includes(homeId);
+    //    }
+    // } else
+    // inUsersTrips = false;
+/////////////////////////////////
 
 
     if (this.props.loggedIn && !this.state.editFormOpen && inUsersTrips) {

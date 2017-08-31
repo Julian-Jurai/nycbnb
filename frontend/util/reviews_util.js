@@ -10,6 +10,7 @@ export const fetchReviewsForHome = (homeId) => {
 
 export const createReview = (review) => {
 //Works!
+debugger;
   return (
     $.ajax({
       method: "POST",

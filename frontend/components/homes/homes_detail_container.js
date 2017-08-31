@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { fetchSingleHome, fetchAllHomes } from '../../actions/homes_actions';
-import { fetchReviewsForHome } from '../../actions/reviews_actions';
+import { fetchReviewsForHome, createReviewForHome } from '../../actions/reviews_actions';
 import { fetchAllUserTrips } from '../../actions/users_actions';
 import HomesDetail from './homes_detail';
 
@@ -18,12 +18,13 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-
+debugger
   return {
     fetchAllHomes: () => dispatch(fetchAllHomes()),
     fetchReviewsForHome: (homeId) => dispatch(fetchReviewsForHome(homeId)),
     fetchSingleHome: (homeId) => dispatch(fetchSingleHome(homeId)),
-    fetchAllUserTrips: (userId) => dispatch(fetchAllUserTrips(userId))
+    fetchAllUserTrips: (userId) => dispatch(fetchAllUserTrips(userId)),
+    createReviewForHome: (review) => dispatch(createReviewForHome(review))
   };
 };
 

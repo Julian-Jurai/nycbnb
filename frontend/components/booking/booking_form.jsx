@@ -35,7 +35,7 @@ class BookingForm extends React.Component {
       this.props.setBookingUI(this.state);
       this.props.history.push("/booking");
     } else if ( !this.props.currentUser )
-      { this.setState({errors: "You must be logged in"});
+      { this.setState({errors: "You must be logged in to make a booking"});
     } else if (!this.state.start_date && !this.state.end_date )
       { this.setState({errors: "You must select check-in and check-out dates"});
     }

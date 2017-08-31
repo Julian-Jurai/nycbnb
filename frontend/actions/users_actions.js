@@ -5,7 +5,7 @@ export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 
 export const receiveAllUsersTrips = (trips) => {
-  debugger
+
   return{
     type: RECEIVE_USERS_TRIPS,
     trips
@@ -22,11 +22,11 @@ export const receiveErrors = (errors) => {
 //thunkactions
 
 export const fetchAllUserTrips = (userId) => (dispatch) => {
-  debugger
+
   return (
     APIUtil.fetchAllHomesForUser(userId).then(
       trips => {
-        debugger
+      
         return dispatch(receiveAllUsersTrips(trips.homes));
       },
       err => dispatch(receiveErrors(err.responseJSON))
