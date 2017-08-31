@@ -12,14 +12,15 @@ class Trips extends React.Component {
     this.state = {dataFetched: false};
   }
 
-  // componentDidMount(){
-  //   window.setTimeout(() => this.setState({dataFetched: true}), 1000);
-  // }
-
-
-  componentWillMount(){
+  componentDidMount(){
+    debugger
     this.props.fetchAllUserTrips(this.props.currentUser.id);
   }
+
+
+  // componentWillMount(){
+  //   this.props.fetchAllUserTrips(this.props.currentUser.id);
+  // }
 
   render() {
 

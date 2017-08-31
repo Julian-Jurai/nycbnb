@@ -16,27 +16,30 @@ class ReviewItem extends React.Component {
   // deleteReview: (reviewId) => dispatch(deleteReview(reviewId))
 
   handleEditForm(e){
-    
+
     e.preventDefault();
     this.setState({editFormOpen: (!this.state.editFormOpen)});
-    
+
 
     let radnom;
-    
+
 
   }
 
   handleUpdate(e){
+    debugger
     e.preventDefault();
     let review = {
       id: this.props.review.id,
       homes_id: this.props.review.homes_id,
-      user_id: this.props.currentUser.id,
+      user_id: this.props.currentUser.user.id,
       body: this.state.body,
       rating: 1,
     };
+    debugger
     this.props.updateReviewForHome(review);
     this.setState({editFormOpen: false, body: this.state.body});
+    debugger
   }
 
   handleDeleteReview(e){
@@ -52,7 +55,7 @@ class ReviewItem extends React.Component {
 
 
   render(){
-    
+    debugger
     let editFormClass;
     let editButtonClass;
     let bodyClass;
@@ -63,7 +66,7 @@ class ReviewItem extends React.Component {
 
     //editButtonClass
     if (this.props.currentUser){
-      if (this.props.currentUser.id === this.props.review.user.id) {
+      if (this.props.currentUser.user.id === this.props.review.user.id) {
         editButtonClass =  "edit-buttons";
       }
     } else { editButtonClass =  "hidden"; }
@@ -105,12 +108,13 @@ class ReviewItem extends React.Component {
           </div>
 
           <div className="review-item-header-left">
-            <i className="fa fa-flag-o" aria-hidden="true">Report</i>
+            <i className="fa fa-flag-o" aria-hidden="true">{` Report `}</i>
 
-            <i className="fa fa-thumbs-o-up" aria-hidden="true">Helpful</i>
-            <div id="helpful-tag">
-              <p>{`${randNum}`}</p>
-            </div>
+            <i className="fa fa-thumbs-o-up helpful" aria-hidden="true">
+              <span>{`  Helpful `}</span>
+              <span id="helpful">{` ${randNum}`}</span>
+            </i>
+
           </div>
         </div>
 

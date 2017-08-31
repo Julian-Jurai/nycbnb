@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { RECEIVE_USERS_TRIPS, RECEIVE_ERRORS } from '../actions/users_actions';
+import { RECEIVE_USERS_TRIPS, RECEIVE_TRIPS_ERRORS } from '../actions/users_actions';
 
 
 const TripsReducer = (state = {}, action) => {
@@ -8,7 +8,7 @@ const TripsReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_USERS_TRIPS:
       return action.trips;
-    case RECEIVE_ERRORS:
+    case RECEIVE_TRIPS_ERRORS:
       const errors = action.errors;
       return merge({}, state, { errors });
     default:

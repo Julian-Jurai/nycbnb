@@ -8,7 +8,7 @@ import Trips from './trips';
 const mapStateToProps = (state) => {
   return {
     trips: selectAllTrips(state),
-    currentUser :state.session.currentUser
+    currentUser :state.session.currentUser.user
   };
 };
 

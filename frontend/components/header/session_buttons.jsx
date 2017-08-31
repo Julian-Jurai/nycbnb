@@ -41,6 +41,7 @@ class SessionButtons extends React.Component{
   }
 
   handleLogout(e){
+
     e.preventDefault();
     this.setState({ open: false });
     this.props.logout();
@@ -57,7 +58,6 @@ class SessionButtons extends React.Component{
 // use img tag instead for session button
     //house sign in login log out
     if (this.props.loggedIn){
-
       return(
 
         <div className ="dropdown">

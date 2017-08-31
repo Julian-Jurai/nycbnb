@@ -1,4 +1,5 @@
 export const fetchAllHomesForUser = (userId) => {
+
   return (
     $.ajax({
       method: "GET",

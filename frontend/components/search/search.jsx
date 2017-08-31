@@ -15,6 +15,7 @@ class Search extends React.Component {
   }
 
   render(){
+  
     return(
       <div className="homes-page-container-map">
         <HomesIndexContainer />

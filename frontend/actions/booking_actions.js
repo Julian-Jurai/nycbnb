@@ -3,7 +3,7 @@ import * as APIUtil from '../util/booking_util';
 export const STORE_BOOKING = "STORE_BOOKING";
 export const CLEAR_BOOKING = "CLEAR_BOOKING";
 export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_BOOKING_ERRORS = "RECEIVE_BOOKING_ERRORS";
 
 
 
@@ -31,7 +31,7 @@ export const receiveBooking = (booking) => {
 
 export const receiveErrors = (errors) => {
   return ({
-    type: RECEIVE_ERRORS,
+    type: RECEIVE_BOOKING_ERRORS,
     errors,
   });
 };

@@ -23,7 +23,7 @@ export const receiveSingleReviewForHome = (review) => {
 };
 
 export const receiveErrors = (errors) => {
-  debugger
+  
   return{
       type: RECEIVE_REVIEWS_ERRORS,
       errors

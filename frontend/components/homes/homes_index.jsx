@@ -5,6 +5,7 @@ import HomesIndexItem from './homes_index_item';
 import MarkerManager from '../../util/marker_manager';
 
 class HomesIndex extends React.Component {
+
   constructor(props){
     super(props);
     this.state = {dataFetched: false};

@@ -4,9 +4,10 @@ import { setSessionUI } from '../../actions/session_buttons_actions';
 import { updateSearch } from '../../actions/search_actions';
 import SearchFormButtons from './search_form_buttons';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    session_ui: state.search_ui
+    session_ui: state.search_ui,
+
   };
 };
 

@@ -18,15 +18,20 @@ class SearchFormButtons extends React.Component{
   // <input type="text" name="search" id="search-button" placeholder="Anywhere" onChange={this.handleSearch}/>
 
   render(){
+    let displayOption;
+    if (this.props.location.pathname == "/homes") {
+      displayOption = "";
+    } else { displayOption = "hidden";}
     return(
 
-      <div className="search-form-button" id="address-input">
+      <div className={"search-form-button"} id="address-input">
 
         <div  className="logo" >
           <Link to="/"><img src={window.images.logo} /></Link>
         </div>
 
-        <div className="search-form-button-container">
+        <div className={`search-form-button-container ${displayOption}`}>
+
 
           <div className="anywhere-searchbutton" >
             <input type="text" name="search" id="search-button" placeholder="Anywhere" onChange={this.handleSearch}/>

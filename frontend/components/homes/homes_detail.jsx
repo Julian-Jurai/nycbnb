@@ -25,15 +25,17 @@ class HomesDetail extends React.Component {
   }
 
   handleChange(e){
+    debugger
     e.preventDefault();
     this.setState({body: e.currentTarget.value});
   }
 
   handleSubmit(e){
+    debugger
     e.preventDefault();
     let review = {
       homes_id: parseInt(this.props.match.params.homeId),
-      user_id: this.props.currentUser.id,
+      user_id: this.props.currentUser.user.id,
       body: this.state.body,
       rating: 1,
     };
@@ -44,17 +46,37 @@ class HomesDetail extends React.Component {
 
 
   componentDidMount(){
-    const homeId = this.props.match.params.homeId;
+    // if (Object.keys(this.props.homes).length <= 1){
+    //   this.props.fetchAllHomes()
+    //     .then(() => this.props.fetchSingleHome(homeId))
+    //     .then(() => this.props.fetchReviewsForHome(homeId));
+    // } else {
+    //   this.props.fetchSingleHome(homeId)
+    //   .then(() => this.props.fetchReviewsForHome(homeId));
+    // }
+    // //loading screen dispatched > data is fetched loading stopped(state changes)
+    //#########################################################################
+    const homeId = parseInt(this.props.match.params.homeId);
 
     if (Object.keys(this.props.homes).length <= 1){
+      debugger
       this.props.fetchAllHomes()
         .then(() => this.props.fetchSingleHome(homeId))
         .then(() => this.props.fetchReviewsForHome(homeId));
+        if (this.props.loggedIn) {
+          debugger
+          this.props.fetchAllUserTrips(this.props.currentUser.user.id);
+        }
     } else {
       this.props.fetchSingleHome(homeId)
-      .then(() => this.props.fetchReviewsForHome(homeId));
+      .then(() => this.props.fetchReviewsForHome(homeId))
+      .then(() => {
+        if (this.props.loggedIn) {
+          debugger
+          this.props.fetchAllUserTrips(this.props.currentUser.user.id);
+        }
+      });
     }
-    //loading screen dispatched > data is fetched loading stopped(state changes)
     window.setTimeout(() => this.setState({dataFetched: true}), 1000);
   }
 
@@ -73,29 +95,29 @@ class HomesDetail extends React.Component {
   //   }
   //   //loading screen dispatched > data is fetched loading stopped(state changes)
   // }
-
-  componentWillMount(){
-    const homeId = parseInt(this.props.match.params.homeId);
-
-    if (Object.keys(this.props.homes).length <= 1){
-      this.props.fetchAllHomes()
-        .then(() => this.props.fetchSingleHome(homeId))
-        .then(() => this.props.fetchReviewsForHome(homeId))
-        .then(() => {
-          if (this.props.loggedIn) {
-            this.props.fetchAllUserTrips(this.props.currentUser.id);
-          }
-        });
-    } else {
-      this.props.fetchSingleHome(homeId)
-      .then(() => this.props.fetchReviewsForHome(homeId))
-      .then(() => {
-        if (this.props.loggedIn) {
-          this.props.fetchAllUserTrips(this.props.currentUser.id);
-        }
-      });
-    }
-  }
+//#######################################################################
+  // componentWillMount(){
+  //   const homeId = parseInt(this.props.match.params.homeId);
+  //   debugger
+  //   if (Object.keys(this.props.homes).length <= 1){
+  //     this.props.fetchAllHomes()
+  //       .then(() => this.props.fetchSingleHome(homeId))
+  //       .then(() => this.props.fetchReviewsForHome(homeId))
+  //       .then(() => {
+  //         if (this.props.loggedIn) {
+  //           this.props.fetchAllUserTrips(this.props.currentUser.id);
+  //         }
+  //       });
+  //   } else {
+  //     this.props.fetchSingleHome(homeId)
+  //     .then(() => this.props.fetchReviewsForHome(homeId))
+  //     .then(() => {
+  //       if (this.props.loggedIn) {
+  //         this.props.fetchAllUserTrips(this.props.currentUser.id);
+  //       }
+  //     });
+  //   }
+  // }
 
 
   render() {
@@ -107,48 +129,48 @@ class HomesDetail extends React.Component {
     let editButtonOption;
     let editFormOption;
     let inUsersTrips;
-    //NOTE: reviews are fetchde in jbuidler homes show
 
+    debugger
 
-    const reviews = Object.values(this.props.reviews_ui).map((review) => (
-      <div>
-        <ReviewItem
-          key={review.id}
-          review={review}
-          currentUser={this.props.currentUser}
-          updateReviewForHome={this.props.updateReviewForHome}
-          deleteReview={this.props.deleteReview}
-        />
+    const reviews = Object.values(this.props.reviews_ui).map((review) => {
+      debugger
+      return (
+        <div>
+          <ReviewItem
+            key={review.id}
+            review={review}
+            currentUser={this.props.currentUser}
+            updateReviewForHome={this.props.updateReviewForHome}
+            deleteReview={this.props.deleteReview}
+          />
+        </div>
+      );
+    });
 
-      </div>
-    ));
+    // debugger
+    // if (this.props.loggedIn) {
+    //   debugger
+    //   // why not use trips_ui???
+    //    if (this.props.currentUser.homes){ //array [{home}];
+    //    let prevTrips = this.props.currentUser.homes;
+    //    let prevTripsIds = prevTrips.map( home => (home.id));
+    //    inUsersTrips =  prevTripsIds.includes(homeId);
+    //    }
+    // } else  inUsersTrips = false;
 
-
+///////////////////////////////
     if (this.props.loggedIn) {
 
-      // why not use trips_ui???
-       if (this.props.currentUser.homes){ //array [{home}];
-       let prevTrips = this.props.currentUser.homes;
+
+       if (Array.isArray(this.props.trips_ui)){ //array [{home}];
+
+       let prevTrips = this.props.trips_ui;
        let prevTripsIds = prevTrips.map( home => (home.id));
        inUsersTrips =  prevTripsIds.includes(homeId);
        }
     } else
     inUsersTrips = false;
 
-///////////////////////////////
-    // if (this.props.loggedIn) {
-    //
-    //   // why not use trips_ui???
-    //    if (this.props.trips_ui){ //array [{home}];
-    //    let prevTrips = this.props.trips_ui;
-    //    let prevTripsIds =
-    //       Object.values(prevTrips)
-    //       .map( home => (home.id));
-    //    inUsersTrips =  prevTripsIds.includes(homeId);
-    //    }
-    // } else
-    // inUsersTrips = false;
-/////////////////////////////////
 
 
     if (this.props.loggedIn && !this.state.createFormOpen && inUsersTrips) {
@@ -304,7 +326,7 @@ class HomesDetail extends React.Component {
                 <button className={createButtonOption} onClick={this.handleEditForm}>Write review</button>
 
                 <div className={`${createFormOption}-background`}>
-                  <form className="edit-form">
+                  <form className="create-review-form">
                     <input type="text" placeholder="Write your review" onChange={this.handleChange} value={this.state.body}></input>
                     <button onClick={this.handleSubmit}>Submit review</button>
                   </form>
