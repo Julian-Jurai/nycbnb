@@ -10,7 +10,7 @@ export const fetchReviewsForHome = (homeId) => {
 
 export const createReview = (review) => {
 //Works!
-debugger;
+
   return (
     $.ajax({
       method: "POST",
@@ -34,10 +34,11 @@ export const deleteReview = (reviewId) => {
 
 export const updateReview = (review) => {
 //WORKS!
+
   return (
     $.ajax({
       method: "PATCH",
-      url: `/api/reviews/${reviewId}`,
+      url: `/api/reviews/${review.id}`,
       data: { review }
     })
   );

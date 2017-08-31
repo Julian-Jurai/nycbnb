@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   let store;
 
   if (window.currentUser) {
+
     const preloadedState = { session: { currentUser: window.currentUser } };
     store = configureStore(preloadedState);
     delete window.currentUser;
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   //test starts######################################################
   // window.fetchAllHomes = fetchAllHomes;
   // window.updateFilter = updateFilter;
-  window.fetchReviewsForHome = fetchReviewsForHome;
+  // window.fetchReviewsForHome = fetchReviewsForHome;
   // window.fetchAllHomes = APIUtil.fetchAllHomes;
   // // window.fetchSingleHome = fetchSingleHome;
   //
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 
   const root = document.getElementById('root');
-  ReactDOM.render(<Root store={store} />, root); // linter error
+  ReactDOM.render(<Root store={store} />, root);
 
 
 });

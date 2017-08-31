@@ -378,7 +378,8 @@ select::-ms-expand {
   flex-direction: row;
   padding: 20px;
   font-weight: 100;
-  border-bottom: 1px solid #aaa;
+  // border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid rgb(220, 224, 224);;
 }
 
 .home-detail-image-summary-items {
@@ -420,7 +421,8 @@ select::-ms-expand {
 }
 
 #home-detail-heading {
-  border-bottom: 1px solid rgb(166, 166, 166) ;
+  border-bottom: 1px solid rgb(220, 224, 224); ;
+  // border-bottom: 1px solid rgb(166, 166, 166) ;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -1267,4 +1269,17 @@ justify-content: space-between;
 #helpful-tag{
   display: flex;
   align-items: center;
+}
+
+
+//reviewItems
+
+.edit-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-buttons i {
+  padding: 10px;
+
 }

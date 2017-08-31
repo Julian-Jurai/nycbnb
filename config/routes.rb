@@ -11,11 +11,10 @@ Rails.application.routes.draw do
 
     end
 
-    # resources :homes, only: [] do
-    #   resources :users, only: [] do
-    #     resources :reviews, only: [:create, :update]
-    #   end
-    # end
+    resources :homes, only: [] do
+        resources :reviews, only: [:index, :create, :update]
+    end
+
     resources :reviews, only: [:create, :update, :destroy, :index]
 
     resources :users, only:[] do

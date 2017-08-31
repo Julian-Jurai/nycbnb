@@ -13,7 +13,7 @@ import ReviewItem from './review_item';
 class HomesDetail extends React.Component {
   constructor(props){
     super(props);
-    this.state = {dataFetched: false, editFormOpen:false, body: "", rating: 0};
+    this.state = {dataFetched: false, createFormOpen:false, body: "", rating: 0};
     this.handleEditForm = this.handleEditForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +21,7 @@ class HomesDetail extends React.Component {
 
   handleEditForm(e){
     e.preventDefault();
-    this.setState({editFormOpen: !this.state.editFormOpen}); //button is hidden
+    this.setState({createFormOpen: !this.state.createFormOpen}); //button is hidden
   }
 
   handleChange(e){
@@ -37,9 +37,8 @@ class HomesDetail extends React.Component {
       body: this.state.body,
       rating: 1,
     };
-    debugger
+
     this.props.createReviewForHome(review);
-    //dispatch thunk action to create review and return all review
     this.setState({body: "", rating: 0});
   }
 
@@ -76,36 +75,57 @@ class HomesDetail extends React.Component {
   // }
 
   componentWillMount(){
-    const homeId = this.props.match.params.homeId;
+    const homeId = parseInt(this.props.match.params.homeId);
 
     if (Object.keys(this.props.homes).length <= 1){
       this.props.fetchAllHomes()
         .then(() => this.props.fetchSingleHome(homeId))
-        .then(() => this.props.fetchAllUserTrips(this.props.currentUser.id));
+        .then(() => this.props.fetchReviewsForHome(homeId))
+        .then(() => {
+          if (this.props.loggedIn) {
+            this.props.fetchAllUserTrips(this.props.currentUser.id);
+          }
+        });
     } else {
       this.props.fetchSingleHome(homeId)
-      .then(() => this.props.fetchAllUserTrips(this.props.currentUser.id));
-      // .then(() => this.props.fetchAllReviewsForHome(homeId));
+      .then(() => this.props.fetchReviewsForHome(homeId))
+      .then(() => {
+        if (this.props.loggedIn) {
+          this.props.fetchAllUserTrips(this.props.currentUser.id);
+        }
+      });
     }
   }
 
 
-
   render() {
-    debugger
+
     const homeId = parseInt(this.props.match.params.homeId);
     const currentHome = this.props.homes[homeId];
+    let createButtonOption;
+    let createFormOption;
     let editButtonOption;
     let editFormOption;
     let inUsersTrips;
     //NOTE: reviews are fetchde in jbuidler homes show
+
+
     const reviews = Object.values(this.props.reviews_ui).map((review) => (
-    <ReviewItem review={review}/>
+      <div>
+        <ReviewItem
+          key={review.id}
+          review={review}
+          currentUser={this.props.currentUser}
+          updateReviewForHome={this.props.updateReviewForHome}
+          deleteReview={this.props.deleteReview}
+        />
+
+      </div>
     ));
 
 
     if (this.props.loggedIn) {
-      debugger
+
       // why not use trips_ui???
        if (this.props.currentUser.homes){ //array [{home}];
        let prevTrips = this.props.currentUser.homes;
@@ -114,9 +134,10 @@ class HomesDetail extends React.Component {
        }
     } else
     inUsersTrips = false;
+
 ///////////////////////////////
     // if (this.props.loggedIn) {
-    //   debugger
+    //
     //   // why not use trips_ui???
     //    if (this.props.trips_ui){ //array [{home}];
     //    let prevTrips = this.props.trips_ui;
@@ -130,15 +151,15 @@ class HomesDetail extends React.Component {
 /////////////////////////////////
 
 
-    if (this.props.loggedIn && !this.state.editFormOpen && inUsersTrips) {
-      editButtonOption = "create-review-button";
-    } else editButtonOption = "hidden";
+    if (this.props.loggedIn && !this.state.createFormOpen && inUsersTrips) {
+      createButtonOption = "create-review-button";
+    } else createButtonOption = "hidden";
 
-    if (this.props.loggedIn && this.state.editFormOpen && inUsersTrips) {
-      editFormOption = "display-edit-form";
-    } else editFormOption = "hidden";
+    if (this.props.loggedIn && this.state.createFormOpen && inUsersTrips) {
+      createFormOption = "show-create-review-form";
+    } else createFormOption = "hidden";
 
-    debugger
+
 
     if (this.state.dataFetched){
       return(
@@ -280,11 +301,11 @@ class HomesDetail extends React.Component {
                 </div>
 
                 {reviews}
-                <button className={editButtonOption} onClick={this.handleEditForm}>Write review</button>
+                <button className={createButtonOption} onClick={this.handleEditForm}>Write review</button>
 
-                <div className={`${editFormOption}-background`}>
+                <div className={`${createFormOption}-background`}>
                   <form className="edit-form">
-                    <input type="text" placeholder="Write your review" onChange={this.handleChange}></input>
+                    <input type="text" placeholder="Write your review" onChange={this.handleChange} value={this.state.body}></input>
                     <button onClick={this.handleSubmit}>Submit review</button>
                   </form>
                 </div>

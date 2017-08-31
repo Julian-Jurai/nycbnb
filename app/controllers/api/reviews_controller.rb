@@ -32,7 +32,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     if @review
       @review.destroy
-      render json: ["Review sucessfully deleted"]
+      render "api/reviews/show"
     else
       render json: ["Deletion failed"], status: 422
     end

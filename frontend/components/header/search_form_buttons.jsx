@@ -12,7 +12,7 @@ class SearchFormButtons extends React.Component{
 
   handleSearch(e){
     e.preventDefault();
-    this.props.updateSearch(e.currentTarget.value);
+    // this.props.updateSearch(e.currentTarget.value);
   }
 
   // <input type="text" name="search" id="search-button" placeholder="Anywhere" onChange={this.handleSearch}/>
@@ -32,13 +32,6 @@ class SearchFormButtons extends React.Component{
             <input type="text" name="search" id="search-button" placeholder="Anywhere" onChange={this.handleSearch}/>
           </div>
 
-          <div className="when-calender-button">
-            <input id="date" type="date"  placeholder="Check In"/>
-          </div>
-
-          <div className="when-calender-button">
-            <input id="date" type="date"  placeholder="Check In" />
-          </div>
 
 
           <select>

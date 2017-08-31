@@ -24,7 +24,7 @@ export const receiveAllHomes = (homes) => {
 
 export const receiveErrors = (errors) => {
   return{
-      type: receiveErrors,
+      type: RECEIVE_ERRORS,
       errors
   };
 };
