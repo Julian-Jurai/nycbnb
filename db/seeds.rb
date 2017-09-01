@@ -30,10 +30,10 @@ random_descriptions = [
 ]
 
 random_titles = [
-  "Central Greenwich Village Home Perfect For Summer",
-  "Double room in lge Victorian house",
+  "Central Greenwich Village ",
+  "Double room in Victorian house",
   "In the historical center of Lecce",
-  "Stunning All concrete House by the river",
+  "Stunning All concrete House ",
   "Leccio Apartment",
   "Unique architecture",
   "'Silo Studio' Cottage",
@@ -51,7 +51,7 @@ random_titles = [
   "Private Pool House with Amazing Views!",
   "Charming gardenroom with woodstove",
   "Luxury Gold Coast Hinterland Villa",
-  "Minsk Belarus Studio in historical center",
+  "Minsk  Studio in historical center",
   "Luxury Villa with Amazing Sea View"
 ]
 
