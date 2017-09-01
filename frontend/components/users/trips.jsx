@@ -13,7 +13,7 @@ class Trips extends React.Component {
   }
 
   componentDidMount(){
-    debugger
+  
     this.props.fetchAllUserTrips(this.props.currentUser.id);
   }
 

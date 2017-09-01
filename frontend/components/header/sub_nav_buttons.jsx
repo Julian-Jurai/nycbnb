@@ -9,19 +9,36 @@ const subNavButtons = (props) => {
     marginFix = "with-greeting";
   } else { marginFix = "";}
 
-  let classname;
+  let homesClassName;
+  let experiencesClassName;
+  let placesClassName;
+  let forYouClassName;
+
+  if (props.location.pathname === "/"){
+    forYouClassName = "selected-site-nav-button";
+  } else forYouClassName = "site-nav-button";
+
   if (props.location.pathname === "/homes"){
-    classname = "selected-site-nav-button";
-  } else classname = "site-nav-button";
+    homesClassName = "selected-site-nav-button";
+  } else homesClassName = "site-nav-button";
+
+  if (props.location.pathname === "/experiences"){
+    experiencesClassName = "selected-site-nav-button";
+  } else experiencesClassName = "site-nav-button";
+
+  if (props.location.pathname === "/places"){
+    placesClassName = "selected-site-nav-button";
+  } else placesClassName = "site-nav-button";
 
 
   return (
     <div className={`site-nav-buttons ${marginFix}`}>
 
-        <Link className={`${classname}`} to="/homes"> Homes </Link>
-        <Link className={`${classname}`} to="/experiences"> Experiences </Link>
-        <Link className={`${classname}`} to="/places"> Homes </Link>
-      
+        <Link className={`${forYouClassName}`} to="/"> For You </Link>
+        <Link className={`${homesClassName}`} to="/homes"> Homes </Link>
+        <Link className={`${experiencesClassName}`} to="/experiences"> Experiences </Link>
+        <Link className={`${placesClassName}`} to="/places"> Places </Link>
+
 
     </div>
   );

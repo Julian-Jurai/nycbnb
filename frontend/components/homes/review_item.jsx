@@ -27,7 +27,7 @@ class ReviewItem extends React.Component {
   }
 
   handleUpdate(e){
-    debugger
+
     e.preventDefault();
     let review = {
       id: this.props.review.id,
@@ -37,10 +37,10 @@ class ReviewItem extends React.Component {
       body: this.state.body,
       rating: 1,
     };
-    debugger
+
     this.props.updateReviewForHome(review);
     this.setState({editFormOpen: false, body: this.state.body});
-    debugger
+
   }
 
   handleDeleteReview(e){
@@ -56,18 +56,20 @@ class ReviewItem extends React.Component {
 
 
   render(){
-    debugger
+
     let editFormClass;
     let editButtonClass;
     let bodyClass;
 
+    editButtonClass =  "hidden";
+    editFormClass = "hidden";
     //editFormClass
     this.state.editFormOpen  ? ( editFormClass = "show-edit-form") : (editFormClass = "hidden")
 
 
     //editButtonClass
     if (this.props.currentUser){
-      debugger
+
       // if (this.props.currentUser.user.id === this.props.review.user.id) {
       if (this.props.currentUser.id === this.props.review.user.id) {
         editButtonClass =  "edit-buttons";
@@ -133,7 +135,7 @@ class ReviewItem extends React.Component {
                 value={this.state.body}
                 onChange={this.handleChange}
               />
-            <button onClick={this.handleUpdate}>Update review</button>
+            <button onClick={this.handleUpdate} id="update-review">Update review</button>
           </div>
         </div>
 
