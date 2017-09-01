@@ -19,6 +19,8 @@ import BookingPageContainer from './booking/booking_page_container';
 import TripsContainer from './users/trips_container';
 import SearchFormButtonsContainer from './header/search_form_button_container';
 import HomePage from './header/home_page';
+import ExperiencesPage from './header/experiences_page';
+import PlacesPage from './header/places_page';
 
 //test
 import Trips from './users/trips';
@@ -56,7 +58,7 @@ const Greeting = () => (
 
 const Footer = (props) => {
   let show;
-  debugger
+
 
   if (props.location.pathname == "/homes"){
     show = "hidden";
@@ -123,12 +125,14 @@ const Footer = (props) => {
 
 
 export const App = () => {
-  debugger
+
   return (
     <div>
       <Route component={Header} />
       <Route path="/" component={SessionFormContainer} />
-      <Route path="/####################" exact component={HomePage} />
+      <Route path="/" exact component={HomePage} />
+      <Route path="/experiences" exact component={ExperiencesPage} />
+      <Route path="/places" exact component={PlacesPage} />
       <Route path="/homes/:homeId" component={HomesDetailContainer} />
       <ProtectedRoute path="/booking" component={BookingPageContainer} />
       <ProtectedRoute path="/:userId/trips" component={TripsContainer} />

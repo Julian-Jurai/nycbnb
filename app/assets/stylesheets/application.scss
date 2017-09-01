@@ -138,11 +138,11 @@ input[type="checkbox"]{
 
 
 #homepage{
-  margin-top: 60px;
-  // width: 100%;
-  width: 80%;
-  height: auto;
-  position: fixed;
+  width: auto;
+  height: 392px;
+  position: absolute;
+  top: 330px;
+
 }
 // select
 
@@ -800,11 +800,8 @@ select::-ms-expand {
 
 // homeindex
 .home-index-image {
-  // max-width: 440px;
-  // min-width: 340px;
-  max-height: 280px;
-  max-width: 390px;
-  // min-height: 230px;
+  height: 280px;
+  width: 390px;
   padding-bottom: 5px;
 }
 
@@ -1544,4 +1541,20 @@ justify-content: space-between;
 #update-review :hover{
   border-color: #007377;
   background-color: #007377;
+}
+#review-date{
+  font-size: 10px !important;
+}
+#experiences {
+  height: 302px;
+  width: auto;
+  top: 190px;
+  left: 140px;
+  position: absolute;
+}
+#places{
+  width: 100%;
+    top: -33px;
+    left: -5px;
+    position: absolute;
 }

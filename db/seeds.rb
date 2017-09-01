@@ -77,13 +77,175 @@ random_profile_image = [
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/067ad871eca05621e4f5396ea92f3d66--profile-photography-headshot-photography.jpg",
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/205-McGREGOR_CONOR.png",
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/IMG_ReeseD_20161027.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/caa238-profile.jpg",
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/emily-profile.png",
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/image.jpeg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/images.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/mock-profile.jpg",
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/obioma.jpg",
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/profile.jpg",
-  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/varun_56b_copy.jpg"
-
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/profile_img.png",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/student-profile-nicole-mills-college.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/team2.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/varun_56b_copy.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/viewImage-1.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/viewImage-2.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/viewImage.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/xu-profile-400-1.png"
 ]
+
+random_house_image = [
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/05HIGHEND1-superJumbo.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/0c899a0f3b6ba01181d56b0fcc300061.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/0e25c2e2390dc63c0b7b9e11b54d6a10.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/101-west-end-apartments-exterior.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/111-murray-street-kpf-rockwell-architecture-news-skyscraper-new-york-city-usa_dezeen_1568_8.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/131162027.0.0.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/16TICKET-superJumbo-v2.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/3H9aKtT.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/75-Kenmare-Street-1.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/7TvpgVk.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/80_columbus_circle_-66a-master_bedroom-nyc1.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/8AGvuIL.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/9s1aqOG.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/CetraRuddy-535W43205.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/ClLGSwk.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/E5bU0Pi.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/JBq9WNw.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/LaRpJ7X.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/MOPW0Nk.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/MfthjDF.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/Py9u71V.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/SbGhUW3.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/XaRqYju.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/Y5E19DN.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/beatrice-apartments-penthouse.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/beTTeDs.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/cream-wall-luxury-bedroom-apt-nyc-with-white-table-lamp-on-the-desk-it-also-has-minimalist-windows-design-ideas-with-white-ceiling-it-also-has-brown-rug.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/cullman-aerial-real-estate-phot.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/d0T3XtH.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/dynamic.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/go-inside-the-brooklyn-home-of-new-yorks-most-sought-after-architect-1.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/m3pTnKW.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/new-york-loft-apartments-in-cool-414827e80d5ebfd1102575b3c042e801jpg.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/slide-1.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/slider_ar_06sl_big.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/wLV72T0.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/walkup-nyc-header.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/we-toured-a-273-million-apartment-in-one-of-new-york-citys-most-expensive-buildings.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/xwBZmOB.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/z2sInhy.jpg",
+  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/wwwww.jpg"
+]
+
+random_lat = [
+  40.816807403348875, 40.77342043091354, 40.795748560480185,
+  40.64055540328192, 40.65443768662733, 40.85908127792321,
+  40.60648765999119, 40.68661801739872, 40.724167563384526,
+  40.73553758530453, 40.88128119365111, 40.846018624975635,
+  40.60488684143729, 40.72219811535685, 40.88674827678327,
+  40.78505606414934, 40.676937872111274, 40.627962645144514,
+  40.86583462317485, 40.77385721693258, 40.76248639192421,
+  40.73472658884314, 40.77250885522205, 40.809309950586425,
+  40.70752729844037, 40.67041663166196, 40.643253536644245,
+  40.66868876840924, 40.752928442969456, 40.60097266029533,
+  40.65414834031823, 40.81900428924561, 40.68111936862471,
+  40.825231637153614, 40.899064419055456, 40.617387889982936,
+  40.75681181444408, 40.84136354168355, 40.6720746722405,
+  40.70153265388591, 40.87758593920155, 40.87336162173339,
+  40.887310942353125, 40.689170825645576, 40.855737780370575,
+  40.877308897358944, 40.72802353769765, 40.68693013258512,
+  40.72244623542839, 40.89444539889581
+]
+
+random_lng = [
+  -73.75071028159498, -73.92776703939857, -73.95502874562277,
+  -73.96764806687663, -73.80431911436969, -73.77255278452935,
+  -73.87480097236744, -73.82674781981046, -73.87948246654521,
+  -73.88435162896823, -73.85768737586965, -73.75125215871401,
+  -73.75098406230536, -73.79029455547581, -73.97907891684451,
+  -73.90692279192305, -73.88527614241319, -73.86348627252585,
+  -73.88853062376921, -73.89322604076548, -73.97164261658948,
+  -73.99320816495678, -73.94539671881397, -73.94050771116738,
+  -73.86312416695844, -73.92301426642318, -73.75359519031565,
+  -73.93647729241525, -73.95683685324686, -73.83489484649839,
+  -73.80492138338653, -73.83791504962713, -73.9417374375959,
+  -73.97423914940997, -73.95140433346374, -73.87644609838442,
+  -73.95345854797141, -73.94839220194227, -73.8130095995791,
+  -73.86812056574374, -73.83723735587658, -73.87629672099047,
+  -73.81692215904386, -73.98790390071963, -73.76304034990447,
+  -73.8911604982731, -73.87944867445297, -73.86678936004408,
+  -73.95275737935677, -73.8958970534631
+]
+
+random_addresses = [
+  "8151 S. El Dorado Street
+Westbury, NY 11590",
+  "8204 Chapel Rd.
+Rego Park, NY 11374",
+  "259 Shore Lane
+New York, NY 10025",
+  "668 East Meadowbrook St.
+South Richmond Hill, NY 11419",
+  "9290 Silver Spear St.
+New York, NY 10016",
+  "9704 Central St.
+New York, NY 10028",
+  "1 South Middle River Lane
+New York, NY 10003",
+  "27 Summerhouse Street
+Poughkeepsie, NY 12601",
+  "7570 Bridgeton Court
+Newburgh, NY 12550",
+  "691 Wood Lane
+Freeport, NY 11520",
+  "649 Lees Creek Rd.
+Staten Island, NY 10306",
+  "65 East Columbia Dr.
+Troy, NY 12180",
+  "15 Lookout Circle
+New York, NY 10003",
+  "21 Edgewater St.
+Elmont, NY 11003",
+  "9958 Parker Street
+New York, NY 10016",
+  "31 Thomas Ave.
+Brooklyn, NY 11229",
+  "9812 Myers Ave.
+Rochester, NY 14609",
+  "78 S. Holly Ave.
+New York, NY 10031",
+  "254 Indian Spring Drive
+New York, NY 10040",
+  "8158 Westminster Street
+Woodside, NY 11377",
+  "8443 N. Bald Hill Avenue
+Astoria, NY 11106",
+  "26 Ridgewood Avenue
+Buffalo, NY 14215
+",
+  "8991 St Louis St.
+Staten Island, NY 10314",
+  "19 Atlantic Drive
+New York, NY 10024",
+  "532 West Rd.
+Jamaica, NY 11435",
+  "81 Overlook Drive
+North Tonawanda, NY 14120",
+  "466 Cherry Road
+Flushing, NY 11355",
+  "7 Aspen St.
+Brooklyn, NY 11201",
+  "239 Berkshire Rd.
+Huntington Station, NY 11746"
+]
+
+random_room_type = [
+  "Entire home",
+  "Private room",
+  "Shared room"
+]
+
 
 random_profile_usernames = [
   "Emma",	"Liam",
@@ -94,45 +256,30 @@ random_profile_usernames = [
 	"Mia",	"Logan",
 	",Amelia",	"Ethan",
 	"Charlotte",	"Elijah",
-	"Harper",	"Aiden",
-	"Aria",	"Benjamin",
-	"Ella",	"James"
+	"Harper",	"Aiden"
 ]
+
+# random_yr = (10..18).to_a
+# random_month = (1..9).to_a
+random_day = (2..9).to_a
+# random_date = "20#{random_yr.sample}-0#{random_month.sample}-0#{random_day.sample}"
 
 User.destroy_all
 
 User.create!(
 username: "guest",
 password: "password",
-image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Users/varun_56b_copy.jpg"
-)
-
-
-User.create!(
-username: random_profile_usernames.pop,
-password: "password",
-image: random_profile_image.pop
-)
-
-User.create!(
-username: random_profile_usernames.pop,
-password: "password",
-image: random_profile_image.pop
-)
-
-User.create!(
-username: random_profile_usernames.pop,
-password: "password",
-image: random_profile_image.pop
-)
-
-User.create!(
-username: random_profile_usernames.pop,
-password: "password",
 image: random_profile_image.pop
 )
 
 
+10.times do
+  User.create!(
+  username: random_profile_usernames.pop,
+  password: "password",
+  image: random_profile_image.pop
+  )
+end
 
 
 user_ids = User.all.map{ |user| user.id }
@@ -140,219 +287,52 @@ user_ids = User.all.map{ |user| user.id }
 Home.destroy_all
 
 
-
-Home.create!(
-  host_id: user_ids.sample,
-  title: "title",
-  description: "In bounds 1",
-  lat: 40.72,
-  long: -74,
-  address: "address",
-  price: 50,
-  room_type: "Entire  home",
-  bedrooms: 4,
-  guests: 6,
-  beds: 5,
-  kitchen: true,
-  internet: true,
-  family: true,
-  tv: true,
-  essentials: true,
-  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/1.jpg"
-)
-
-Home.create!(
-  host_id: user_ids.sample,
-  title: "title",
-  description: "In bounds 2",
-  lat: 40.76,
-  long: -74,
-  address: "address",
-  price: 50,
-  room_type: "Entire home",
-  bedrooms: 4,
-  guests: 6,
-  beds: 5,
-  kitchen: true,
-  internet: true,
-  family: true,
-  tv: true,
-  essentials: true,
-  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/1.jpg"
-)
-Home.create!(
-  host_id: user_ids.sample,
-  title: "title",
-  description: "out of bounds 1",
-  lat: 50,
-  long: -75,
-  address: "address",
-  price: 50,
-  room_type: "Entire home",
-  bedrooms: 4,
-  guests: 6,
-  beds: 5,
-  kitchen: true,
-  internet: true,
-  family: true,
-  tv: true,
-  essentials: true,
-  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/1.jpg"
-)
-
-Home.create!(
-  host_id: user_ids.sample,
-  title: "title",
-  description: "out of bounds 2",
-  lat: 55,
-  long: -76,
-  address: "address",
-  price: 50,
-  room_type: "Entire home",
-  bedrooms: 4,
-  guests: 6,
-  beds: 5,
-  kitchen: true,
-  internet: true,
-  family: true,
-  tv: true,
-  essentials: true,
-  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/33f0a1eb_original.jpg"
-)
-
-Home.create!(
-  host_id: user_ids.sample,
-  title: "title",
-  description: "description",
-  lat: 50,
-  long: 45,
-  address: "address",
-  price: 50,
-  room_type: "Entire home",
-  bedrooms: 4,
-  guests: 6,
-  beds: 5,
-  kitchen: true,
-  internet: true,
-  family: true,
-  tv: true,
-  essentials: true,
-  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/7b53f441_original.jpg"
-)
-
-Home.create!(
-  host_id: user_ids.sample,
-  title: "title",
-  description: "description",
-  lat: 50,
-  long: 45,
-  address: "address",
-  price: 50,
-  room_type: "Entire home",
-  bedrooms: 4,
-  guests: 6,
-  beds: 5,
-  kitchen: true,
-  internet: true,
-  family: true,
-  tv: true,
-  essentials: true,
-  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/7b53f441_original.jpg"
-)
-
-Home.create!(
-  host_id: user_ids.sample,
-  title: "title",
-  description: "description",
-  lat: 50,
-  long: 45,
-  address: "address",
-  price: 50,
-  room_type: "Entire home",
-  bedrooms: 4,
-  guests: 6,
-  beds: 5,
-  kitchen: true,
-  internet: true,
-  family: true,
-  tv: true,
-  essentials: true,
-  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/da4b9b6b_original.jpg"
-)
-
-Home.create!(
-  host_id: user_ids.sample,
-  title: "title",
-  description: "description",
-  lat: 50,
-  long: 45,
-  address: "address",
-  price: 50,
-  room_type: "Entire home",
-  bedrooms: 4,
-  guests: 6,
-  beds: 5,
-  kitchen: true,
-  internet: true,
-  family: true,
-  tv: true,
-  essentials: true,
-  image: "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/seed_homes/fd6d6382_original.jpg"
-)
+24.times do
+  Home.create!(
+    host_id: user_ids.sample,
+    title: random_titles.sample,
+    description: random_descriptions.sample,
+    lat: random_lat.sample,
+    long: random_lng.sample,
+    address: random_addresses.sample,
+    price: random_price.sample,
+    room_type: random_room_type.sample,
+    bedrooms: random_snum.sample,
+    guests: random_snum.sample,
+    beds: random_snum.sample,
+    kitchen: true,
+    internet: true,
+    family: true,
+    tv: true,
+    essentials: true,
+    image: random_house_image.pop
+  )
+end
 
 homes_ids = Home.all.map{ |home| home.id }
 
 Booking.destroy_all
 
-Booking.create!(
-  {
-    user_id: user_ids.sample,
-    homes_id: homes_ids.sample,
-    start_date: '2017-06-01',
-    end_date: '2017-06-04'
-  }
-)
-
-Booking.create!(
-  {
-  user_id: user_ids.sample,
-  homes_id: homes_ids.sample,
-  start_date: '2016-06-01',
-  end_date: '2015-06-04'
-  }
-)
+8.times do
+  Booking.create!(
+    {
+      user_id: user_ids.sample,
+      homes_id: homes_ids.sample,
+      start_date: '2017-06-01',
+      end_date: "2017-06-0#{random_day.sample}"
+    }
+  )
+end
 
 ### REVIEWS ###
 
-Review.create!(
-  {
-  user_id: user_ids.sample,
-  homes_id: homes_ids.sample,
-  body: random_reviews.sample,
-  rating: random_rating.sample
-  }
-)
-Review.create!(
-  {
-  user_id: user_ids.sample,
-  homes_id: homes_ids.sample,
-  body: random_reviews.sample,
-  rating: random_rating.sample
-  }
-)
-Review.create!(
-  {
-  user_id: user_ids.sample,
-  homes_id: homes_ids.sample,
-  body: random_reviews.sample,
-  rating: random_rating.sample
-  }
-)
-Review.create!(
-  {
-  user_id: user_ids.sample,
-  homes_id: homes_ids.sample,
-  body: random_reviews.sample,
-  rating: random_rating.sample
-  }
-)
+30.times do
+  Review.create!(
+    {
+    user_id: user_ids.sample,
+    homes_id: homes_ids.sample,
+    body: random_reviews.sample,
+    rating: random_rating.sample
+    }
+  )
+end

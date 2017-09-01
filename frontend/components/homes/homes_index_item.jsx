@@ -21,7 +21,6 @@ const HomesIndexItem = ({home}) => {
       <div>
         <span>From ${home.price} &middot;  </span>
         <span>{home.title}</span>
-        <span>{home.title}</span>
       </div>
       <div className="home-index-item-feats">
         <span>{home.room_type} &middot; </span>

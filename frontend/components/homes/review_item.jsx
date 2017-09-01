@@ -83,9 +83,13 @@ class ReviewItem extends React.Component {
     // let randNum =  Math.floor(Math.random() * (20 - 1) + 1);
     let stars = [];
     let num = this.props.review.rating;
-    for (var i = 0; i < num; i++) {
+    for (var i = 0; i < num + 2; i++) {
       stars.push(<i className="fa fa-star" aria-hidden="true"></i>);
     }
+
+
+        let moment = require('moment');
+        let reviewDate = moment(this.props.review.updated_at).format("MMM Do YY");
 
     return (
       <div className="review-item">
@@ -104,8 +108,8 @@ class ReviewItem extends React.Component {
             <img src={this.props.review.user.image} id="user-avatar"></img>
             <div>
               <p>{this.props.review.user.username}</p>
-              <p>{this.props.review.updated_at}</p>
-              <p>{this.props.review.user.rating}</p>
+              <p id="review-date">{reviewDate}</p>
+
               <span id="stars" className="user-reviews">
                 { stars }
               </span>

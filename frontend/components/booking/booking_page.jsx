@@ -40,6 +40,14 @@ class BookingPage extends React.Component {
     let checked;
     this.state.checkbox ? checked = "checked" : checked = ""
 
+
+    let moment = require('moment');
+    let checkInDate = moment(this.props.booking_ui.start_date).format("MMM Do YY");
+    let checkOutDate = moment(this.props.booking_ui.end_date).format("MMM Do YY");
+    debugger
+    let duration = (moment(this.props.booking_ui.end_date)).diff(moment(this.props.booking_ui.start_date), 'days');
+    let totalCost = this.props.booking_ui.currentHome.price * duration;
+    debugger
     return(
     <div className="booking_page_container">
       <div className="booking-page-details">
@@ -107,18 +115,18 @@ class BookingPage extends React.Component {
           <div className="checkin-dates">
             <div>
               <p>Check-in</p>
-              <h4>{this.props.booking_ui.start_date}</h4>
+              <h4>{checkInDate}</h4>
             </div>
 
             <div>
               <p>Check-out</p>
-              <h4>{this.props.booking_ui.start_date}</h4>
+              <h4>{checkOutDate}</h4>
             </div>
           </div>
 
           <div className="total">
             <h4>Total</h4>
-            <h4>${this.props.booking_ui.currentHome.price}</h4>
+            <h4>${totalCost}</h4>
           </div>
 
           <div className="disclaimer">
