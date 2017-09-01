@@ -135,7 +135,7 @@ random_house_image = [
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/we-toured-a-273-million-apartment-in-one-of-new-york-citys-most-expensive-buildings.jpg",
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/xwBZmOB.jpg",
   "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/z2sInhy.jpg",
-  "https://s3.us-east-2.amazonaws.com/nyc-bnb-dev/Homes/wwwww.jpg"
+
 ]
 
 random_lat = [
