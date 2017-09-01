@@ -140,9 +140,7 @@ input[type="checkbox"]{
 #homepage{
   width: auto;
   height: 392px;
-  position: absolute;
-  top: 330px;
-
+  padding-top: 400px;
 }
 // select
 
@@ -1231,6 +1229,7 @@ select::-ms-expand {
   height: 100vh;
   position: sticky;
   top: 0;
+  width: 33%;
   position: fixed;
   right: 0;
  }
@@ -1407,7 +1406,7 @@ justify-content: space-between;
 
 // footer
 .footer-container {
-  margin-top: 700px;
+  // margin-top: 700px;
   border-top: 1px solid rgb(209, 214, 214);
   display: flex;
   width: 100%;
@@ -1549,12 +1548,10 @@ justify-content: space-between;
   height: 302px;
   width: auto;
   top: 190px;
+  padding-top: 300px;
   left: 140px;
-  position: absolute;
+/* position: absolute; */
 }
 #places{
   width: 100%;
-    top: -33px;
-    left: -5px;
-    position: absolute;
 }
