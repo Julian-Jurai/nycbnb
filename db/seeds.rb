@@ -287,7 +287,7 @@ user_ids = User.all.map{ |user| user.id }
 Home.destroy_all
 
 
-24.times do
+30.times do
   Home.create!(
     host_id: user_ids.sample,
     title: random_titles.sample,
@@ -326,7 +326,7 @@ end
 
 ### REVIEWS ###
 
-30.times do
+40.times do
   Review.create!(
     {
     user_id: user_ids.sample,

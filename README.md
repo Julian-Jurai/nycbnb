@@ -12,32 +12,14 @@ NYCbnb is a full-stack web application inspired by Airbnb. It utilizes Ruby on R
 
 ### Google Maps Search
 
-  In the backend, homes are stored in its own table that has properties of 'lat','lng' and 'address' which corresponds to the latitude, longitude and address of a particular location. The Google Places API allows for a dynamic map component to be used to display, upon search and also upon initial render, the homes that corresponds the bounds defined by the location.
+  In the backend, homes are stored in its own table that has the properties of but not limited to `lat`,`lng` and `address` which corresponds to the latitude, longitude and address of a particular location. The Google Places API allows for a dynamic map component to be used to display, upon search and also upon initial render, the homes that corresponds the bounds defined by the location; bounds refers to the longitude and latitude at the top-right and bottom-left corner of the map component.
 
-  create_table "homes", force: :cascade do |t|
-    t.integer "host_id", null: false
-    t.string "title", null: false
-    t.string "description", null: false
-    t.float "lat", null: false
-    t.float "long", null: false
-    t.string "address", null: false
-    t.integer "price", null: false
-    t.string "room_type", null: false
-    t.integer "bedrooms", null: false
-    t.integer "guests", null: false
-    t.integer "beds", null: false
-    t.boolean "kitchen", null: false
-    t.boolean "internet", null: false
-    t.boolean "family", null: false
-    t.boolean "tv", null: false
-    t.boolean "essentials", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.integer "image_file_size"
-    t.datetime "image_updated_at"
-  end
+  The map component was created with an idle event listener to trigger a re-render and update the slice of state that stores the current bounds. This in turn causes the homes within that bounds to be fetched and updated as markers on the map.
+
+##User Reviews
+
+  Stored in the database in addition to `homes` is the `bookings`, `reviews` and `users` table. Each user is is linked to a home in either through the `booking` joins table or through both the `booking` and `reviews` join table. Once the user has made a booking he/she now has a an association to retrieve all homes that was booked. When the user has that booking association a review can now be posted, deleted or edited by that user.
+
 
   On the database side, the notes are stored in one table in the database, which contains columns for `id`, `user_id`, `content`, and `updated_at`.  Upon login, an API call is made to the database which joins the user table and the note table on `user_id` and filters by the current user's `id`.  These notes are held in the `NoteStore` until the user's session is destroyed.  
 
