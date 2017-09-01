@@ -15,11 +15,17 @@ class BookingPage extends React.Component {
         end_date: this.props.booking_ui.end_date,
         user_id: this.props.currentUser.id,
         homes_id: this.props.booking_ui.currentHome.id
-      }
+      },
+      checkbox: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCheckBox = this.handleCheckBox.bind(this);
   }
 
+  handleCheckBox(e){
+    e.preventDefault();
+    this.setState({checkbox: !this.state.checkbox});
+  }
 
   handleSubmit(e){
     e.preventDefault();
@@ -31,6 +37,8 @@ class BookingPage extends React.Component {
 // <input type="checkbox">Bring a pet? </input>
   render() {
 //fix direct link to with if statement to redirect to homes page
+    let checked;
+    this.state.checkbox ? checked = "checked" : checked = ""
 
     return(
     <div className="booking_page_container">
@@ -59,7 +67,7 @@ class BookingPage extends React.Component {
         </div>
 
         <div className="booking-checkbox">
-          <input id="checkBox" type="checkbox"></input>
+          <input id="checkBox" type="checkbox" className={checked} onClick={this.handleCheckBox}></input>
           <p>Bringing a pet?</p>
         </div>
 

@@ -32,7 +32,8 @@ class ReviewItem extends React.Component {
     let review = {
       id: this.props.review.id,
       homes_id: this.props.review.homes_id,
-      user_id: this.props.currentUser.user.id,
+      // user_id: this.props.currentUser.user.id,
+      user_id: this.props.currentUser.id,
       body: this.state.body,
       rating: 1,
     };
@@ -61,12 +62,14 @@ class ReviewItem extends React.Component {
     let bodyClass;
 
     //editFormClass
-    this.state.editFormOpen ? ( editFormClass = "show-edit-form") : (editFormClass = "hidden")
+    this.state.editFormOpen  ? ( editFormClass = "show-edit-form") : (editFormClass = "hidden")
 
 
     //editButtonClass
     if (this.props.currentUser){
-      if (this.props.currentUser.user.id === this.props.review.user.id) {
+      debugger
+      // if (this.props.currentUser.user.id === this.props.review.user.id) {
+      if (this.props.currentUser.id === this.props.review.user.id) {
         editButtonClass =  "edit-buttons";
       }
     } else { editButtonClass =  "hidden"; }
@@ -75,7 +78,7 @@ class ReviewItem extends React.Component {
     this.state.editFormOpen ? ( bodyClass = "hidden") : (bodyClass = "show-body")
 
 
-    let randNum =  Math.floor(Math.random() * (20 - 1) + 1);
+    // let randNum =  Math.floor(Math.random() * (20 - 1) + 1);
     let stars = [];
     let num = this.props.review.rating;
     for (var i = 0; i < num; i++) {
@@ -112,7 +115,7 @@ class ReviewItem extends React.Component {
 
             <i className="fa fa-thumbs-o-up helpful" aria-hidden="true">
               <span>{`  Helpful `}</span>
-              <span id="helpful">{` ${randNum}`}</span>
+              <span id="helpful">{` ${this.props.review.id}`}</span>
             </i>
 
           </div>

@@ -35,7 +35,8 @@ class HomesDetail extends React.Component {
     e.preventDefault();
     let review = {
       homes_id: parseInt(this.props.match.params.homeId),
-      user_id: this.props.currentUser.user.id,
+      // user_id: this.props.currentUser.user.id,
+      user_id: this.props.currentUser.id,
       body: this.state.body,
       rating: 1,
     };
@@ -65,7 +66,8 @@ class HomesDetail extends React.Component {
         .then(() => this.props.fetchReviewsForHome(homeId));
         if (this.props.loggedIn) {
           debugger
-          this.props.fetchAllUserTrips(this.props.currentUser.user.id);
+          // this.props.fetchAllUserTrips(this.props.currentUser.user.id);
+          this.props.fetchAllUserTrips(this.props.currentUser.id);
         }
     } else {
       this.props.fetchSingleHome(homeId)
@@ -73,7 +75,8 @@ class HomesDetail extends React.Component {
       .then(() => {
         if (this.props.loggedIn) {
           debugger
-          this.props.fetchAllUserTrips(this.props.currentUser.user.id);
+          // this.props.fetchAllUserTrips(this.props.currentUser.user.id);
+          this.props.fetchAllUserTrips(this.props.currentUser.id);
         }
       });
     }
@@ -322,14 +325,16 @@ class HomesDetail extends React.Component {
                   <p>2 nights minimum stay</p>
                 </div>
 
-                {reviews}
-                <button className={createButtonOption} onClick={this.handleEditForm}>Write review</button>
 
-                <div className={`${createFormOption}-background`}>
-                  <form className="create-review-form">
-                    <input type="text" placeholder="Write your review" onChange={this.handleChange} value={this.state.body}></input>
-                    <button onClick={this.handleSubmit}>Submit review</button>
-                  </form>
+                {reviews}
+                <div className="create-review-container">
+                  <button className={createButtonOption} onClick={this.handleEditForm}>Write review</button>
+                  <div className={`${createFormOption}`}>
+                    <form className="create-review-form">
+                      <input type="text" placeholder="Write your review" onChange={this.handleChange} value={this.state.body}></input>
+                      <button onClick={this.handleSubmit}>Submit review</button>
+                    </form>
+                  </div>
                 </div>
           </div>
             <BookingFormContainer currentHome={currentHome} />

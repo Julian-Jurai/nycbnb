@@ -65,6 +65,9 @@
    text-indent: 0 !important;
  }
 
+a {
+  color: inherit;
+}
 
 /*css reset*/
 /*Main*/
@@ -123,6 +126,10 @@ input[type="checkbox"]{
   height: 20px;
   width: 20px;
   border-radius: 2px;
+}
+
+.checked {
+  background-color: #008489;
 }
 
 #date {
@@ -1258,7 +1265,7 @@ select::-ms-expand {
 
 .review-item{
   border-top: 1px solid rgb(209, 214, 214);
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   padding-top: 30px;
 }
 
@@ -1299,11 +1306,43 @@ justify-content: space-between;
 .review-item-header-left i {
   padding: 5px;
   margin-left: 5px;
-  width: 92px;
+
 }
 
-.create-review-form{
 
+.create-review-form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.create-review-form button{
+  display: block;
+  white-space: normal;
+  width: 139px;
+  border-color: #008489;
+  background-color: #008489;
+  color: #fff;
+  padding: 9px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  line-height: 1.43;
+}
+
+.create-review-form button:hover{
+  border-color: #007377;
+  background-color: #007377;
+}
+
+.create-review-form input{
+  width: 480px;
+  height: 24px;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
 .create-review-button{
@@ -1326,7 +1365,6 @@ justify-content: space-between;
 .create-review-button:hover{
   border-color: #007377;
   background-color: #007377;
-
 }
 
 
@@ -1347,10 +1385,18 @@ justify-content: space-between;
 
 .helpful {
   border: 1px solid rgb(209, 214, 214);
+  width: 100px;
   border-radius: 5px;
 }
 
 .show-body {
   min-height: 50px;
   padding-top: 15px;
+}
+
+.create-review-container{
+  border-top: 1px solid rgb(209, 214, 214);
+  justify-content: center;
+  padding: 20px;
+  display: flex;
 }
