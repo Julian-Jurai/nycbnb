@@ -15,9 +15,9 @@ NYCbnb is a full-stack web application inspired by Airbnb. It utilizes Ruby on R
 
   The map component was created with an idle event listener to trigger a re-render and update the slice of state that stores the current bounds. This in turn causes the homes within that bounds to be fetched and updated as markers on the map.
 
-  ![image of google search](wireframes/google_api_gif.gif)
+  ![image of google search](docs/google_api_gif.gif)
 
-##User Reviews
+## User Reviews
 
   Stored in the database in addition to `homes` is the `bookings`, `reviews` and `users` table. Each user is is linked to a home in either through the `booking` joins table or through both the `booking` and `reviews` join table. Once the user has made a booking he/she now has a an association to retrieve all homes that was booked. When the user has that booking association a review can now be posted, deleted or edited by that user.
 
@@ -46,12 +46,12 @@ NYCbnb is a full-stack web application inspired by Airbnb. It utilizes Ruby on R
 
   Depending on the above conditional statements, a change in component state will be triggered causing the class name to be manipulated on a particular react element thus displaying or hiding accordingly
 
-![image of google search](wireframes/home-logged-in.png)
+
 
 
 ## Future Directions for the Project
 
-To further develop what was already created the future implementations will be developed and refined
+To further develop what was already created the following implementations will be developed to improve user's experience.
 
 ### Search
 
