@@ -7,7 +7,8 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      resetToken: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
@@ -16,12 +17,20 @@ class SessionForm extends React.Component {
   }
 
   handleX(e){
-
-    return  this.props.resetSessionUI(false);
+    this.setState({
+      username: '',
+      password: ''
+    });
+    this.props.resetSessionUI(false);
+    this.props.clearSesssionErrors();
   }
 
 
   handleSubmit(e) {
+    this.setState({
+      username: '',
+      password: ''
+    });
     e.preventDefault();
     const user = this.state;
     const processFrom = this.props.session_ui === "login" ? this.props.login : this.props.signup;
@@ -40,8 +49,11 @@ class SessionForm extends React.Component {
 
 
 
-  renderErrors(){
-    const errors = this.props.errors ? this.props.errors : [];
+  renderErrors(resetToken){
+    let errors = this.props.errors ? this.props.errors : [];
+    if (resetToken) { errors = []; }
+
+
     return(
       <ul >
         {errors.map((error, i) => (
@@ -78,6 +90,7 @@ class SessionForm extends React.Component {
                 type="text"
                 onChange={this.update('username')}
                 placeholder="Username"
+                value={this.state.username}
                 />
 
 
@@ -86,6 +99,7 @@ class SessionForm extends React.Component {
                 type="password"
                 onChange={this.update('password')}
                 placeholder="password"
+                value={this.state.password}
                 />
               <button className="session-form-submit" type="submit"> Submit </button>
             </form>
