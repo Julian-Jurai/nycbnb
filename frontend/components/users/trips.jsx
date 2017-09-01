@@ -13,7 +13,7 @@ class Trips extends React.Component {
   }
 
   componentDidMount(){
-  
+
     this.props.fetchAllUserTrips(this.props.currentUser.id);
   }
 
@@ -42,10 +42,9 @@ class Trips extends React.Component {
       );
     } else {
       return (
-        <div>
-          <h1>You have no trips yet</h1>
+        <div className="notrips">
           <div>
-            <img src={window.images.no_trips}></img>
+            <img id="notrips" src={window.images.notrips}></img>
           </div>
         </div>
       );
