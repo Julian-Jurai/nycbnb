@@ -44,10 +44,10 @@ class BookingPage extends React.Component {
     let moment = require('moment');
     let checkInDate = moment(this.props.booking_ui.start_date).format("MMM Do YY");
     let checkOutDate = moment(this.props.booking_ui.end_date).format("MMM Do YY");
-    debugger
+    
     let duration = (moment(this.props.booking_ui.end_date)).diff(moment(this.props.booking_ui.start_date), 'days');
     let totalCost = this.props.booking_ui.currentHome.price * duration;
-    debugger
+    
     return(
     <div className="booking_page_container">
       <div className="booking-page-details">
