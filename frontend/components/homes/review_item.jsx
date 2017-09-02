@@ -65,17 +65,13 @@ class ReviewItem extends React.Component {
     editFormClass = "hidden";
     //editFormClass
     this.state.editFormOpen  ? ( editFormClass = "show-edit-form") : (editFormClass = "hidden")
-
-
     //editButtonClass
     if (this.props.currentUser){
-
       // if (this.props.currentUser.user.id === this.props.review.user.id) {
       if (this.props.currentUser.id === this.props.review.user.id) {
         editButtonClass =  "edit-buttons";
       }
     } else { editButtonClass =  "hidden"; }
-
     //bodyClass
     this.state.editFormOpen ? ( bodyClass = "hidden") : (bodyClass = "show-body")
 

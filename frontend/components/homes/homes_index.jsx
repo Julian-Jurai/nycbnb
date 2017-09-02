@@ -30,7 +30,7 @@ class HomesIndex extends React.Component {
     if (this.state.dataFetched){
 
       allHomes = this.props.homes.map(
-        home => ( <HomesIndexItem home={home} />)
+        home => ( <HomesIndexItem key={home.id} home={home} />)
       );
 
       // if (this.props.search_ui){

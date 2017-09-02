@@ -31,8 +31,15 @@ import SearchContainer from './search/search_container';
 
 
 const Header = (props) => {
+  
+  let show;
+  if (props.location.pathname == "/homes"){
+    show= "show-header";
+  } else show = "";
+
+
   return (
-    <header className="header-container">
+    <header className={`header-container ${show}`}>
 
       <header className="top-nav">
         <Route path="/"  component={SearchFormButtonsContainer} />

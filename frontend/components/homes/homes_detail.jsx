@@ -25,13 +25,13 @@ class HomesDetail extends React.Component {
   }
 
   handleChange(e){
-    
+
     e.preventDefault();
     this.setState({body: e.currentTarget.value});
   }
 
   handleSubmit(e){
-    
+
     e.preventDefault();
     let review = {
       homes_id: parseInt(this.props.match.params.homeId),
@@ -60,12 +60,12 @@ class HomesDetail extends React.Component {
     const homeId = parseInt(this.props.match.params.homeId);
 
     if (Object.keys(this.props.homes).length <= 1){
-      
+
       this.props.fetchAllHomes()
         .then(() => this.props.fetchSingleHome(homeId))
         .then(() => this.props.fetchReviewsForHome(homeId));
         if (this.props.loggedIn) {
-          
+
           // this.props.fetchAllUserTrips(this.props.currentUser.user.id);
           this.props.fetchAllUserTrips(this.props.currentUser.id);
         }
@@ -74,7 +74,7 @@ class HomesDetail extends React.Component {
       .then(() => this.props.fetchReviewsForHome(homeId))
       .then(() => {
         if (this.props.loggedIn) {
-          
+
           // this.props.fetchAllUserTrips(this.props.currentUser.user.id);
           this.props.fetchAllUserTrips(this.props.currentUser.id);
         }
@@ -101,7 +101,7 @@ class HomesDetail extends React.Component {
 //#######################################################################
   // componentWillMount(){
   //   const homeId = parseInt(this.props.match.params.homeId);
-  //   
+  //
   //   if (Object.keys(this.props.homes).length <= 1){
   //     this.props.fetchAllHomes()
   //       .then(() => this.props.fetchSingleHome(homeId))
@@ -133,12 +133,12 @@ class HomesDetail extends React.Component {
     let editFormOption;
     let inUsersTrips;
 
-    
+
 
     const reviews = Object.values(this.props.reviews_ui).map((review) => {
-      
+
       return (
-        <div>
+        <div  key={review.id}>
           <ReviewItem
             key={review.id}
             review={review}
@@ -150,9 +150,9 @@ class HomesDetail extends React.Component {
       );
     });
 
-    // 
+    //
     // if (this.props.loggedIn) {
-    //   
+    //
     //   // why not use trips_ui???
     //    if (this.props.currentUser.homes){ //array [{home}];
     //    let prevTrips = this.props.currentUser.homes;

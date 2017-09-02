@@ -140,7 +140,7 @@ input[type="checkbox"]{
 #homepage{
   width: auto;
   height: 392px;
-  padding-top: 400px;
+  
 }
 // select
 
@@ -216,12 +216,18 @@ select::-ms-expand {
 .header-container {
   box-shadow: 0px 4px 16px 3px rgba(0,0,0,0.1);
   margin-bottom: 50px;
-  z-index: 5;
-  position: fixed;
-  top: 0;
+  // z-index: 5;
+  // position: fixed;
+  // top: 0;
   width: 100%;
   background-color: white;
   // border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.show-header {
+  z-index: 5 !important;
+  position: fixed !important;
+  top: 0 !important;
 }
 
 .home-page-greeting{
@@ -1564,7 +1570,7 @@ justify-content: space-between;
   height: 302px;
   width: auto;
   top: 190px;
-  padding-top: 300px;
+
   left: 140px;
 /* position: absolute; */
 }
@@ -1572,7 +1578,7 @@ justify-content: space-between;
   height: 302px;
   width: auto;
   top: 190px;
-  padding-top: 300px;
+
   left: 140px;
 }
 
@@ -1580,6 +1586,6 @@ justify-content: space-between;
   height: 302px;
   width: auto;
   top: 190px;
-  padding-top: 300px;
+
   left: 140px;
 }
