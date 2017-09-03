@@ -273,7 +273,7 @@ image: random_profile_image.pop
 )
 
 
-10.times do
+14.times do
   User.create!(
   username: random_profile_usernames.pop,
   password: "password",
@@ -326,7 +326,7 @@ end
 
 ### REVIEWS ###
 
-40.times do
+60.times do
   Review.create!(
     {
     user_id: user_ids.sample,
