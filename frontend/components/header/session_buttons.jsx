@@ -63,7 +63,7 @@ class SessionButtons extends React.Component{
         <div className ="dropdown">
           <span className="session-button">
             <button >Become a Host</button>
-            <button >Help</button>
+
             <button>
               <Link to={`/${this.props.currentUser.id}/trips`}>Trips</Link>
             </button>
@@ -72,11 +72,11 @@ class SessionButtons extends React.Component{
           <img src={window.images.avatar} className="avatar session-button" onClick={this.handleDropDown}></img>
         <div className={this.state.open ? "session-button-background" : "hidden"} onClick={this.handleDropDown} >
           <ul className={this.state.open ? "pullDown active " : "hidden"} onClick={ (e) => e.stopPropagation() } >
-            <li onClick={this.handleLogout}>Edit Profile</li>
-            <li onClick={this.handleLogout}>Travel Credit</li>
-            <li onClick={this.handleLogout}>Account Settings</li>
-            <li onClick={this.handleLogout}>My Guidbook</li>
-            <li onClick={this.handleLogout}>Help</li>
+            <li onClick={this.handleLogout}>Log Out</li>
+            <li onClick={this.handleLogout}>Log Out</li>
+            <li onClick={this.handleLogout}>Log Out</li>
+            <li onClick={this.handleLogout}>Log Out</li>
+            <li onClick={this.handleLogout}>Log Out</li>
             <li onClick={this.handleLogout}>Log Out</li>
           </ul>
         </div>

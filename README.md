@@ -2,7 +2,7 @@
 
 [NYCbnb Live][heroku] **NB:** This should be a link to your production site
 
-[heroku]: https://nyc-bnb.herokuapp.com/#/
+[heroku]: http://nyc-bnb.herokuapp.com/#/
 
 NYCbnb is a full-stack web application inspired by Airbnb. It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.  
 

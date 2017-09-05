@@ -80,7 +80,7 @@ class ReviewItem extends React.Component {
     let stars = [];
     let num = this.props.review.rating;
     for (var i = 0; i < num + 2; i++) {
-      stars.push(<i className="fa fa-star" aria-hidden="true"></i>);
+      stars.push(<i key={i} className="fa fa-star" aria-hidden="true"></i>);
     }
 
 

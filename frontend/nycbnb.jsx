@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () =>{
   let store;
 
   if (window.currentUser) {
-
     const preloadedState = { session: { currentUser: window.currentUser } };
     store = configureStore(preloadedState);
     delete window.currentUser;
@@ -28,44 +27,11 @@ document.addEventListener("DOMContentLoaded", () =>{
     store = configureStore();
   }
 
-
-
-  //test starts######################################################
-  // window.fetchAllHomes = fetchAllHomes;
-  // window.updateFilter = updateFilter;
-  // window.fetchReviewsForHome = fetchReviewsForHome;
-  // window.fetchAllHomes = APIUtil.fetchAllHomes;
-  // // window.fetchSingleHome = fetchSingleHome;
-  //
-  // window.fetchAllUserTrips = APIUtil.fetchAllUserTrips;
-  // window.coord =
-  //     {
-  //       "northEast": {
-  //         "lat": "40.777",
-  //         "lng":"-73.986"
-  //       },
-  //       "southWest": {
-  //         "lat": "40.7140",
-  //         "lng": "-74.030"
-  //       }
-  //     };
-
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-
-  // window.login = SessionAction.login;
-  // window.signup = SessionAction.signup;
-  // window.logout = SessionAction.logout;
-  // window.login = APIUtil.login;
-  // window.signup = APIUtil.signup;
-  // window.logout = APIUtil.logout;
-
-  //testends#########################################################
-
-
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
-
+  
 
 });

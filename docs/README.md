@@ -1,6 +1,6 @@
 # nycbnb
 
- https://nyc-bnb.herokuapp.com/
+ http://nyc-bnb.herokuapp.com/
 
 ## Minimum Viable Product
 

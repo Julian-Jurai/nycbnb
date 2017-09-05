@@ -21,7 +21,7 @@ import SearchFormButtonsContainer from './header/search_form_button_container';
 import HomePage from './header/home_page';
 import ExperiencesPage from './header/experiences_page';
 import PlacesPage from './header/places_page';
-
+import Favicon from 'react-favicon';
 //test
 import Trips from './users/trips';
 import SearchContainer from './search/search_container';
@@ -31,7 +31,7 @@ import SearchContainer from './search/search_container';
 
 
 const Header = (props) => {
-  
+
   let show;
   if (props.location.pathname == "/homes"){
     show= "show-header";
@@ -74,6 +74,7 @@ const Footer = (props) => {
 
   return (
     <div className={`footer-container ${show}`}>
+      <Favicon url={[window.images.logoicon]}/>
       <div className="footer-main">
         <div>
           <h5>NYCbnb</h5>

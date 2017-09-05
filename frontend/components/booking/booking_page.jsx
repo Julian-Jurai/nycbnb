@@ -44,10 +44,10 @@ class BookingPage extends React.Component {
     let moment = require('moment');
     let checkInDate = moment(this.props.booking_ui.start_date).format("MMM Do YY");
     let checkOutDate = moment(this.props.booking_ui.end_date).format("MMM Do YY");
-    
+
     let duration = (moment(this.props.booking_ui.end_date)).diff(moment(this.props.booking_ui.start_date), 'days');
     let totalCost = this.props.booking_ui.currentHome.price * duration;
-    
+
     return(
     <div className="booking_page_container">
       <div className="booking-page-details">
@@ -56,8 +56,8 @@ class BookingPage extends React.Component {
         <div className="booking-form-guests">
           <p> Who's coming</p>
           <div id="booking-form-guests" ></div>
-            <select >
-              <option selected="selected" value="guest">1 Guest</option>
+            <select defaultValue="1 Guest">
+              <option value="guest">1 Guest</option>
               <option value="guest">2 Guests</option>
               <option value="guest">3 Guests</option>
               <option value="guest">4 Guests</option>

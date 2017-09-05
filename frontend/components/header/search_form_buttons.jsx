@@ -39,8 +39,8 @@ class SearchFormButtons extends React.Component{
 
 
 
-          <select>
-            <option selected="selected" value="guest">1 Guest</option>
+          <select defaultValue="1 Guest">
+            <option value="guest">1 Guest</option>
             <option value="guest">2 Guests</option>
             <option value="guest">3 Guests</option>
             <option value="guest">4 Guests</option>

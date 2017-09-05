@@ -16,6 +16,7 @@
     "moment": "^2.18.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-favicon": "0.0.9",
     "react-redux": "^5.0.6",
     "react-router": "^4.1.2",
     "react-router-dom": "^4.1.2",
@@ -36,13 +37,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Julian-Jurai/nycbnb.git"
+    "url": "git+http://github.com/Julian-Jurai/nycbnb.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Julian-Jurai/nycbnb/issues"
+    "url": "http://github.com/Julian-Jurai/nycbnb/issues"
   },
-  "homepage": "https://github.com/Julian-Jurai/nycbnb#readme"
+  "homepage": "http://github.com/Julian-Jurai/nycbnb#readme"
 }
