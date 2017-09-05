@@ -57,8 +57,8 @@ module.exports = {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: "bundle.js"
   },
+  plugins: plugins,
   module: {
-    // plugins: plugins,
     loaders: [
       {
         test: [/\.jsx?$/, /\.js?$/],
