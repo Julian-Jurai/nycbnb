@@ -30,6 +30,7 @@ module.exports = {
     filename: "bundle.js"
   },
   module: {
+    plugins: plugins,
     loaders: [
       {
         test: [/\.jsx?$/, /\.js?$/],

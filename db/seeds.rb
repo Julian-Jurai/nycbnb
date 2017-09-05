@@ -254,7 +254,7 @@ random_profile_usernames = [
 	"Sophia",	"Mason",
 	"Isabella",	"Oliver",
 	"Mia",	"Logan",
-	",Amelia",	"Ethan",
+	"Amelia",	"Ethan",
 	"Charlotte",	"Elijah",
 	"Harper",	"Aiden"
 ]
