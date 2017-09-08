@@ -1,0 +1,51 @@
+/*level1*/
+
+.submit-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.text-input-style-1{
+  margin-bottom: 10px;
+  width: auto;
+  font-family: sans-serif;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.textarea-style{
+  padding: 5px;
+  resize: none;
+  height: 80px;
+}
+
+.form-container {
+  border: 1px solid black;
+  padding: 10px;
+  width: 330px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.form-container form{
+  display: flex;
+  flex-direction: column;
+}
+
+.list-style{
+  border: 1px solid black;
+  margin-left: 30px;
+  width: 330px;
+}
+
+.main-container{
+  display: flex;
+
+}
