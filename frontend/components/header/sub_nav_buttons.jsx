@@ -34,15 +34,26 @@ const subNavButtons = (props) => {
   return (
     <div className={`site-nav-buttons ${marginFix}`}>
 
-        <Link className={`${forYouClassName}`} to="/"> For You </Link>
+        <Link className={`${forYouClassName}`} to="/"> Welcome </Link>
         <Link className={`${homesClassName}`} to="/homes"> Homes </Link>
-        <Link className={`${experiencesClassName}`} to="/experiences"> Experiences </Link>
-        <Link className={`${placesClassName}`} to="/places"> Places </Link>
+
 
 
     </div>
   );
 };
+//   return (
+//     <div className={`site-nav-buttons ${marginFix}`}>
+//
+//         <Link className={`${forYouClassName}`} to="/"> For You </Link>
+//         <Link className={`${homesClassName}`} to="/homes"> Homes </Link>
+//         <Link className={`${experiencesClassName}`} to="/experiences"> Experiences </Link>
+//         <Link className={`${placesClassName}`} to="/places"> Places </Link>
+//
+//
+//     </div>
+//   );
+// };
 
 
 export default withRouter(subNavButtons);

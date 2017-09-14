@@ -72,7 +72,7 @@ class SessionButtons extends React.Component{
           <img src={window.images.avatar} className="avatar session-button" onClick={this.handleDropDown}></img>
         <div className={this.state.open ? "session-button-background" : "hidden"} onClick={this.handleDropDown} >
           <ul className={this.state.open ? "pullDown active " : "hidden"} onClick={ (e) => e.stopPropagation() } >
-            <li onClick={this.handleLogout}>Log Out</li>
+            <li id="demo-logout" onClick={this.handleLogout}>Log Out</li>
             <li onClick={this.handleLogout}>Log Out</li>
             <li onClick={this.handleLogout}>Log Out</li>
             <li onClick={this.handleLogout}>Log Out</li>
@@ -98,13 +98,12 @@ class SessionButtons extends React.Component{
           <button onClick={this.handleSignUp}>Sign Up</button>
         </span>
         <span >
-          <button onClick={this.handleGuestLogin}>Guest Login</button>
+          <button id="demo-login" onClick={this.handleGuestLogin}>Guest Login</button>
         </span>
       </div>
 
       );
     }
-
   }//render
 
 
@@ -113,3 +112,20 @@ class SessionButtons extends React.Component{
 }//classend
 
 export default SessionButtons;
+
+
+// const autoLogin = () => {
+//
+//   setInterval(()=>{
+//     demoLogin = document.getElementById("demo-login");
+//     demoLogout = document.getElementById("demo-logout");
+//
+//     if (demoLogin){
+//       demoLogin.click()
+//     } else {
+//       demoLogout.click()
+//     }
+//
+//   },5000);
+//
+// };
