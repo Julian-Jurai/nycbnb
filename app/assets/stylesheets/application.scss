@@ -139,7 +139,7 @@ input[type="checkbox"]{
 
 #homepage{
   width: 100vw;
-  
+
 
 }
 // select
@@ -1477,11 +1477,16 @@ justify-content: space-between;
 
 .footer-main {
   display: flex;
+  margin-top: 20px;
   justify-content: space-around;
   align-items: flex-start;
   width: 700px;
   padding-bottom: 25px;
 
+}
+
+.profiles{
+  padding: 30px;
 }
 
 .footer-sub {

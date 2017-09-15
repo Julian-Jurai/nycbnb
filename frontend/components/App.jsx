@@ -77,34 +77,14 @@ const Footer = (props) => {
       <Favicon url={[window.images.logoicon]}/>
       <div className="footer-main">
         <div>
-          <h5>NYCbnb</h5>
-          <p>About us</p>
-          <p>Careers</p>
-          <p>Press</p>
-          <p>Policies</p>
-          <p>Help</p>
-          <p>Diversity & Belonging</p>
+          <a href="https://www.linkedin.com/in/julian-jurai/" className="profiles" target="_blank">
+            <i className="fa fa-linkedin  fa-4x" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/Julian-Jurai"  className="profiles" target="_blank">
+            <i className="fa fa-github  fa-4x" aria-hidden="true"></i>
+          </a>
         </div>
 
-        <div>
-          <h5>Discover</h5>
-          <p>Trust & Safety</p>
-          <p>Travel Credit</p>
-          <p>Gift Cards</p>
-          <p>NYCbnb Citizen</p>
-          <p>Business Travel</p>
-          <p>Guidebooks</p>
-          <p>Nycbnbmag</p>
-        </div>
-
-        <div>
-          <h5>Hosting</h5>
-          <p>Why Host</p>
-          <p>Hospitality</p>
-          <p>Responsible</p>
-          <p>Hosting</p>
-          <p>Community Center</p>
-        </div>
       </div>
 
       <div className="footer-sub">
