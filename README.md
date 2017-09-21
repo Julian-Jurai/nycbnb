@@ -1,6 +1,6 @@
 # NYCbnb
 
-[NYCbnb Live][heroku] **NB:** This should be a link to your production site
+[LIVE][heroku]
 
 [heroku]: http://nyc-bnb.herokuapp.com/#/
 
@@ -15,6 +15,7 @@ NYCbnb is a full-stack web application inspired by Airbnb. It utilizes Ruby on R
 
   The map component was created with an idle event listener to trigger a re-render and update the slice of state that stores the current bounds. This in turn causes the homes within that bounds to be fetched and updated as markers on the map.
 
+#### Screenshot
   ![image of google search](docs/google_api_gif.gif)
 
 ## User Reviews
