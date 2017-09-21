@@ -48,21 +48,15 @@ class SessionButtons extends React.Component{
 
   }
 
-  // <span className="session-button">
-  //   <button onClick={this.handleLogout}>Log Out</button>
-  // </span>
-
   render(){
 
-  // <div className="avatar session-button" onClick={this.handleDropDown}></div>
-// use img tag instead for session button
-    //house sign in login log out
+
     if (this.props.loggedIn){
       return(
 
         <div className ="dropdown">
           <span className="session-button">
-            <button >Become a Host</button>
+
 
             <button>
               <Link to={`/${this.props.currentUser.id}/trips`}>Trips</Link>
@@ -85,12 +79,7 @@ class SessionButtons extends React.Component{
     } else {
       return(
       <div className="session-button">
-        <span >
-          <button>Become a Host</button>
-        </span>
-        <span >
-          <button>Help</button>
-        </span>
+      
         <span >
           <button onClick={this.handleLogin}>Log In</button>
         </span>
@@ -115,17 +104,17 @@ export default SessionButtons;
 
 
 // const autoLogin = () => {
-//
+// const halfHour = 1800000;
 //   setInterval(()=>{
 //     demoLogin = document.getElementById("demo-login");
 //     demoLogout = document.getElementById("demo-logout");
 //
 //     if (demoLogin){
-//       demoLogin.click()
+//       demoLogin.click();
 //     } else {
-//       demoLogout.click()
+//       demoLogout.click();
 //     }
 //
-//   },5000);
+//   },halfHour);
 //
 // };

@@ -83,27 +83,15 @@ const Footer = (props) => {
           <a href="https://github.com/Julian-Jurai"  className="profiles" target="_blank">
             <i className="fa fa-github  fa-4x" aria-hidden="true"></i>
           </a>
+      
+
         </div>
 
       </div>
 
       <div className="footer-sub">
-        <div className="footer-sub-left">
           <i className="fa fa-clone" aria-hidden="true"></i>
           <p>NYCbnb, Inc.</p>
-        </div>
-        <div className="footer-sub-right">
-          <div className="footer-sub-right-sub">
-            <p>Terms</p>
-            <p>Privacy</p>
-            <p>Site Map</p>
-          </div>
-          <div className="footer-sub-right-icons">
-            <i className="fa fa-twitter" aria-hidden="true"></i>
-            <i className="fa fa-facebook" aria-hidden="true"></i>
-            <i className="fa fa-instagram" aria-hidden="true"></i>
-          </div>
-        </div>
       </div>
     </div>
   );

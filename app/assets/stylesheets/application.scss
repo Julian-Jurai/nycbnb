@@ -975,7 +975,7 @@ select::-ms-expand {
 }
 
 .session-button {
-
+  padding-right: 20px;
   color: #767676;
   display: flex;
   justify-content: flex-end;
@@ -1489,56 +1489,28 @@ justify-content: space-between;
   padding: 30px;
 }
 
+.profiles:hover {
+  color: black;
+}
+
 .footer-sub {
   display: flex;
   min-width: 700px;
   padding: 30px;
   border-top: 1px solid rgb(209, 214, 214);
-  justify-content: space-between;
-}
-
-.footer-sub-left {
-  display: flex;
   align-items: center;
 }
 
-.footer-sub-left p {
+.footer-sub p {
   padding: 0 10px 0 10px;
 }
 
-.footer-sub-left i {
+.footer-sub i {
   padding: 0 10px 0 10px;
   align-items: center;
 }
 
-.footer-sub-right {
-  display: flex;
-}
 
-.footer-sub-right i {
-  padding: 0 ;
-}
-.footer-sub-right p {
-  padding: 0 12px 0 12px;
-}
-
-.footer-sub-right-sub {
-  display: flex;
-  align-items: center;
-}
-
-.footer-sub-right-icons {
-  display: flex;
-  align-items: center;
-}
-
-.footer-sub-right-icons i {
-  padding: 0 10px 0 10px;
-}
-
-.footer-sub-right-icons p {
-  padding: 0 12px 0 12px;
-}
 
 #footer-image{
   filter: gray;
