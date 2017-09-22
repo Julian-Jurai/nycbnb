@@ -138,9 +138,8 @@ class HomesDetail extends React.Component {
     const reviews = Object.values(this.props.reviews_ui).map((review) => {
 
       return (
-        <div  key={review.id}>
+        <div key={review.id}>
           <ReviewItem
-            key={review.id}
             review={review}
             currentUser={this.props.currentUser}
             updateReviewForHome={this.props.updateReviewForHome}
@@ -163,8 +162,6 @@ class HomesDetail extends React.Component {
 
 ///////////////////////////////
     if (this.props.loggedIn) {
-
-
        if (Array.isArray(this.props.trips_ui)){ //array [{home}];
 
        let prevTrips = this.props.trips_ui;

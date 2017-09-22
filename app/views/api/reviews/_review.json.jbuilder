@@ -6,5 +6,3 @@ json.extract! review,
   :user_id,
   :rating,
   :updated_at
-
-json.partial! "api/users/user", user: review.user

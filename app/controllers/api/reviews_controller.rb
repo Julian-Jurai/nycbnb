@@ -1,12 +1,10 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-
     @reviews = Review.where(
       homes_id: params[:home_id]
     )
     render "api/reviews/index"
-
   end
 
 
@@ -21,14 +19,13 @@ class Api::ReviewsController < ApplicationController
   end
 
   def show
-    @reviews = Review.where(
-      user_id: params[:user_id],
-      homes_id: params[:home_id]
-    )
+
+    @review = Review.find(params[:id])
     render "api/reviews/show"
   end
 
   def destroy
+  
     @review = Review.find(params[:id])
     if @review
       @review.destroy

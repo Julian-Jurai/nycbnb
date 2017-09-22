@@ -20,10 +20,6 @@ class ReviewItem extends React.Component {
     e.preventDefault();
     this.setState({editFormOpen: (!this.state.editFormOpen)});
 
-
-    let radnom;
-
-
   }
 
   handleUpdate(e){
@@ -68,7 +64,7 @@ class ReviewItem extends React.Component {
     //editButtonClass
     if (this.props.currentUser){
       // if (this.props.currentUser.user.id === this.props.review.user.id) {
-      if (this.props.currentUser.id === this.props.review.user.id) {
+      if (this.props.currentUser.id === this.props.review.user_id) {
         editButtonClass =  "edit-buttons";
       }
     } else { editButtonClass =  "hidden"; }
@@ -82,8 +78,7 @@ class ReviewItem extends React.Component {
     for (var i = 0; i < num + 2; i++) {
       stars.push(<i key={i} className="fa fa-star" aria-hidden="true"></i>);
     }
-
-
+  
         let moment = require('moment');
         let reviewDate = moment(this.props.review.updated_at).format("MMM Do YY");
 
@@ -101,9 +96,9 @@ class ReviewItem extends React.Component {
 
         <div className="review-item-header">
           <div className="review-item-header-right">
-            <img src={this.props.review.user.image} id="user-avatar"></img>
+            <img src={this.props.review.image} id="user-avatar"></img>
             <div>
-              <p>{this.props.review.user.username}</p>
+              <p>{this.props.review.username}</p>
               <p id="review-date">{reviewDate}</p>
 
               <span id="stars" className="user-reviews">

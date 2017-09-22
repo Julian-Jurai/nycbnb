@@ -5,6 +5,7 @@ import { merge } from 'lodash';
 const SessionButtonsReducer = (state = false, action) => {
 
   Object.freeze(state);
+
   switch(action.type) {
     case LOGINSIGNUP:
       return action.buttonAction;
