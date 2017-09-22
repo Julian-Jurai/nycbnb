@@ -16,8 +16,6 @@ export const TripItem = (props) => {
         <Link to={`/homes/${props.home.id}`}>
           <h5>Read Your Review</h5>
         </Link>
-      <h5 className="view-receipt">View Receipt</h5>
-      <h5>Send or request money</h5>
     </div>
   );
 };
