@@ -13,7 +13,7 @@ const HomesIndexItem = ({home}) => {
   return (
     <div className="home-index-item" >
       <Link to={`/homes/${home.id}`}>
-        <img src={home.image} className="home-index-image"/>
+        <img src={home.thumb} className="home-index-image"/>
       </Link>
       <div>
         <span>From ${home.price} &middot;  </span>

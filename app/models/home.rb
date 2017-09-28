@@ -32,6 +32,7 @@ class Home < ApplicationRecord
   validates :family, :tv, :essentials, :room_type, :bedrooms, :guests, :beds, :kitchen, :internet, presence: true
 
   has_attached_file :image, styles: {thumb: "400x300>"}, default_url: "home_default.png"
+
   # has_attached_file :image, default_url: "home_default.png"
 
   validates_attachment_content_type :image, content_type: /\Aimage/
