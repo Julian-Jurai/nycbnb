@@ -31,7 +31,8 @@ class Home < ApplicationRecord
   validates :host_id, :title, :description, :lat, :long, :address, :price, presence: true
   validates :family, :tv, :essentials, :room_type, :bedrooms, :guests, :beds, :kitchen, :internet, presence: true
 
-  has_attached_file :image, default_url: "home_default.png"
+  has_attached_file :image, styles: {thumb: "400x300>"}, default_url: "home_default.png"
+  # has_attached_file :image, default_url: "home_default.png"
 
   validates_attachment_content_type :image, content_type: /\Aimage/
 
@@ -54,7 +55,7 @@ class Home < ApplicationRecord
   through: :user
 
   def self.in_bounds(bounds)
-  
+
     self.where("lat < ?", bounds[:northEast][:lat])
       .where("lat > ?", bounds[:southWest][:lat])
       .where("long > ?", bounds[:southWest][:lng])

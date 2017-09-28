@@ -2,7 +2,7 @@
 @homes.each do |home|
 
   json.set! home.id do
-    json.image home.image.url
+    json.image home.image.url(:thumb)
     json.extract! home,
       :id,
       :title,
